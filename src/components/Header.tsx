@@ -1,0 +1,72 @@
+import { useState, useEffect } from 'react';
+
+const CTA_URL = 'https://cosmofeed.com/bp/683b06f5a8498c001f839e1d';
+
+export default function Header() {
+  const [time, setTime] = useState({ hours: 2, minutes: 43, seconds: 58 });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(prev => {
+        let { hours, minutes, seconds } = prev;
+        seconds--;
+        if (seconds < 0) { seconds = 59; minutes--; }
+        if (minutes < 0) { minutes = 59; hours--; }
+        if (hours < 0) { hours = 0; minutes = 0; seconds = 0; }
+        return { hours, minutes, seconds };
+      });
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const pad = (n: number) => n.toString().padStart(2, '0');
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Countdown Timer */}
+      <div
+        className="w-full py-2 px-4 text-center"
+        style={{
+          background: 'linear-gradient(90deg, #7000ff, #00f2ff, #7000ff)',
+          backgroundSize: '200% 100%',
+          animation: 'shimmer 3s linear infinite',
+        }}
+      >
+        <p className="text-xs sm:text-sm font-bold text-[#030712] tracking-wide">
+          ⚡ FLASH DEAL: FREE Bonus (worth ₹6499) expires in →{' '}
+          <span className="font-mono text-sm sm:text-base inline-block min-w-[72px]">
+            {pad(time.hours)}:{pad(time.minutes)}:{pad(time.seconds)}
+          </span>{' '}
+          ⚡
+        </p>
+      </div>
+
+      {/* Nav */}
+      <div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-[#030712] border-b border-white/10">
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00f2ff] to-[#7000ff] flex items-center justify-center">
+            <span className="text-white font-black text-sm">P</span>
+          </div>
+          <span className="text-sm font-bold text-white hidden sm:block">ProDigitalFiles</span>
+        </div>
+
+        <nav className="hidden md:flex items-center gap-6">
+          <a href="#features" className="text-sm text-[#cbd5e1] hover:text-[#00f2ff] transition-colors">Features</a>
+          <a href="#reviews" className="text-sm text-[#cbd5e1] hover:text-[#00f2ff] transition-colors">Reviews</a>
+          <a href="#pricing" className="text-sm text-[#cbd5e1] hover:text-[#00f2ff] transition-colors">Pricing</a>
+          <a href="#faq" className="text-sm text-[#cbd5e1] hover:text-[#00f2ff] transition-colors">FAQ</a>
+        </nav>
+
+        <a
+          href={CTA_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-2 rounded-full transition-colors"
+          style={{ background: 'linear-gradient(135deg, #ff6b00, #ff9500)' }}
+        >
+          Get Bundle — ₹199
+        </a>
+      </div>
+    </header>
+  );
+}
