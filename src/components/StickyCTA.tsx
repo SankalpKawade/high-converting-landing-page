@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const CTA_URL = 'https://cosmofeed.com/bp/683b06f5a8498c001f839e1d';
+const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 export default function StickyCTA() {
   const [visible, setVisible] = useState(false);
@@ -17,18 +17,27 @@ export default function StickyCTA() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 bg-[#030712] border-t border-[#00f2ff]/20 px-4 py-3 ${
-        visible ? 'sticky-cta-visible' : 'sticky-cta-hidden'
-      }`}
+      className={`fixed bottom-0 left-0 right-0 z-50 bg-[#030712] border-t border-[#00f2ff]/20 px-4 py-3 ${visible ? 'sticky-cta-visible' : 'sticky-cta-hidden'
+        }`}
       style={{ pointerEvents: visible ? 'auto' : 'none' }}
     >
       <div className="max-w-lg mx-auto flex items-center gap-3">
         <div className="flex-1 min-w-0">
-          <p className="text-xs sm:text-sm font-bold text-white truncate">Complete Bundle</p>
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-[#94a3b8] line-through">₹4,999</span>
-            <span className="text-base sm:text-lg font-black text-[#00f2ff]">₹199</span>
-          </div>
+          <p className="text-xs sm:text-sm font-bold text-white truncate">Complete Video Editing Bundle</p>
+          <p className="text-xs" style={{ color: "#00D4FF" }}>
+            70GB+ Assets • Instant Download
+          </p>
+        </div>
+        <div className="text-center">
+          <span
+            className="text-xs line-through"
+            style={{ color: "rgba(255,255,255,0.4)" }}
+          >
+            ₹3,999
+          </span>
+          <p className="font-black text-xl" style={{ color: "#FF6B00" }}>
+            ₹199
+          </p>
         </div>
         <a
           href={CTA_URL}
@@ -36,9 +45,9 @@ export default function StickyCTA() {
           rel="noopener noreferrer"
           className="btn-cta text-sm sm:text-base font-bold px-5 sm:px-8 py-3 rounded-xl whitespace-nowrap text-center"
         >
-          Get Now →
+          Get It Now →
         </a>
       </div>
-    </div>
+    </div >
   );
 }

@@ -1,4 +1,6 @@
-const CTA_URL = 'https://cosmofeed.com/bp/683b06f5a8498c001f839e1d';
+import StarField from './StarField';
+
+const CTA_URL = 'CTA_URL';
 
 export default function CloserSection() {
   return (
@@ -17,7 +19,9 @@ export default function CloserSection() {
         </p>
 
         {/* Visual testimonial */}
+        {/*
         <div className="card-accent p-5 sm:p-6 mb-8 max-w-md mx-auto text-left relative overflow-hidden">
+          <StarField speed={0.4} starsSmall={50} starsMedium={18} starsLarge={6} opacity={0.3} />
           <div className="glow-line" />
           <div className="flex items-center gap-3 mb-3">
             <div
@@ -26,19 +30,24 @@ export default function CloserSection() {
             >
               V
             </div>
+           
             <div>
               <p className="text-sm font-bold text-white">Vikram R.</p>
               <p className="text-xs text-[#94a3b8]">Freelance Video Editor, Mumbai</p>
             </div>
+            
           </div>
+          
           <p className="text-yellow-400 text-xs mb-2">★★★★★</p>
           <p className="text-sm text-[#cbd5e1] leading-relaxed italic">
             "I was charging ₹1,500 per wedding video. After using these LUTs and transitions, my work looks so cinematic that I now charge ₹12,000. This bundle literally 8x'd my income."
           </p>
-        </div>
+         
+      </div>
+       */}
 
         <a
-          href={CTA_URL}
+          href="https://superprofile.bio/vp/professional-video-editing-made-simple"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block btn-cta text-base sm:text-lg font-black px-10 sm:px-14 py-4 sm:py-5 rounded-2xl tracking-wide uppercase"
@@ -53,6 +62,6 @@ export default function CloserSection() {
           <span>🎁 4 Free Bonuses</span>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

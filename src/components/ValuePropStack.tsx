@@ -1,13 +1,15 @@
+import StarField from './StarField';
+
 const props = [
   {
-    headline: '500+ Cinematic LUTs for Hollywood-Level Color Grading',
+    headline: '200+ Cinematic LUTs for Hollywood-Level Color Grading',
     body: 'Transform flat, boring footage into cinematic masterpieces with one click. Warm tones, cold tones, vintage film looks, modern styles — every mood covered.',
     bullets: ['Works with ANY camera footage', 'Compatible with Premiere, Resolve, FCPX', 'Instant drag-and-drop application'],
     emoji: '🎨',
     accent: '#00f2ff',
   },
   {
-    headline: '250+ Seamless Transitions to Keep Viewers Watching',
+    headline: '800+ Seamless Transitions to Keep Viewers Watching',
     body: 'Smooth zooms, glitch cuts, light leak wipes, cinematic punches — transitions that make your audience forget to scroll away.',
     bullets: ['Smooth, glitch, zoom, warp styles', 'No plugins required', 'Works at any resolution & frame rate'],
     emoji: '✨',
@@ -35,7 +37,7 @@ const props = [
     accent: '#00f2ff',
   },
   {
-    headline: '4K Overlays & VFX for Cinematic Production Value',
+    headline: '4K Overlays & Film Grains for Cinematic Production Value',
     body: 'Film burns, light leaks, bokeh, particles, green screen VFX — add that premium cinematic polish that separates amateurs from professionals.',
     bullets: ['Pre-keyed for instant use', '4K resolution quality', 'Film grain, dust & vintage textures'],
     emoji: '🎬',
@@ -47,7 +49,7 @@ export default function ValuePropStack() {
   return (
     <section className="py-16 sm:py-20 px-4 relative z-10">
       <div className="section-divider mb-16" />
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10 sm:mb-14">
           <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Why This Bundle</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
@@ -61,6 +63,7 @@ export default function ValuePropStack() {
               key={i}
               className={`card-accent p-5 sm:p-7 relative overflow-hidden`}
             >
+              <StarField speed={0.4} starsSmall={60} starsMedium={20} starsLarge={8} opacity={0.3} />
               <div className="glow-line" />
               <div className={`flex flex-col ${i % 2 === 1 ? 'sm:flex-row-reverse' : 'sm:flex-row'} gap-5 items-center`}>
                 {/* Icon */}

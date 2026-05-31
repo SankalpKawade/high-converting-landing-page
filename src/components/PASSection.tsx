@@ -1,61 +1,79 @@
-const CTA_URL = 'https://cosmofeed.com/bp/683b06f5a8498c001f839e1d';
+import { useState } from 'react';
+import StarField from './StarField';
+
+const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
+
+const struggles = [
+  "I want to post faceless reels but don't know where to start",
+  "I waste hours looking for B-roll clips online",
+  "I don't have the time or skills to edit videos from scratch",
+  "I want to start a faceless page but I don't know what to post",
+  "I want to sell a digital product but don't have anything to offer",
+  "I want to make money online but don't want to show my face",
+  "I just need a plug-and-play system to help me grow fast",
+];
 
 export default function PASSection() {
+  const [checkedItems, setCheckedItems] = useState<Record<number, boolean>>({});
+
+  const toggleItem = (index: number) => {
+    setCheckedItems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   return (
     <section className="py-16 sm:py-20 px-4 relative z-10">
       <div className="section-divider mb-16" />
-      <div className="max-w-3xl mx-auto text-center">
-        <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">The Problem</p>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white mb-6 leading-tight">
-          You're Spending <span className="text-red-400">Hours Searching</span> for Assets<br className="hidden sm:block" /> That Should Take Minutes
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-10 sm:mb-14 leading-tight">
+          What Are You Struggling<br className="hidden sm:block" /> With Right Now?
         </h2>
 
-        {/* Problem / Agitate */}
-        <div className="card-dark p-6 sm:p-8 mb-8 text-left relative overflow-hidden">
-          <div className="glow-line" />
-          <p className="text-[#94a3b8] text-sm sm:text-base leading-relaxed mb-4">
-            Every day you <strong className="text-white">waste 2–3 hours</strong> digging through free LUTs that look terrible, transitions that don't match, and sound effects from sketchy websites.
-          </p>
-          <ul className="space-y-3 text-sm sm:text-base text-[#94a3b8]">
-            <li className="flex items-start gap-3">
-              <span className="text-red-400 mt-0.5 font-bold">✕</span>
-              <span>Free assets are <strong className="text-white">scattered, low-quality</strong>, and unreliable</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-red-400 mt-0.5 font-bold">✕</span>
-              <span>Buying individually costs <strong className="text-white">₹50,000+</strong> for decent packs</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-red-400 mt-0.5 font-bold">✕</span>
-              <span>Your videos look <strong className="text-white">amateur</strong> compared to competitors</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-red-400 mt-0.5 font-bold">✕</span>
-              <span>Clients notice. <strong className="text-white">You lose projects.</strong> Revenue drops.</span>
-            </li>
+        <div className="text-left max-w-3xl mx-auto mb-14 px-2 sm:px-0">
+          <ul className="space-y-5 sm:space-y-6">
+            {struggles.map((item, i) => (
+              <li
+                key={i}
+                className="flex items-start sm:items-center gap-4 sm:gap-6 cursor-pointer group"
+                onClick={() => toggleItem(i)}
+              >
+                <div className={`w-7 h-7 sm:w-8 sm:h-8 mt-0.5 sm:mt-0 shrink-0 rounded-md border shadow-inner flex items-center justify-center transition-colors ${checkedItems[i]
+                  ? 'bg-[#00f2ff]/20 border-[#00f2ff]/50'
+                  : 'bg-[#1e293b] border-[#334155] group-hover:border-[#475569]'
+                  }`}>
+                  {checkedItems[i] && (
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#00f2ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  )}
+                </div>
+                <span className="text-[#e2e8f0] text-base sm:text-lg md:text-xl font-medium leading-snug group-hover:text-white transition-colors">
+                  {item}
+                </span>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Solve */}
-        <div className="card-accent p-6 sm:p-8 relative overflow-hidden">
+        {/* Solve / CTA Box */}
+        <div className="card-accent p-6 sm:p-10 relative overflow-hidden max-w-2xl mx-auto">
+          <StarField speed={0.5} starsSmall={80} starsMedium={30} starsLarge={10} opacity={0.35} />
           <div className="glow-line" />
-          <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">The Solution</p>
-          <h3 className="text-xl sm:text-2xl font-black text-white mb-4">
-            One Bundle. Every Asset You'll Ever Need.
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-8 leading-snug">
+            If You Ticked Even 2 Of These...<br className="hidden sm:block" /> Creator Vault Was Made For You
           </h3>
-          <p className="text-[#94a3b8] text-sm sm:text-base leading-relaxed mb-6">
-            The <strong className="text-white">Video Editor's Dream Bundle</strong> gives you <strong className="text-[#00f2ff]">70GB+ of curated, professional-grade assets</strong> across 28 categories — for less than the price of a single coffee ☕
-          </p>
           <a
             href={CTA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block btn-cta text-sm sm:text-base font-bold px-8 py-3.5 rounded-xl"
+            className="inline-block btn-cta text-base sm:text-lg font-bold px-10 py-4 rounded-xl"
           >
-            Solve It Now — Just ₹199 →
+            Get Creator Vault Now →
           </a>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: 'How long will this ₹199 price last?',
-    a: 'This is a limited-time flash deal. The regular price is ₹4,999 and we will be increasing the price back soon. We strongly recommend you grab it now before the price goes up.',
+    a: 'This is a limited-time flash deal. The regular price is ₹3,999 and we will be increasing the price back soon. We strongly recommend you grab it now before the price goes up.',
   },
   {
     q: 'Is the payment secure?',

@@ -1,3 +1,5 @@
+import StarField from './StarField';
+
 const steps = [
   {
     emoji: '🖱️',
@@ -35,9 +37,10 @@ export default function AccessSection() {
           {steps.map((s, i) => (
             <div key={i} className="relative">
               {i < steps.length - 1 && (
-                <div className="hidden sm:block absolute left-10 top-full w-0.5 h-5 bg-gradient-to-b from-[#00f2ff] to-[#7000ff] z-0" />
+                <div className="hidden sm:block absolute left-1/2 -translate-x-1/2 top-full w-0.5 h-4 sm:h-5 bg-gradient-to-b from-[#00f2ff] to-[#7000ff] z-0" />
               )}
               <div className="card-accent p-5 sm:p-6 relative overflow-hidden">
+                <StarField speed={0.4} starsSmall={60} starsMedium={20} starsLarge={8} opacity={0.3} />
                 <div className="glow-line" />
                 <div className="flex items-start gap-4 sm:gap-6">
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center shrink-0"

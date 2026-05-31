@@ -1,64 +1,78 @@
+import StarField from './StarField';
+
 const bonuses = [
   {
-    emoji: '🎬',
     title: '1500+ Motivational Reels',
-    desc: 'Ready-to-post viral motivational content for Instagram & YouTube Shorts',
     value: '₹1,999',
   },
   {
-    emoji: '📚',
     title: 'Premium E-Books Pack',
-    desc: 'Digital marketing, content creation & video editing reference guide',
     value: '₹1,499',
   },
   {
-    emoji: '🤖',
     title: 'ChatGPT Prompts Pack',
-    desc: '200+ AI prompts for video scripts, captions, thumbnails & content ideas',
     value: '₹999',
   },
   {
-    emoji: '📈',
     title: 'Instagram Growth Course',
-    desc: 'Proven strategies to grow your Instagram to 10K+ followers fast',
     value: '₹1,999',
   },
 ];
 
 export default function BonusSection() {
   return (
-    <section className="py-16 sm:py-20 px-4 relative z-10">
+    <section className="py-16 sm:py-10 px-4 relative z-10">
       <div className="section-divider mb-16" />
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10 sm:mb-14">
           <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Free Bonuses</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
             4 Exclusive Bonuses — Absolutely FREE
           </h2>
-          <p className="text-base sm:text-lg text-[#94a3b8]">
-            Total Bonus Value: <strong className="text-[#00f2ff]">₹6,499</strong>
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-          {bonuses.map((b, i) => (
-            <div key={i} className="card-accent rounded-2xl p-6 sm:p-7 relative overflow-hidden">
-              <div className="glow-line" />
-              <div className="absolute top-4 right-4 rounded-full px-3 py-0.5"
-                style={{ background: 'rgba(0, 242, 255, 0.12)', border: '1px solid rgba(0, 242, 255, 0.3)' }}>
-                <span className="text-xs font-bold text-[#00f2ff]">FREE!</span>
-              </div>
+        <div className="bg-[#0b101e] border border-white/5 rounded-3xl p-4 sm:p-10 shadow-[0_0_30px_-5px_rgba(34,211,238,0.6)] max-w-2xl mx-auto relative overflow-hidden">
+          {/* subtle glow inside */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-[#00f2ff]/5 blur-[80px] pointer-events-none" />
+          <StarField speed={0.5} starsSmall={80} starsMedium={30} starsLarge={10} opacity={0.35} />
 
-              <div className="text-3xl sm:text-4xl mb-4">{b.emoji}</div>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2 pr-20">{b.title}</h3>
-              <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">{b.desc}</p>
+          <div className="flex items-center gap-4 mb-8 sm:mb-10 relative z-10">
+            <span className="text-4xl sm:text-5xl">🎁</span>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white">
+              Exclusive Bonuses
+            </h3>
+          </div>
 
-              <div className="flex items-center gap-3 flex-wrap">
-                <span className="text-sm text-[#94a3b8]">Valued at <span className="line-through">{b.value}</span></span>
-                <span className="text-sm font-bold text-[#00f2ff]">FREE with Bundle</span>
+          <div className="flex flex-col relative z-10">
+            {bonuses.map((b, i) => (
+              <div key={i} className="flex items-center justify-between py-5 sm:py-6 border-b border-white/5 last:border-0">
+                <div className="flex items-center gap-4 sm:gap-5">
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#fbbf24] flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4 sm:w-4 sm:h-4 text-[#0b101e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={4}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-white font-bold text-base sm:text-lg lg:text-xl">
+                    {b.title}
+                  </span>
+                </div>
+                <div className="bg-[#fbbf24]/10 border border-[#fbbf24]/20 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg ml-4">
+                  <span className="text-[#fbbf24] font-bold text-xs sm:text-sm whitespace-nowrap">
+                    {b.value} Value
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
+            <p className="text-[#94a3b8] text-base sm:text-lg font-medium">
+              Total Value: <span className="line-through decoration-white/30">₹6,496</span>
+            </p>
+            <p className="text-[#00f2ff] text-2xl sm:text-3xl md:text-4xl font-black tracking-tight">
+              FREE Today!
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
-const CTA_URL = 'https://cosmofeed.com/bp/683b06f5a8498c001f839e1d';
+import StarField from './StarField';
+
+const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 const floatingSnippets = [
   { label: '500+ LUTs', emoji: '🎨' },
@@ -26,7 +28,7 @@ export default function HeroSection() {
         {/* Top badge — SOLID background */}
         <div className="inline-flex items-center gap-2 bg-[#0f1629] border border-[#00f2ff]/30 rounded-full px-4 py-1.5 mb-6">
           <span className="w-2 h-2 rounded-full bg-[#00f2ff] pulse-icon" />
-          <span className="text-xs sm:text-sm font-medium text-[#cbd5e1]">Limited Time Offer — 28 Categories Inside</span>
+          <span className="text-xs sm:text-sm font-medium text-[#cbd5e1]">Limited Time Offer</span>
         </div>
 
         {/* Dream Outcome Headline */}
@@ -83,12 +85,6 @@ export default function HeroSection() {
           >
             Get Everything for Just ₹199 →
           </a>
-          {/* FUD reducers */}
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 mt-4 text-xs sm:text-sm text-[#94a3b8]">
-            <span>🔒 Secure Payment</span>
-            <span>📥 Instant Download</span>
-            <span>💯 100% Satisfaction</span>
-          </div>
         </div>
 
         {/* Hero Visual — Dashboard mockup with floating snippets */}
@@ -97,9 +93,8 @@ export default function HeroSection() {
           {floatingSnippets.map((s, i) => (
             <div
               key={`desk-${i}`}
-              className={`absolute ${desktopPositions[i]} bg-[#0f1629] border border-white/15 rounded-xl px-3 py-2 z-20 hidden sm:flex items-center gap-2 ${
-                i % 2 === 0 ? 'animate-float' : 'animate-float-delay'
-              }`}
+              className={`absolute ${desktopPositions[i]} bg-[#0f1629] border border-white/15 rounded-xl px-3 py-2 z-20 hidden sm:flex items-center gap-2 ${i % 2 === 0 ? 'animate-float' : 'animate-float-delay'
+                }`}
             >
               <span className="text-lg">{s.emoji}</span>
               <span className="text-xs font-bold text-white whitespace-nowrap">{s.label}</span>
@@ -108,13 +103,18 @@ export default function HeroSection() {
 
           {/* Dashboard container */}
           <div className="bg-[#0a0f1a] border border-white/10 rounded-2xl sm:rounded-3xl p-2 sm:p-3 relative overflow-hidden">
+            <StarField speed={0.5} starsSmall={80} starsMedium={30} starsLarge={10} opacity={0.3} />
             <div className="glow-line" />
             <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden relative bg-[#0a0f1a]">
-              <img
-                src="https://images.pexels.com/photos/29505140/pexels-photo-29505140.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                alt="Professional video editing dashboard"
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="w-full h-full object-cover opacity-80"
-                loading="eager"
+                src="https://videoeditorstudio.com/cdn/shop/videos/c/vp/8380e9171de14f19a62ffd3c4af126e7/8380e9171de14f19a62ffd3c4af126e7.SD-480p-1.5Mbps-31690304.mp4?v=0"
+                aria-label="Professional video editing dashboard"
+                title="Professional video editing dashboard"
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/60 via-transparent to-transparent" />
@@ -146,6 +146,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

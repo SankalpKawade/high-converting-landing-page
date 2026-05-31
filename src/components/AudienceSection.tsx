@@ -1,10 +1,12 @@
 const audiences = [
-  { emoji: '🎥', title: 'Video Editors', desc: 'Deliver pro-quality work faster & charge premium rates' },
-  { emoji: '📱', title: 'Content Creators', desc: 'Make viral reels, shorts & YouTube videos effortlessly' },
-  { emoji: '💒', title: 'Wedding & Event Videographers', desc: 'Stunning cinematic wedding films with elegant templates' },
-  { emoji: '🎓', title: 'Complete Beginners', desc: 'Learn editing from scratch with the included A-Z course' },
-  { emoji: '💼', title: 'Social Media Marketing', desc: 'Professional business videos with motion graphics' },
-  { emoji: '🚀', title: 'Graphic Design', desc: 'Scale your designs with ready-to-use asset library' },
+  'Video Editors',
+  'Videographers',
+  'Content Creators',
+  'Film Students',
+  'Marketing Agencies',
+  'Freelancers',
+  'Businesses',
+  'Event Organizers',
 ];
 
 export default function AudienceSection() {
@@ -12,25 +14,30 @@ export default function AudienceSection() {
     <section className="py-16 sm:py-20 px-4 relative z-10">
       <div className="section-divider mb-16" />
       <div className="max-w-5xl mx-auto">
+        {/* Heading */}
         <div className="text-center mb-10 sm:mb-14">
-          <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Who Is This For</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
-            Designed Especially For
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+            Especially designed for:
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {audiences.map((a, i) => (
+        {/* 2-Column Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          {audiences.map((title, i) => (
             <div
               key={i}
-              className="tilt-card card-dark p-6 sm:p-8 text-center relative overflow-hidden cursor-default"
+              className="bg-gradient-to-r from-[#d10917] to-[#c6a1e6] rounded-xl py-3.5 sm:py-4 px-6 text-center text-white font-extrabold tracking-wider text-sm sm:text-base md:text-lg shadow-lg hover:scale-[1.02] hover:brightness-110 transition-all duration-300 uppercase cursor-default"
             >
-              <div className="glow-line" />
-              <div className="text-4xl sm:text-5xl mb-4">{a.emoji}</div>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{a.title}</h3>
-              <p className="text-sm text-[#94a3b8] leading-relaxed">{a.desc}</p>
+              {title}
             </div>
           ))}
+        </div>
+
+        {/* Bottom Centered Row */}
+        <div className="mt-4 max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-[#d10917] to-[#c6a1e6] rounded-xl py-3.5 sm:py-4 px-6 text-center text-white font-extrabold tracking-wider text-sm sm:text-base md:text-lg shadow-lg hover:scale-[1.02] hover:brightness-110 transition-all duration-300 uppercase cursor-default">
+            And everyone who's interested
+          </div>
         </div>
       </div>
     </section>

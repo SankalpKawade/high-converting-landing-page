@@ -4,17 +4,24 @@ export default function Footer() {
       <div className="max-w-4xl mx-auto text-center">
         {/* Logo */}
         <div className="flex items-center justify-center gap-2 mb-4">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00f2ff] to-[#7000ff] flex items-center justify-center">
-            <span className="text-white font-black text-sm">P</span>
-          </div>
-          <span className="text-base font-bold text-white">ProDigitalFiles</span>
+          <img
+            src="/images/logo2-removebg.webp"
+            alt="ProDigitalFiles Logo"
+            className="w-8 h-8 object-contain drop-shadow-[0_0_4px_rgba(255,255,255,0.25)]"
+          />
+          <span className="text-lg md:text-xl font-bold tracking-tight">
+            <span className="text-white">Pro</span>
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              DigitalFiles
+            </span>
+          </span>
         </div>
 
         {/* Links */}
         <div className="flex items-center justify-center gap-4 sm:gap-6 mb-6">
-          <a href="#" className="text-sm text-[#94a3b8] hover:text-[#00f2ff] transition-colors">Privacy Policy</a>
-          <a href="#" className="text-sm text-[#94a3b8] hover:text-[#00f2ff] transition-colors">Terms & Conditions</a>
-          <a href="#" className="text-sm text-[#94a3b8] hover:text-[#00f2ff] transition-colors">Contact Us</a>
+          <a href="https://prodigitalfiles.com/privacy-policy/" className="text-sm text-[#94a3b8] hover:text-[#00f2ff] transition-colors">Privacy Policy</a>
+          <a href="https://prodigitalfiles.com/terms-conditions/" className="text-sm text-[#94a3b8] hover:text-[#00f2ff] transition-colors">Terms & Conditions</a>
+          <a href="mailto:contact.prodigitalfiles@gmail.com" className="text-sm text-[#94a3b8] hover:text-[#00f2ff] transition-colors">Contact Us</a>
         </div>
 
         {/* Disclaimer */}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const CTA_URL = 'https://cosmofeed.com/bp/683b06f5a8498c001f839e1d';
+const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 export default function Header() {
   const [time, setTime] = useState({ hours: 2, minutes: 43, seconds: 58 });
@@ -42,12 +42,19 @@ export default function Header() {
       </div>
 
       {/* Nav */}
-      <div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-[#030712] border-b border-white/10">
+      <div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-[#091024]/90 backdrop-blur-md border-b border-white/10">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00f2ff] to-[#7000ff] flex items-center justify-center">
-            <span className="text-white font-black text-sm">P</span>
-          </div>
-          <span className="text-sm font-bold text-white hidden sm:block">ProDigitalFiles</span>
+          <img
+            src="/images/logo2-removebg.webp"
+            alt="ProDigitalFiles Logo"
+            className="w-8 h-8 object-contain drop-shadow-[0_0_4px_rgba(255,255,255,0.25)]"
+          />
+          <span className="text-base sm:text-lg md:text-xl font-bold tracking-tight">
+            <span className="text-white">Pro</span>
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              DigitalFiles
+            </span>
+          </span>
         </div>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -61,12 +68,12 @@ export default function Header() {
           href={CTA_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-2 rounded-full transition-colors"
-          style={{ background: 'linear-gradient(135deg, #ff6b00, #ff9500)' }}
+          className="text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-2 rounded-full transition-all transform hover:-translate-y-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 shadow-[0_0_30px_-5px_rgba(34,211,238,0.6)]"
         >
           Get Bundle — ₹199
         </a>
+
       </div>
-    </header>
+    </header >
   );
 }

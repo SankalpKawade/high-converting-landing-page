@@ -1,8 +1,10 @@
-const CTA_URL = 'https://cosmofeed.com/bp/683b06f5a8498c001f839e1d';
+import StarField from './StarField';
+
+const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 const features = [
-  { icon: '🎨', title: 'Color Grading LUTs', desc: '500+ cinematic LUTs for every mood and style — warm, cold, vintage, modern', accent: '#00f2ff' },
-  { icon: '✨', title: 'Video Transitions', desc: '250+ smooth, glitch, zoom, and cinematic transitions for any editor', accent: '#7000ff' },
+  { icon: '🎨', title: 'Color Grading LUTs', desc: '200+ cinematic LUTs for every mood and style — warm, cold, vintage, modern', accent: '#00f2ff' },
+  { icon: '✨', title: 'Video Transitions', desc: '800+ seamless, glitch, zoom, and cinematic transitions for any editor', accent: '#7000ff' },
   { icon: '🎬', title: 'Premiere Pro Presets', desc: 'One-click color, motion & effect presets that save hours of work', accent: '#00f2ff' },
   { icon: '🔊', title: 'Sound Effects (SFX)', desc: '1000+ royalty-free whooshes, hits, ambience & cinematic sound FX', accent: '#7000ff' },
   { icon: '🎵', title: 'Background Music', desc: 'Copyright-free tracks — cinematic, upbeat, emotional & more genres', accent: '#00f2ff' },
@@ -35,7 +37,7 @@ export default function FeatureGrid() {
   return (
     <section className="py-16 sm:py-20 px-4 relative z-10" id="features">
       <div className="section-divider mb-16" />
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-10 sm:mb-14">
           <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">What's Included</p>
@@ -48,16 +50,17 @@ export default function FeatureGrid() {
         </div>
 
         {/* Grid — Tilt Cards with solid opaque backgrounds */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-0.5 lg:grid-cols-4 gap-4">
           {features.map((f, i) => (
             <div
               key={i}
-              className="tilt-card rounded-3xl p-6 sm:p-7 relative overflow-hidden cursor-default"
+              className="tilt-card rounded-3xl p-4 sm:p-5 relative overflow-hidden cursor-default"
               style={{
                 background: 'linear-gradient(135deg, #0f1830 0%, #0a1226 100%)',
                 border: '1px solid rgba(56, 130, 200, 0.18)',
               }}
             >
+              <StarField speed={0.3} starsSmall={40} starsMedium={12} starsLarge={5} opacity={0.25} />
               <div className="glow-line" />
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"

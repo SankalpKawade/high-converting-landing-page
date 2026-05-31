@@ -1,4 +1,6 @@
-const CTA_URL = 'https://cosmofeed.com/bp/683b06f5a8498c001f839e1d';
+import StarField from './StarField';
+
+const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 export default function PricingSection() {
   return (
@@ -13,6 +15,7 @@ export default function PricingSection() {
         </div>
 
         <div className="pricing-box rounded-3xl p-6 sm:p-8 md:p-10 text-center relative">
+          <StarField speed={0.5} starsSmall={100} starsMedium={35} starsLarge={12} opacity={0.3} />
           <div className="glow-line" />
 
           <h3 className="text-xl sm:text-2xl font-black text-white mb-6">
@@ -22,7 +25,7 @@ export default function PricingSection() {
           {/* Value stack */}
           <div className="space-y-2.5 mb-6">
             {[
-              ['70GB+ Video Editing Assets (28 Categories)', '₹24,999'],
+              ['70GB+ Video Editing Assets (28 Categories)', '₹13,999'],
               ['1500+ Motivational Reels', '₹1,999'],
               ['Premium E-Books Pack', '₹1,499'],
               ['ChatGPT Prompts Pack', '₹999'],
@@ -39,12 +42,12 @@ export default function PricingSection() {
 
           <div className="mb-2">
             <p className="text-sm text-[#94a3b8]">Total Market Value</p>
-            <p className="text-2xl sm:text-3xl font-black text-white line-through opacity-50">₹31,495</p>
+            <p className="text-2xl sm:text-3xl font-black text-white line-through opacity-50">₹19,788</p>
           </div>
 
           <div className="mb-4">
             <p className="text-sm text-[#94a3b8]">Regular Price</p>
-            <p className="text-xl font-bold text-white line-through opacity-50">₹4,999</p>
+            <p className="text-xl font-bold text-white line-through opacity-50">₹3,999</p>
           </div>
 
           <div className="mb-6 sm:mb-8">
@@ -73,6 +76,6 @@ export default function PricingSection() {
           </p>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

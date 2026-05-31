@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import PASSection from './components/PASSection';
@@ -15,6 +16,28 @@ import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
 
 export default function App() {
+  useEffect(() => {
+    const handleCTAClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      // Find closest anchor tag
+      const anchor = target.closest('a');
+      
+      // Check if it's a link to the checkout page
+      if (anchor && anchor.href && anchor.href.includes('superprofile.bio')) {
+        // Trigger Facebook Pixel InitiateCheckout event
+        if (typeof window !== 'undefined' && (window as any).fbq) {
+          (window as any).fbq('track', 'InitiateCheckout');
+        }
+      }
+    };
+
+    // Use capturing phase to ensure we catch the event before any stopPropagation
+    document.addEventListener('click', handleCTAClick, true);
+    
+    return () => {
+      document.removeEventListener('click', handleCTAClick, true);
+    };
+  }, []);
   return (
     <div className="min-h-screen bg-[#030712] text-white grid-bg">
       <Header />
@@ -22,17 +45,17 @@ export default function App() {
         {/* ATF: Hero — Dream Outcome + Social Proof + CTA */}
         <HeroSection />
         {/* Section 2: Problem-Agitate-Solve */}
-        <PASSection />
-        {/* Section 3: Social Proof — Wall of Love */}
-        <ReviewsSection />
-        {/* Section 4: Value Proposition Stack — Feature+Benefit combos */}
-        <ValuePropStack />
+        {/* <PASSection /> */}
         {/* Feature Bento Grid — All 28 Categories */}
         <FeatureGrid />
+        {/* Section 4: Value Proposition Stack — Feature+Benefit combos */}
+        {/* <ValuePropStack /> */}
         {/* Before & After Transformation */}
         <TransformationSection />
         {/* Audience Section */}
         <AudienceSection />
+        {/* Section 3: Social Proof — Wall of Love */}
+        <ReviewsSection />
         {/* Section 5: How It Works — 3 Steps */}
         <AccessSection />
         {/* Bonus Section */}

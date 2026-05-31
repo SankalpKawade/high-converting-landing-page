@@ -22,27 +22,20 @@ export default function ReviewsSection() {
         {/* Review Image Placeholders — Wall of Love (NO carousel) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="card-dark rounded-2xl overflow-hidden relative">
+            <div key={i} className="card-dark rounded-2xl overflow-hidden relative group hover:scale-[1.02] hover:shadow-[0_10px_30px_rgba(0,242,255,0.1)] transition-all duration-300">
               <div className="glow-line" />
-              {/* Placeholder for review images (.webp) */}
-              <div className="aspect-[4/5] flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #0a1226 0%, #0f1830 100%)' }}>
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 rounded-full mx-auto mb-3 flex items-center justify-center"
-                    style={{ background: 'linear-gradient(135deg, rgba(0,242,255,0.15), rgba(112,0,255,0.15))', border: '1px solid rgba(0,242,255,0.3)' }}>
-                    <span className="text-2xl">💬</span>
-                  </div>
-                  <p className="text-sm text-[#cbd5e1] font-semibold">Review {i}</p>
-                  <p className="text-[11px] text-[#64748b] mt-1 leading-relaxed">
-                    Replace this with a real .webp image:<br />
-                    <code className="text-[#00f2ff]">&lt;img src="/reviews/review-{i}.webp" /&gt;</code>
-                  </p>
-                </div>
-              </div>
+              <img
+                src={`/images/v${i}.webp`}
+                alt={`Creator Review ${i}`}
+                className="w-full h-auto block"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>
 
         {/* Additional text testimonials */}
+        {/*
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
           {[
             { name: 'Rahul S.', role: 'Wedding Videographer', text: 'This bundle saved me ₹40,000+ on assets. The LUTs alone are worth 10x the price. My wedding films look cinematic now!', stars: 5 },
@@ -67,6 +60,7 @@ export default function ReviewsSection() {
             </div>
           ))}
         </div>
+        */}
       </div>
     </section>
   );
