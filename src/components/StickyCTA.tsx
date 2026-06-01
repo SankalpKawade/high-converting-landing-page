@@ -23,10 +23,7 @@ export default function StickyCTA() {
     >
       <div className="max-w-lg mx-auto flex items-center gap-3">
         <div className="flex-1 min-w-0">
-          <p className="text-xs sm:text-sm font-bold text-white truncate">Complete Video Editing Bundle</p>
-          <p className="text-xs" style={{ color: "#00D4FF" }}>
-            70GB+ Assets • Instant Download
-          </p>
+          <p className="text-xs sm:text-sm font-bold text-white truncate">Complete Bundle At</p>
         </div>
         <div className="text-center">
           <span
@@ -35,7 +32,7 @@ export default function StickyCTA() {
           >
             ₹3,999
           </span>
-          <p className="font-black text-xl" style={{ color: "#FF6B00" }}>
+          <p className="font-black text-xl" style={{ color: "#385ffbff" }}>
             ₹199
           </p>
         </div>
@@ -45,7 +42,7 @@ export default function StickyCTA() {
           rel="noopener noreferrer"
           className="btn-cta text-sm sm:text-base font-bold px-5 sm:px-8 py-3 rounded-xl whitespace-nowrap text-center"
         >
-          Get It Now →
+          Get It Now
         </a>
       </div>
     </div >

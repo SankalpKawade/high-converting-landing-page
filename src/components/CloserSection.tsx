@@ -52,15 +52,16 @@ export default function CloserSection() {
           rel="noopener noreferrer"
           className="inline-block btn-cta text-base sm:text-lg font-black px-10 sm:px-14 py-4 sm:py-5 rounded-2xl tracking-wide uppercase"
         >
-          Get Everything for ₹199 →
+          Get Everything for ₹199
         </a>
-
+        {/*
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 mt-4 text-xs text-[#94a3b8]">
           <span>🔒 Secure Payment</span>
           <span>📥 Instant Download</span>
           <span>💯 100% Satisfaction</span>
           <span>🎁 4 Free Bonuses</span>
         </div>
+         */}
       </div>
     </section >
   );

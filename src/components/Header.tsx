@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 export default function Header() {
-  const [time, setTime] = useState({ hours: 2, minutes: 43, seconds: 58 });
+  const [time, setTime] = useState({ hours: 5, minutes: 23, seconds: 11 });
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -19,22 +20,30 @@ export default function Header() {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const pad = (n: number) => n.toString().padStart(2, '0');
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${scrolled ? '-translate-y-[32px]' : 'translate-y-0'}`}>
       {/* Countdown Timer */}
       <div
-        className="w-full py-2 px-4 text-center"
+        className="w-full h-[32px] flex items-center justify-center px-4 text-center"
         style={{
-          background: 'linear-gradient(90deg, #7000ff, #00f2ff, #7000ff)',
+          background: 'linear-gradient(90deg, #00effbb4, #379effff, #5689ffff)',
           backgroundSize: '200% 100%',
-          animation: 'shimmer 3s linear infinite',
+          // animation: 'shimmer 3s linear infinite',
         }}
       >
-        <p className="text-xs sm:text-sm font-bold text-[#030712] tracking-wide">
-          ⚡ FLASH DEAL: FREE Bonus (worth ₹6499) expires in →{' '}
-          <span className="font-mono text-sm sm:text-base inline-block min-w-[72px]">
+        <p className="text-xs font-bold text-[#ebf7fc] tracking-wide">
+          ⚡ FLASH DEAL: FREE ₹6499 Bonus expires in →{' '}
+          <span className="font-mono inline-block min-w-[65px]">
             {pad(time.hours)}:{pad(time.minutes)}:{pad(time.seconds)}
           </span>{' '}
           ⚡
@@ -56,7 +65,7 @@ export default function Header() {
             </span>
           </span>
         </div>
-
+        {/*
         <nav className="hidden md:flex items-center gap-6">
           <a href="#features" className="text-sm text-[#cbd5e1] hover:text-[#00f2ff] transition-colors">Features</a>
           <a href="#reviews" className="text-sm text-[#cbd5e1] hover:text-[#00f2ff] transition-colors">Reviews</a>
@@ -72,7 +81,7 @@ export default function Header() {
         >
           Get Bundle — ₹199
         </a>
-
+        */}
       </div>
     </header >
   );

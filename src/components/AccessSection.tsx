@@ -37,7 +37,7 @@ export default function AccessSection() {
           {steps.map((s, i) => (
             <div key={i} className="relative">
               {i < steps.length - 1 && (
-                <div className="hidden sm:block absolute left-1/2 -translate-x-1/2 top-full w-0.5 h-4 sm:h-5 bg-gradient-to-b from-[#00f2ff] to-[#7000ff] z-0" />
+                <div className="absolute left-1/2 -translate-x-1/2 top-full w-0.5 h-4 sm:h-5 bg-gradient-to-b from-[#00f2ff] to-[#7000ff] z-0" />
               )}
               <div className="card-accent p-5 sm:p-6 relative overflow-hidden">
                 <StarField speed={0.4} starsSmall={60} starsMedium={20} starsLarge={8} opacity={0.3} />

@@ -62,7 +62,7 @@ export default function PricingSection() {
             rel="noopener noreferrer"
             className="block w-full btn-cta text-base sm:text-lg font-black py-4 sm:py-5 rounded-2xl tracking-wide uppercase text-center"
           >
-            Get Everything for ₹199 →
+            Get Everything for ₹199
           </a>
 
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 mt-4 text-xs text-[#94a3b8]">

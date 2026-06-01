@@ -3,26 +3,25 @@ import StarField from './StarField';
 const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 const floatingSnippets = [
-  { label: '500+ LUTs', emoji: '🎨' },
-  { label: '250+ Transitions', emoji: '✨' },
+  { label: '200+ LUTs', emoji: '🎨' },
+  { label: '800+ Transitions', emoji: '✨' },
   { label: '1000+ Sound FX', emoji: '🔊' },
   { label: '70GB+ Assets', emoji: '📦' },
 ];
 
-// Desktop positions for absolute floating cards
-const desktopPositions = [
-  '-left-8 top-12',
-  '-right-8 top-8',
-  '-left-6 bottom-16',
-  '-right-6 bottom-12',
+const snippetPositions = [
+  '-left-2 sm:-left-8 -top-4 sm:top-12',
+  '-right-2 sm:-right-8 top-6 sm:top-8',
+  '-left-2 sm:-left-6 -bottom-4 sm:-bottom-4 sm:bottom-16', // wait, sm:bottom-16
+  '-right-2 sm:-right-6 bottom-4 sm:bottom-12',
 ];
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-20 px-4 overflow-hidden grid-bg" id="hero">
+    <section className="relative pt-36 sm:pt-40 pb-12 sm:pb-20 px-4 overflow-hidden grid-bg" id="hero">
       {/* Background glow orbs */}
-      <div className="absolute top-20 left-1/4 w-72 h-72 bg-[#00f2ff] rounded-full opacity-[0.06] blur-[100px]" />
-      <div className="absolute bottom-20 right-1/4 w-72 h-72 bg-[#7000ff] rounded-full opacity-[0.08] blur-[100px]" />
+      <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 bg-[#00f2ff] rounded-full opacity-[0.06] blur-[100px]" />
+      <div className="hidden sm:block absolute bottom-20 right-1/4 w-72 h-72 bg-[#7000ff] rounded-full opacity-[0.08] blur-[100px]" />
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
         {/* Top badge — SOLID background */}
@@ -42,8 +41,8 @@ export default function HeroSection() {
         </h1>
 
         {/* Sub-headline — Effort & Sacrifice */}
-        <p className="text-base sm:text-lg md:text-xl text-[#94a3b8] max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
-          <strong className="text-white">Without</strong> spending lakhs on courses, assets, or software.{' '}
+        <p className="text-sm sm:text-base md:text-xl text-[#94a3b8] max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+          <strong className="text-white">Without</strong> spending thousands on courses, assets, or software.{' '}
           <strong className="text-white">Without</strong> hours of searching for free resources.{' '}
           Get <strong className="text-[#00f2ff]">70GB+ of pro-grade editing assets</strong> — instantly.
         </p>
@@ -55,49 +54,46 @@ export default function HeroSection() {
             <span className="text-sm text-[#cbd5e1] font-medium">9.4/10 Rating</span>
           </div>
           <div className="hidden sm:block w-px h-5 bg-white/20" />
-          <div className="flex items-center gap-2.5">
-            {/* Creator avatar stack — 3 overlapping people icons */}
-            <div className="flex -space-x-2">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white border-2 border-[#050a18]"
-                style={{ background: 'linear-gradient(135deg, #00f2ff, #7000ff)' }}>
-                A
-              </div>
-              <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white border-2 border-[#050a18]"
-                style={{ background: 'linear-gradient(135deg, #ff6b00, #ff9500)' }}>
-                V
-              </div>
-              <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white border-2 border-[#050a18]"
-                style={{ background: 'linear-gradient(135deg, #7000ff, #00f2ff)' }}>
-                P
-              </div>
+          <div className="flex items-center gap-0.5">
+            <div className="flex items-center">
+              <img
+                src="/images/creators.webp"
+                alt="Trusted Creators"
+                className="h-9 sm:h-16 w-auto object-contain"
+              />
             </div>
-            <span className="text-sm text-[#cbd5e1] font-medium">Trusted by 5,000+ Creators</span>
+            <span className="text-sm text-[#cbd5e1] font-medium">Trusted by 2,500+ Creators</span>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="mb-8 sm:mb-10">
+        <div className="mb-12 sm:mb-16">
           <a
             href={CTA_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-4 sm:py-5 rounded-2xl tracking-wide uppercase"
           >
-            Get Everything for Just ₹199 →
+            Get Everything for Just  → ₹199
           </a>
         </div>
 
         {/* Hero Visual — Dashboard mockup with floating snippets */}
-        <div className="relative max-w-3xl mx-auto">
-          {/* Floating 3D Snippets — DESKTOP (absolute positioned, floating) */}
+        <div className="relative max-w-3xl mx-auto mt-8 sm:mt-12">
+          {/* Floating 3D Snippets — Responsive (absolute positioned, floating) */}
           {floatingSnippets.map((s, i) => (
             <div
-              key={`desk-${i}`}
-              className={`absolute ${desktopPositions[i]} bg-[#0f1629] border border-white/15 rounded-xl px-3 py-2 z-20 hidden sm:flex items-center gap-2 ${i % 2 === 0 ? 'animate-float' : 'animate-float-delay'
+              key={`float-${i}`}
+              className={`absolute ${[
+                '-left-2 sm:-left-8 -top-5 sm:top-12',
+                '-right-2 sm:-right-8 top-10 sm:top-8',
+                '-left-2 sm:-left-6 -bottom-5 sm:-bottom-8 sm:bottom-16',
+                '-right-2 sm:-right-6 bottom-10 sm:bottom-12'
+              ][i]} bg-[#0f1629] border border-white/15 rounded-xl px-2 sm:px-3 py-1.5 sm:py-2 z-20 flex items-center gap-1.5 sm:gap-2 shadow-2xl ${i % 2 === 0 ? 'animate-float' : 'animate-float-delay'
                 }`}
             >
-              <span className="text-lg">{s.emoji}</span>
-              <span className="text-xs font-bold text-white whitespace-nowrap">{s.label}</span>
+              <span className="text-sm sm:text-lg">{s.emoji}</span>
+              <span className="text-[10px] sm:text-xs font-bold text-white whitespace-nowrap">{s.label}</span>
             </div>
           ))}
 
@@ -118,31 +114,18 @@ export default function HeroSection() {
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/60 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 hidden sm:flex items-center gap-3">
-                <div className="bg-[#0f1629] border border-white/15 rounded-lg px-3 py-1.5">
-                  <span className="text-xs font-bold text-[#00f2ff]">28 Categories</span>
+              <div className="absolute bottom-2 sm:bottom-4 left-2 right-2 sm:left-4 sm:right-4 flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
+                <div className="bg-[#0f1629]/80 backdrop-blur-sm border border-white/15 rounded-lg px-2 sm:px-3 py-1 sm:py-1.5">
+                  <span className="text-[9px] sm:text-xs font-bold text-[#00f2ff]">28 Categories</span>
                 </div>
-                <div className="bg-[#0f1629] border border-white/15 rounded-lg px-3 py-1.5">
-                  <span className="text-xs font-bold text-[#00f2ff]">70GB+</span>
+                <div className="bg-[#0f1629]/80 backdrop-blur-sm border border-white/15 rounded-lg px-2 sm:px-3 py-1 sm:py-1.5 hidden sm:block">
+                  <span className="text-[9px] sm:text-xs font-bold text-[#00f2ff]">70GB+</span>
                 </div>
-                <div className="bg-[#0f1629] border border-white/15 rounded-lg px-3 py-1.5">
-                  <span className="text-xs font-bold text-[#00f2ff]">Instant Access</span>
+                <div className="bg-[#0f1629]/80 backdrop-blur-sm border border-white/15 rounded-lg px-2 sm:px-3 py-1 sm:py-1.5">
+                  <span className="text-[9px] sm:text-xs font-bold text-[#00f2ff]">Instant Access</span>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Floating Snippets — MOBILE (grid below dashboard, always visible) */}
-          <div className="grid grid-cols-2 gap-2.5 mt-4 sm:hidden">
-            {floatingSnippets.map((s, i) => (
-              <div
-                key={`mob-${i}`}
-                className="bg-[#0f1629] border border-[#00f2ff]/20 rounded-xl px-3 py-2.5 flex items-center gap-2.5"
-              >
-                <span className="text-lg">{s.emoji}</span>
-                <span className="text-xs font-bold text-white">{s.label}</span>
-              </div>
-            ))}
           </div>
         </div>
       </div>

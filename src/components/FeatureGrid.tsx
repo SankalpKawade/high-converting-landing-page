@@ -3,34 +3,42 @@ import StarField from './StarField';
 const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 const features = [
-  { icon: '🎨', title: 'Color Grading LUTs', desc: '200+ cinematic LUTs for every mood and style — warm, cold, vintage, modern', accent: '#00f2ff' },
-  { icon: '✨', title: 'Video Transitions', desc: '800+ seamless, glitch, zoom, and cinematic transitions for any editor', accent: '#7000ff' },
-  { icon: '🎬', title: 'Premiere Pro Presets', desc: 'One-click color, motion & effect presets that save hours of work', accent: '#00f2ff' },
-  { icon: '🔊', title: 'Sound Effects (SFX)', desc: '1000+ royalty-free whooshes, hits, ambience & cinematic sound FX', accent: '#7000ff' },
-  { icon: '🎵', title: 'Background Music', desc: 'Copyright-free tracks — cinematic, upbeat, emotional & more genres', accent: '#00f2ff' },
-  { icon: '💫', title: 'Overlays & Light Leaks', desc: 'Film burns, bokeh, light leaks, dust & grain overlays in 4K quality', accent: '#7000ff' },
-  { icon: '📝', title: 'Title Templates', desc: 'Modern animated lower thirds, title cards & text animation templates', accent: '#00f2ff' },
-  { icon: '🎭', title: 'Motion Graphics', desc: 'Animated elements, subscribe buttons, social media icons & callouts', accent: '#7000ff' },
-  { icon: '📱', title: 'Social Media Templates', desc: 'Instagram Reels, YouTube Shorts & TikTok ready-to-use templates', accent: '#00f2ff' },
-  { icon: '🎞️', title: 'Cinematic Bars & Frames', desc: 'Letterbox overlays, film frames & vintage borders for cinematic look', accent: '#7000ff' },
-  { icon: '💡', title: 'After Effects Templates', desc: 'Intros, outros, logo reveals & motion graphic project files', accent: '#00f2ff' },
-  { icon: '🖼️', title: 'Thumbnail Templates', desc: 'Click-worthy YouTube & social media thumbnail PSD templates', accent: '#7000ff' },
-  { icon: '🎙️', title: 'Podcast Templates', desc: 'Audio visualizer templates & podcast cover art designs', accent: '#00f2ff' },
-  { icon: '📊', title: 'Infographic Elements', desc: 'Animated charts, graphs & data visualization templates', accent: '#7000ff' },
-  { icon: '🌈', title: 'Green Screen VFX', desc: 'Pre-keyed VFX elements — fire, smoke, explosions, particles', accent: '#00f2ff' },
-  { icon: '🔤', title: 'Font Collection', desc: '200+ premium fonts for thumbnails, titles & design projects', accent: '#7000ff' },
-  { icon: '📸', title: 'Stock Footage', desc: 'Royalty-free 4K stock video clips for B-roll and intros', accent: '#00f2ff' },
-  { icon: '🎯', title: 'DaVinci Resolve Presets', desc: 'Color grading nodes, transitions & effects for DaVinci users', accent: '#7000ff' },
-  { icon: '✏️', title: 'Graphic Design Templates', desc: 'Canva, Photoshop & Illustrator ready design templates', accent: '#00f2ff' },
-  { icon: '🏷️', title: 'Logo Templates', desc: 'Editable logo designs for personal branding & client work', accent: '#7000ff' },
-  { icon: '🌟', title: 'Particle Effects', desc: 'Animated particle systems — sparkles, confetti, magic dust', accent: '#00f2ff' },
-  { icon: '🎥', title: 'Drone Footage LUTs', desc: 'Specialized LUTs for DJI, GoPro & aerial videography', accent: '#7000ff' },
-  { icon: '💒', title: 'Wedding Templates', desc: 'Elegant save-the-date, invitation & wedding film templates', accent: '#00f2ff' },
-  { icon: '📋', title: 'Project Files', desc: 'Complete editable project files to learn from professionals', accent: '#7000ff' },
-  { icon: '🎓', title: 'Video Editing Course (A-Z)', desc: 'Complete beginner-to-pro video editing course included FREE', accent: '#00f2ff' },
-  { icon: '🖥️', title: 'Screen Recording Pack', desc: 'Cursor effects, click animations & screen recording overlays', accent: '#7000ff' },
-  { icon: '📐', title: 'Aspect Ratio Templates', desc: '16:9, 9:16, 1:1 — pre-built templates for every platform', accent: '#00f2ff' },
-  { icon: '🚀', title: 'Speed Ramp Presets', desc: 'Smooth speed ramp presets for dynamic action sequences', accent: '#7000ff' },
+  { icon: "🎬", name: "800+ Transitions Pack", desc: "Cinematic cuts, glitch, smooth, whip-pan & more", tag: "MOST POPULAR", tagColor: "#00D4FF", count: "800+", color: "#00D4FF" },
+  { icon: "⚡", name: "2000+ FX Presets", desc: "One-click effects for Premiere Pro & After Effects", tag: "FX", tagColor: "#A855F7", count: "2000+", color: "#A855F7" },
+  { icon: "🎨", name: "200+ Cinematic LUTs", desc: "Hollywood-grade color grading presets", tag: "COLOR", tagColor: "#FF6B00", count: "200+", color: "#FF6B00" },
+  { icon: "🔤", name: "10,000+ Fonts Collection", desc: "Premium typography for titles & lower thirds", tag: "MEGA PACK", tagColor: "#00D4FF", count: "10K+", color: "#00D4FF" },
+  { icon: "🎵", name: "1000+ Free Music", desc: "No copyright strikes. Use freely on YouTube & Reels", tag: "NO COPYRIGHT", tagColor: "#22C55E", count: "1000+", color: "#22C55E" },
+  { icon: "🔊", name: "3000+ Sound Effects", desc: "Whoosh, impacts, UI sounds & cinematic SFX", tag: "SFX", tagColor: "#FF6B00", count: "3000+", color: "#FF6B00" },
+  { icon: "🎥", name: "500+ Stock Videos", desc: "4K footage for any project", tag: "4K", tagColor: "#A855F7", count: "500+", color: "#A855F7" },
+  { icon: "✨", name: "Motion Graphics Pack", desc: "Professional MOGRT templates for Premiere Pro", tag: "MOGRT", tagColor: "#00D4FF", count: "100+", color: "#00D4FF" },
+  { icon: "🌟", name: "Fire & Spark Overlays", desc: "Dramatic fire, ember & spark video overlays", tag: "OVERLAY", tagColor: "#FF6B00", count: "50+", color: "#FF6B00" },
+  { icon: "💥", name: "Glitch Effects Pack", desc: "Digital glitch, VHS & cyberpunk effects", tag: "TRENDING", tagColor: "#A855F7", count: "80+", color: "#A855F7" },
+  { icon: "🌫️", name: "Smoke & Haze Overlays", desc: "Cinematic fog, smoke & atmospheric overlays", tag: "OVERLAY", tagColor: "#00D4FF", count: "60+", color: "#00D4FF" },
+  { icon: "💡", name: "Light Leak & Lens Flare", desc: "Vintage film light effects & bokeh overlays", tag: "VISUAL", tagColor: "#FFAA00", count: "100+", color: "#FFAA00" },
+  { icon: "📊", name: "1500+ Lower Thirds Pack", desc: "Animated name cards, titles & captions", tag: "ANIMATION", tagColor: "#00D4FF", count: "1500+", color: "#00D4FF" },
+  { icon: "🎞️", name: "4K Cinematic Film Grain", desc: "Authentic film grain & texture overlays", tag: "4K", tagColor: "#A855F7", count: "4K", color: "#A855F7" },
+  { icon: "🎭", name: "Animated Title Pack", desc: "Kinetic typography & title animations", tag: "TITLES", tagColor: "#FF6B00", count: "200+", color: "#FF6B00" },
+  { icon: "📱", name: "YouTube Essentials Pack", desc: "Thumbnails, end screens, subscribe buttons", tag: "YOUTUBE", tagColor: "#FF0000", count: "50+", color: "#FF4444" },
+  { icon: "💒", name: "Wedding Invitation Pack", desc: "Elegant templates for wedding cinematographers", tag: "WEDDING", tagColor: "#FFD700", count: "30+", color: "#FFD700" },
+  { icon: "🎬", name: "100+ AE Plugins", desc: "Powerful After Effects plugins & scripts", tag: "PLUGINS", tagColor: "#A855F7", count: "100+", color: "#A855F7" },
+  { icon: "🤖", name: "200+ Animated Emojis", desc: "Expressive animated emoji for reels & stories", tag: "SOCIAL", tagColor: "#FF6B00", count: "200+", color: "#FF6B00" },
+  { icon: "📷", name: "Camera Rig Overlays", desc: "Professional camera frame & rig overlays", tag: "OVERLAY", tagColor: "#00D4FF", count: "40+", color: "#00D4FF" },
+  { icon: "☁️", name: "Rain & Snow Overlays", desc: "Weather & seasonal atmospheric effects", tag: "WEATHER", tagColor: "#00D4FF", count: "30+", color: "#00D4FF" },
+  { icon: "🎯", name: "100+ Callout Graphics", desc: "Arrow pointers, speech bubbles & callouts", tag: "GRAPHICS", tagColor: "#22C55E", count: "100+", color: "#22C55E" },
+  { icon: "🖼️", name: "100+ Video Backgrounds", desc: "Abstract, cinematic & looping backgrounds", tag: "BG", tagColor: "#A855F7", count: "100+", color: "#A855F7" },
+  { icon: "🏆", name: "Logo Animation Pack", desc: "Reveal animations for your brand logo", tag: "BRANDING", tagColor: "#FFAA00", count: "20+", color: "#FFAA00" },
+  { icon: "📹", name: "Full Video Editing Course", desc: "Structured A-Z course from beginner to pro", tag: "🎓 BONUS", tagColor: "#22C55E", count: "A-Z", color: "#22C55E" },
+  { icon: "💬", name: "Wedding Title Pack", desc: "Romantic cinematic text & title animations", tag: "WEDDING", tagColor: "#FFD700", count: "40+", color: "#FFD700" },
+  { icon: "🌈", name: "Dust Particle Overlays", desc: "Floating dust, bokeh & particle effects", tag: "PARTICLES", tagColor: "#FF6B00", count: "25+", color: "#FF6B00" },
+  {
+    icon: "🎪",
+    name: "Viral Meme Videos",
+    desc: "Meme Videos for Video Editing",
+    tag: "REELS",
+    tagColor: "#A855F7",
+    count: "50+",
+    color: "#A855F7",
+  },
 ];
 
 export default function FeatureGrid() {
@@ -45,31 +53,63 @@ export default function FeatureGrid() {
             Everything Inside The Bundle
           </h2>
           <p className="text-base sm:text-lg text-[#94a3b8]">
-            <strong className="text-white">28 Categories</strong> • <strong className="text-white">70GB+</strong> • <strong className="text-white">Instant Download</strong>
+            <strong className="text-white">28 Premium Categories</strong> • <strong className="text-white">70GB+</strong> • <strong className="text-white">Instant Download</strong>
           </p>
         </div>
 
-        {/* Grid — Tilt Cards with solid opaque backgrounds */}
-        <div className="grid grid-cols-1 sm:grid-cols-0.5 lg:grid-cols-4 gap-4">
+        {/* Grid — Tilt Cards with solid opaque backgrounds and responsive tag badges */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {features.map((f, i) => (
             <div
               key={i}
-              className="tilt-card rounded-3xl p-4 sm:p-5 relative overflow-hidden cursor-default"
+              className="tilt-card rounded-2xl sm:rounded-3xl p-3 sm:p-5 relative overflow-hidden cursor-default flex flex-col justify-between"
               style={{
                 background: 'linear-gradient(135deg, #0f1830 0%, #0a1226 100%)',
                 border: '1px solid rgba(56, 130, 200, 0.18)',
+                minHeight: '190px'
               }}
             >
-              <StarField speed={0.3} starsSmall={40} starsMedium={12} starsLarge={5} opacity={0.25} />
-              <div className="glow-line" />
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
-                style={{ background: `${f.accent}1a`, border: `1px solid ${f.accent}33` }}
-              >
-                <span className="text-2xl">{f.icon}</span>
+              <div className="hidden sm:block">
+                <StarField speed={0.3} starsSmall={40} starsMedium={12} starsLarge={5} opacity={0.25} />
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-white mb-2 leading-tight">{f.title}</h3>
-              <p className="text-xs sm:text-sm text-[#94a3b8] leading-relaxed">{f.desc}</p>
+              <div className="glow-line" />
+
+              {/* Card Header & Content */}
+              <div>
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <div
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center relative"
+                    style={{ background: `${f.color}1a`, border: `1px solid ${f.color}33` }}
+                  >
+                    <span className="text-xl sm:text-2xl">{f.icon}</span>
+                    <div className="absolute inset-0 rounded-lg sm:rounded-xl opacity-15 blur-md" style={{ background: f.color }} />
+                  </div>
+
+                  {f.tag && (
+                    <span
+                      className="text-[8px] sm:text-[9px] font-black tracking-wider px-2 py-0.5 rounded-full border uppercase"
+                      style={{
+                        color: f.tagColor || f.color,
+                        borderColor: `${f.tagColor || f.color}40`,
+                        background: `${f.tagColor || f.color}15`
+                      }}
+                    >
+                      {f.tag}
+                    </span>
+                  )}
+                </div>
+
+                <h3 className="text-sm sm:text-base font-extrabold text-white mb-1.5 leading-tight">
+                  {f.name}
+                </h3>
+              </div>
+
+              {/* Card Footer (Description & Count if needed) */}
+              <div>
+                <p className="text-[10px] sm:text-xs text-[#cbd5e1] leading-relaxed">
+                  {f.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -82,7 +122,7 @@ export default function FeatureGrid() {
             rel="noopener noreferrer"
             className="inline-block btn-cta text-sm sm:text-base font-bold px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl uppercase tracking-wide"
           >
-            Get All 28 Categories — ₹199 →
+            Get All 28 Categories — ₹199
           </a>
         </div>
       </div>

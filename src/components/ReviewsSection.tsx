@@ -20,9 +20,9 @@ export default function ReviewsSection() {
         </div>
 
         {/* Review Image Placeholders — Wall of Love (NO carousel) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6 px-2 sm:px-0">
           {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="card-dark rounded-2xl overflow-hidden relative group hover:scale-[1.02] hover:shadow-[0_10px_30px_rgba(0,242,255,0.1)] transition-all duration-300">
+            <div key={i} className="card-dark rounded-xl sm:rounded-2xl overflow-hidden relative group hover:scale-[1.02] hover:shadow-[0_10px_30px_rgba(0,242,255,0.1)] transition-all duration-300">
               <div className="glow-line" />
               <img
                 src={`/images/v${i}.webp`}
