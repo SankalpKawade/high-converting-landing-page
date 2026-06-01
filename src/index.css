@@ -465,3 +465,28 @@ body {
   align-items: center;
   gap: -8px;
 }
+
+/* ===========================================================
+   Global Section Spacing Control — Reduced for tighter flow
+   =========================================================== */
+
+section.py-16 {
+  padding-top: 3.25rem !important; /* Reduced from 4rem (py-16) */
+  padding-bottom: 3.25rem !important; /* Reduced from 4rem (py-16) */
+}
+
+@media (min-width: 640px) {
+  section.sm\:py-20 {
+    padding-top: 4rem !important; /* Reduced from 5rem (sm:py-20) */
+    padding-bottom: 4rem !important; /* Reduced from 5rem (sm:py-20) */
+  }
+  section.sm\:py-24 {
+    padding-top: 4.5rem !important; /* Reduced from 6rem (sm:py-24) */
+    padding-bottom: 4.5rem !important; /* Reduced from 6rem (sm:py-24) */
+  }
+}
+
+/* Tighten the section divider spacing globally */
+.section-divider.mb-16 {
+  margin-bottom: 2.25rem !important; /* Reduced from 4rem (mb-16) */
+}

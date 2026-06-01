@@ -40,7 +40,7 @@ export default function StarField({
   const shadowsLarge = useMemo(() => generateBoxShadows(starsLarge, 800, 800, starColor), [starsLarge, starColor]);
 
   return (
-    <div className="absolute inset-0 pointer-events-none z-0" style={{ opacity: effectiveOpacity }}>
+    <div className="hidden sm:block absolute inset-0 pointer-events-none z-0" style={{ opacity: effectiveOpacity }}>
       <style>{`
         @keyframes starDrift {
           from { transform: translateY(0px); }

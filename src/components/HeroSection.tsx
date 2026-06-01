@@ -51,7 +51,7 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
           <div className="flex items-center gap-2">
             <span className="text-yellow-400 text-sm">★★★★★</span>
-            <span className="text-sm text-[#cbd5e1] font-medium">9.4/10 Rating</span>
+            <span className="text-sm text-[#cbd5e1] font-medium">9.6/10 Rating</span>
           </div>
           <div className="hidden sm:block w-px h-5 bg-white/20" />
           <div className="flex items-center gap-0.5">
@@ -59,10 +59,10 @@ export default function HeroSection() {
               <img
                 src="/images/creators.webp"
                 alt="Trusted Creators"
-                className="h-9 sm:h-16 w-auto object-contain"
+                className="h-10 sm:h-11 w-auto object-contain"
               />
             </div>
-            <span className="text-sm text-[#cbd5e1] font-medium">Trusted by 2,500+ Creators</span>
+            <span className="text-sm text-[#cbd5e1] font-medium">Trusted by 3,500+ Creators</span>
           </div>
         </div>
 
