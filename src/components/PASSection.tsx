@@ -66,8 +66,6 @@ export default function PASSection() {
           </h3>
           <a
             href={CTA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-block btn-cta text-base sm:text-lg font-bold px-10 py-4 rounded-xl"
           >
             Get Creator Vault Now →

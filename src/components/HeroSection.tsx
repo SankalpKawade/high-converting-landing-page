@@ -32,9 +32,9 @@ export default function HeroSection() {
 
         {/* Dream Outcome Headline */}
         <h1 className="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-4 sm:mb-6">
-          <span className="gradient-text">Professional Video Editing</span>
+          <span className="gradient-text">Create Viral Videos</span>
           <br />
-          <span className="text-white">Made Simple</span>
+          <span className="text-white">That Get Views, Followers & Clients</span>
           {/* <span className="shimmer-text">Earn More</span> */}
           {/* <br /> */}
           {/* <span className="text-white">in Less Time</span> */}
@@ -43,8 +43,7 @@ export default function HeroSection() {
         {/* Sub-headline — Effort & Sacrifice */}
         <p className="text-sm sm:text-base md:text-xl text-[#94a3b8] max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
           <strong className="text-white">Stop</strong> wasting hours searching for tools, assets, and tutorials.{' '}
-          Get <strong className="text-[#00f2ff]">70GB+ of pro-grade editing assets</strong> instantly
-          — and start creating stunning videos that earn you more, in less time.
+          Get instant access to a <strong className="text-[#00f2ff]">complete editing system</strong> — presets, transitions, sound effects & step-by-step training — so you can create scroll-stopping videos in minutes.
         </p>
 
         {/* Social Proof - Trust elements */}
@@ -52,7 +51,7 @@ export default function HeroSection() {
           <div className="flex items-center gap-2">
             {/* <span className="text-yellow-400 text-sm">★★★★★</span> */}
             <span className="text-sm text-[#cbd5e1] font-medium">
-              🎬 Edit Videos for YouTube, Instagram, Wedding & Events</span>
+              🎬 Perfect for Reels, YouTube Shorts & Freelancing</span>
           </div>
           <div className="hidden sm:block w-px h-5 bg-white/20" />
           <div className="flex items-center gap-0.5">
@@ -61,6 +60,8 @@ export default function HeroSection() {
                 src="/images/creators.webp"
                 alt="Trusted Creators"
                 className="h-10 sm:h-11 w-auto object-contain"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
             <span className="text-sm text-[#cbd5e1] font-medium">Trusted by 3,500+ Creators</span>
@@ -71,11 +72,9 @@ export default function HeroSection() {
         <div className="mb-12 sm:mb-16">
           <a
             href={CTA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-4 sm:py-5 rounded-2xl tracking-wide uppercase"
           >
-            Get Everything for Just  → ₹199
+            Get Instant Access for Just ₹199
           </a>
         </div>
 
@@ -108,6 +107,7 @@ export default function HeroSection() {
                 muted
                 loop
                 playsInline
+                preload="auto"
                 className="w-full h-full object-cover opacity-80"
                 src="https://videoeditorstudio.com/cdn/shop/videos/c/vp/8380e9171de14f19a62ffd3c4af126e7/8380e9171de14f19a62ffd3c4af126e7.SD-480p-1.5Mbps-31690304.mp4?v=0"
                 aria-label="Professional video editing dashboard"

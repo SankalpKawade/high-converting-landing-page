@@ -32,9 +32,12 @@ export default function BonusSection() {
         </div>
 
         <div className="bg-[#0b101e] border border-white/5 rounded-3xl p-4 sm:p-10 shadow-[0_0_30px_-5px_rgba(34,211,238,0.6)] max-w-2xl mx-auto relative overflow-hidden">
-          {/* subtle glow inside */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-[#00f2ff]/5 blur-[80px] pointer-events-none" />
-          <StarField speed={0.5} starsSmall={80} starsMedium={30} starsLarge={10} opacity={0.35} />
+          {/* subtle glow inside - optimized for mobile performance without css blur */}
+          <div 
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-32 pointer-events-none" 
+            style={{ background: 'radial-gradient(ellipse at top, rgba(0,242,255,0.08) 0%, transparent 70%)' }} 
+          />
+          <StarField speed={0.2} starsSmall={40} starsMedium={15} starsLarge={5} opacity={0.35} />
 
           <div className="flex items-center gap-4 mb-8 sm:mb-10 relative z-10">
             <span className="text-4xl sm:text-5xl">🎁</span>

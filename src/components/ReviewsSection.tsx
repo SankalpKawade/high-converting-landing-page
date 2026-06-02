@@ -29,6 +29,7 @@ export default function ReviewsSection() {
                 alt={`Creator Review ${i}`}
                 className="w-full h-auto block"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           ))}

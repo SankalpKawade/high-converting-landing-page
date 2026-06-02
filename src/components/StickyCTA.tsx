@@ -23,7 +23,7 @@ export default function StickyCTA() {
     >
       <div className="max-w-lg mx-auto flex items-center gap-3">
         <div className="flex-1 min-w-0">
-          <p className="text-xs sm:text-sm font-bold text-white truncate">Complete Bundle At</p>
+          <p className="text-xs sm:text-sm font-bold text-white truncate">Start Creating Pro Videos Today</p>
         </div>
         <div className="text-center">
           <span
@@ -38,8 +38,6 @@ export default function StickyCTA() {
         </div>
         <a
           href={CTA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="btn-cta text-sm sm:text-base font-bold px-5 sm:px-8 py-3 rounded-xl whitespace-nowrap text-center"
         >
           Get It Now

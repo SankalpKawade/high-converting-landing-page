@@ -54,6 +54,8 @@ export default function StarField({
         style={{
           boxShadow: shadowsSmall,
           animation: `starDrift ${50 / speed}s linear infinite`,
+          willChange: 'transform',
+          transform: 'translateZ(0)',
         }}
       >
         <div
@@ -64,10 +66,12 @@ export default function StarField({
 
       {/* Layer 2 — medium stars */}
       <div
-        className="absolute left-0 top-0 w-[2px] h-[2px] bg-transparent"
+        className="hidden sm:block absolute left-0 top-0 w-[2px] h-[2px] bg-transparent"
         style={{
           boxShadow: shadowsMedium,
           animation: `starDrift ${100 / speed}s linear infinite`,
+          willChange: 'transform',
+          transform: 'translateZ(0)',
         }}
       >
         <div
@@ -78,10 +82,12 @@ export default function StarField({
 
       {/* Layer 3 — large stars */}
       <div
-        className="absolute left-0 top-0 w-[3px] h-[3px] bg-transparent"
+        className="hidden sm:block absolute left-0 top-0 w-[3px] h-[3px] bg-transparent"
         style={{
           boxShadow: shadowsLarge,
           animation: `starDrift ${150 / speed}s linear infinite`,
+          willChange: 'transform',
+          transform: 'translateZ(0)',
         }}
       >
         <div

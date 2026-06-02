@@ -1,12 +1,10 @@
 const audiences = [
-  'Video Editors',
-  'Videographers',
   'Content Creators',
-  'Film Students',
-  'Marketing Agencies',
-  'Freelancers',
-  'Businesses',
-  'Event Organizers',
+  'Instagram Reel Makers',
+  'Wedding Filmmakers',
+  'Youtubers',
+  'College Students',
+  'Complete Beginners',
 ];
 
 export default function AudienceSection() {

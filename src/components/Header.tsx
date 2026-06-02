@@ -57,6 +57,7 @@ export default function Header() {
             src="/images/logo2-removebg.webp"
             alt="ProDigitalFiles Logo"
             className="w-8 h-8 object-contain drop-shadow-[0_0_4px_rgba(255,255,255,0.25)]"
+            decoding="async"
           />
           <span className="text-base sm:text-lg md:text-xl font-bold tracking-tight">
             <span className="text-white">Pro</span>
@@ -75,8 +76,6 @@ export default function Header() {
 
         <a
           href={CTA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-2 rounded-full transition-all transform hover:-translate-y-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 shadow-[0_0_30px_-5px_rgba(34,211,238,0.6)]"
         >
           Get Bundle — ₹199

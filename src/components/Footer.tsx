@@ -8,6 +8,8 @@ export default function Footer() {
             src="/images/logo2-removebg.webp"
             alt="ProDigitalFiles Logo"
             className="w-8 h-8 object-contain drop-shadow-[0_0_4px_rgba(255,255,255,0.25)]"
+            loading="lazy"
+            decoding="async"
           />
           <span className="text-lg md:text-xl font-bold tracking-tight">
             <span className="text-white">Pro</span>

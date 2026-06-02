@@ -1,6 +1,6 @@
 import StarField from './StarField';
 
-const CTA_URL = 'CTA_URL';
+const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 export default function CloserSection() {
   return (
@@ -47,9 +47,7 @@ export default function CloserSection() {
        */}
 
         <a
-          href="https://superprofile.bio/vp/professional-video-editing-made-simple"
-          target="_blank"
-          rel="noopener noreferrer"
+          href={CTA_URL}
           className="inline-block btn-cta text-base sm:text-lg font-black px-10 sm:px-14 py-4 sm:py-5 rounded-2xl tracking-wide uppercase"
         >
           Get Everything for ₹199
