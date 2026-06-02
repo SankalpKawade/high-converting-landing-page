@@ -71,7 +71,7 @@ const features = [
 
 export default function FeatureGrid() {
   return (
-    <section className="py-16 sm:py-20 px-4 relative z-10" id="features">
+    <section className="py-1 sm:py-12 px-4 relative z-10" id="features">
       <div className="section-divider mb-16" />
       <div className="max-w-5xl mx-auto">
         {/* Heading */}

@@ -18,7 +18,7 @@ const snippetPositions = [
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-36 sm:pt-40 pb-12 sm:pb-20 px-4 overflow-hidden grid-bg" id="hero">
+    <section className="relative pt-36 sm:pt-40 pb-10 sm:pb-15 px-4 overflow-hidden grid-bg" id="hero">
       {/* Background glow orbs */}
       <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 bg-[#00f2ff] rounded-full opacity-[0.06] blur-[100px]" />
       <div className="hidden sm:block absolute bottom-20 right-1/4 w-72 h-72 bg-[#7000ff] rounded-full opacity-[0.08] blur-[100px]" />
@@ -64,11 +64,12 @@ export default function HeroSection() {
                 decoding="async"
             </div>
               />*/}
+
             <span className="text-sm text-[#cbd5e1] font-medium">🤝Trusted by 3,500+ Creators</span>
           </div>
         </div>
         {/* CTA */}
-        <div className="mt-10 sm:mt-14 mb-12 sm:mb-16">
+        <div className="text-center mt-8 sm:mt-12 mb-1">
           <a
             href={CTA_URL}
             className="inline-block btn-cta text-sm sm:text-lg font-black px-6 sm:px-12 py-3 sm:py-3 rounded-xl sm:rounded-2xl tracking-wide uppercase"
@@ -78,8 +79,8 @@ export default function HeroSection() {
         </div>
         {/* Hero Visual — Dashboard mockup with floating snippets 
         <div className="relative max-w-3xl mx-auto mt-8 sm:mt-12">
-          {/* Floating 3D Snippets — Responsive (absolute positioned, floating) */}
-        {/* {floatingSnippets.map((s, i) => (
+          {/* Floating 3D Snippets — Responsive (absolute positioned, floating) 
+        * {floatingSnippets.map((s, i) => (
             <div
               key={`float-${i}`}
               className={`absolute ${[
@@ -95,10 +96,10 @@ export default function HeroSection() {
             </div>
           ))}*/}
 
-        {/* Dashboard container */}
-        {/* <div className="bg-[#0a0f1a] border border-white/10 rounded-2xl sm:rounded-3xl p-2 sm:p-3 relative overflow-hidden">*/}
-        {/* <StarField speed={0.5} starsSmall={80} starsMedium={30} starsLarge={10} opacity={0.3} />*/}
-        {/*<div className="glow-line" />
+        {/* * Dashboard container 
+        * <div className="bg-[#0a0f1a] border border-white/10 rounded-2xl sm:rounded-3xl p-2 sm:p-3 relative overflow-hidden">
+        * <StarField speed={0.5} starsSmall={80} starsMedium={30} starsLarge={10} opacity={0.3} />
+        *<div className="glow-line" />
             <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden relative bg-[#0a0f1a]">
               <video
                 autoPlay
@@ -124,8 +125,8 @@ export default function HeroSection() {
                   <span className="text-[9px] sm:text-xs font-bold text-[#00f2ff]">Instant Access</span>
                 </div>
               </div>
-               */}
-        {/*</div>
+               *
+        *</div>
           </div>
         </div>
         */}
