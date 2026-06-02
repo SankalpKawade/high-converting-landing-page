@@ -55,16 +55,16 @@ export default function HeroSection() {
           </div>
           <div className="hidden sm:block w-px h-4 bg-white/20" />
           <div className="flex items-center gap-1.5">
-            <div className="flex items-center">
+            {/*<div className="flex items-center">
               <img
                 src="/images/creators.webp"
                 alt="Trusted Creators"
                 className="h-10 sm:h-8 w-auto object-contain"
                 fetchPriority="high"
                 decoding="async"
-              />
             </div>
-            <span className="text-sm text-[#cbd5e1] font-medium">Trusted by 3,500+ Creators</span>
+              />*/}
+            <span className="text-sm text-[#cbd5e1] font-medium">🤝Trusted by 3,500+ Creators</span>
           </div>
         </div>
         {/* CTA */}
@@ -76,10 +76,10 @@ export default function HeroSection() {
             Get Instant Access @ ₹199 Only
           </a>
         </div>
-        {/* Hero Visual — Dashboard mockup with floating snippets */}
+        {/* Hero Visual — Dashboard mockup with floating snippets 
         <div className="relative max-w-3xl mx-auto mt-8 sm:mt-12">
           {/* Floating 3D Snippets — Responsive (absolute positioned, floating) */}
-          {floatingSnippets.map((s, i) => (
+        {/* {floatingSnippets.map((s, i) => (
             <div
               key={`float-${i}`}
               className={`absolute ${[
@@ -93,12 +93,12 @@ export default function HeroSection() {
               <span className="text-sm sm:text-lg">{s.emoji}</span>
               <span className="text-[10px] sm:text-xs font-bold text-white whitespace-nowrap">{s.label}</span>
             </div>
-          ))}
+          ))}*/}
 
-          {/* Dashboard container */}
-          <div className="bg-[#0a0f1a] border border-white/10 rounded-2xl sm:rounded-3xl p-2 sm:p-3 relative overflow-hidden">
-            {/* <StarField speed={0.5} starsSmall={80} starsMedium={30} starsLarge={10} opacity={0.3} />*/}
-            <div className="glow-line" />
+        {/* Dashboard container */}
+        {/* <div className="bg-[#0a0f1a] border border-white/10 rounded-2xl sm:rounded-3xl p-2 sm:p-3 relative overflow-hidden">*/}
+        {/* <StarField speed={0.5} starsSmall={80} starsMedium={30} starsLarge={10} opacity={0.3} />*/}
+        {/*<div className="glow-line" />
             <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden relative bg-[#0a0f1a]">
               <video
                 autoPlay
@@ -111,7 +111,6 @@ export default function HeroSection() {
                 aria-label="Professional video editing dashboard"
                 title="Professional video editing dashboard"
               />
-              {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/60 via-transparent to-transparent" />
               {/*
               <div className="absolute bottom-2 sm:bottom-4 left-2 right-2 sm:left-4 sm:right-4 flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
@@ -126,9 +125,10 @@ export default function HeroSection() {
                 </div>
               </div>
                */}
-            </div>
+        {/*</div>
           </div>
         </div>
+        */}
       </div>
     </section >
   );
