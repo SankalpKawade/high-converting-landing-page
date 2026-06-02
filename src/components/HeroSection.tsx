@@ -67,17 +67,6 @@ export default function HeroSection() {
             <span className="text-sm text-[#cbd5e1] font-medium">Trusted by 3,500+ Creators</span>
           </div>
         </div>
-
-        {/* CTA */}
-        <div className="mb-12 sm:mb-16">
-          <a
-            href={CTA_URL}
-            className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-4 sm:py-5 rounded-2xl tracking-wide uppercase"
-          >
-            Get Instant Access for Just ₹199
-          </a>
-        </div>
-
         {/* Hero Visual — Dashboard mockup with floating snippets */}
         <div className="relative max-w-3xl mx-auto mt-8 sm:mt-12">
           {/* Floating 3D Snippets — Responsive (absolute positioned, floating) */}
@@ -131,6 +120,16 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
+        {/* CTA */}
+        <div className="mt-10 sm:mt-14 mb-12 sm:mb-16">
+          <a
+            href={CTA_URL}
+            className="inline-block btn-cta text-sm sm:text-lg font-black px-6 sm:px-12 py-3 sm:py-3 rounded-xl sm:rounded-2xl tracking-wide uppercase"
+          >
+            Get Instant Access for Just ₹199
+          </a>
+        </div>
+
       </div>
     </section >
   );

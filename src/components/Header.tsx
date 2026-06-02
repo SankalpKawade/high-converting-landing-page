@@ -59,7 +59,7 @@ export default function Header() {
             className="w-8 h-8 object-contain drop-shadow-[0_0_4px_rgba(255,255,255,0.25)]"
             decoding="async"
           />
-          <span className="text-base sm:text-lg md:text-xl font-bold tracking-tight">
+          <span className="text-base md:text-xl font-bold tracking-tight">
             <span className="text-white">Pro</span>
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               DigitalFiles

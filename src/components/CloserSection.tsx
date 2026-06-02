@@ -48,7 +48,7 @@ export default function CloserSection() {
 
         <a
           href={CTA_URL}
-          className="inline-block btn-cta text-base sm:text-lg font-black px-10 sm:px-14 py-4 sm:py-5 rounded-2xl tracking-wide uppercase"
+          className="inline-block btn-cta text-base sm:text-lg font-black px-10 sm:px-14 py-2 sm:py-3 rounded-2xl tracking-wide uppercase"
         >
           Get Everything for ₹199
         </a>

@@ -114,8 +114,8 @@ export default function FeatureGrid() {
                   <div className="flex items-center gap-4 mb-5">
                     <div
                       className="w-12 h-12 rounded-xl flex items-center justify-center relative shrink-0"
-                      style={{ 
-                        background: `${f.color}1a`, 
+                      style={{
+                        background: `${f.color}1a`,
                         border: `1px solid ${f.color}33`,
                         boxShadow: `inset 0 0 12px ${f.color}1a, 0 0 15px ${f.color}22`
                       }}
@@ -157,9 +157,9 @@ export default function FeatureGrid() {
         <div className="text-center mt-12 sm:mt-16">
           <a
             href={CTA_URL}
-            className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-4 sm:py-5 rounded-2xl uppercase tracking-wide"
+            className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-2 sm:py-3 rounded-2xl uppercase tracking-wide"
           >
-            Get All 28 Categories for Just ₹199
+            All 28 Categories — Just ₹199
           </a>
         </div>
       </div>

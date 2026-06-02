@@ -39,7 +39,7 @@ export default function StickyCTA() {
         </div>
         <a
           href={CTA_URL}
-          className="btn-cta text-sm sm:text-base font-bold px-5 sm:px-8 py-3 rounded-xl whitespace-nowrap text-center"
+          className="btn-cta text-sm sm:text-base font-bold px-5 sm:px-8 py-2 rounded-xl whitespace-nowrap text-center"
         >
           Start Creating Pro Videos Today
         </a>

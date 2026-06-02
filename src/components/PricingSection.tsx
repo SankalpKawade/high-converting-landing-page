@@ -58,9 +58,9 @@ export default function PricingSection() {
 
           <a
             href={CTA_URL}
-            className="block w-full btn-cta text-base sm:text-lg font-black py-4 sm:py-5 rounded-2xl tracking-wide uppercase text-center"
+            className="block w-full btn-cta text-base sm:text-lg font-black py-2  sm:py-3 rounded-2xl tracking-wide uppercase text-center"
           >
-            Claim This Offer Before It’s Gone
+            Claim It Before It’s Gone
           </a>
 
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 mt-4 text-xs text-[#94a3b8]">
