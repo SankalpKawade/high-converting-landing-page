@@ -11,7 +11,7 @@ export default function ReviewsSection() {
           </h2>
           <div className="flex flex-col items-center gap-2 mb-4">
             <span className="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
-            <p className="text-xl sm:text-2xl font-black text-white">9.4 / 10</p>
+            <p className="text-xl sm:text-2xl font-black text-white">9.6 / 10</p>
             <p className="text-sm text-[#00f2ff] font-bold">100% Satisfaction</p>
           </div>
           <p className="text-sm sm:text-base text-[#94a3b8] max-w-xl mx-auto">
@@ -25,7 +25,7 @@ export default function ReviewsSection() {
             <div key={i} className="card-dark rounded-xl sm:rounded-2xl overflow-hidden relative group hover:scale-[1.02] hover:shadow-[0_10px_30px_rgba(0,242,255,0.1)] transition-all duration-300">
               <div className="glow-line" />
               <img
-                src={`/images/v${i}.webp`}
+                src={`https://demo.scalenite.com/wp-content/uploads/2024/06/v${i}.webp`}
                 alt={`Creator Review ${i}`}
                 className="w-full h-auto block"
                 loading="lazy"

@@ -50,7 +50,7 @@ export default function FeatureGrid() {
         <div className="text-center mb-10 sm:mb-14">
           <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">What's Included</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
-            Everything Inside The Bundle
+            Your Complete Editing Arsenal — In One Download
           </h2>
           <p className="text-base sm:text-lg text-[#94a3b8]">
             <strong className="text-white">28 Premium Categories</strong> • <strong className="text-white">70GB+</strong> • <strong className="text-white">Instant Download</strong>
@@ -69,9 +69,7 @@ export default function FeatureGrid() {
                 minHeight: '190px'
               }}
             >
-              <div className="hidden sm:block">
-                <StarField speed={0.3} starsSmall={40} starsMedium={12} starsLarge={5} opacity={0.25} />
-              </div>
+              <StarField speed={0.5} starsSmall={40} starsMedium={12} starsLarge={5} opacity={0.25} />
               <div className="glow-line" />
 
               {/* Card Header & Content */}

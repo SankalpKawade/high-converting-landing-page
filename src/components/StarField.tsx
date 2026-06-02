@@ -34,13 +34,13 @@ export default function StarField({
 }: StarFieldProps) {
   // Use a brighter color and multiply the passed opacity to make it more visible
   const effectiveOpacity = Math.min(1, opacity * 2.5); // Boost opacity significantly
-  
+
   const shadowsSmall = useMemo(() => generateBoxShadows(starsSmall, 800, 800, starColor), [starsSmall, starColor]);
   const shadowsMedium = useMemo(() => generateBoxShadows(starsMedium, 800, 800, starColor), [starsMedium, starColor]);
   const shadowsLarge = useMemo(() => generateBoxShadows(starsLarge, 800, 800, starColor), [starsLarge, starColor]);
 
   return (
-    <div className="hidden sm:block absolute inset-0 pointer-events-none z-0" style={{ opacity: effectiveOpacity }}>
+    <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden" style={{ opacity: effectiveOpacity }}>
       <style>{`
         @keyframes starDrift {
           from { transform: translateY(0px); }

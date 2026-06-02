@@ -32,26 +32,27 @@ export default function HeroSection() {
 
         {/* Dream Outcome Headline */}
         <h1 className="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-4 sm:mb-6">
-          <span className="gradient-text">Create Stunning Videos</span>
+          <span className="gradient-text">Professional Video Editing</span>
           <br />
-          <span className="text-white">So You Can </span>
-          <span className="shimmer-text">Earn More</span>
-          <br />
-          <span className="text-white">in Less Time</span>
+          <span className="text-white">Made Simple</span>
+          {/* <span className="shimmer-text">Earn More</span> */}
+          {/* <br /> */}
+          {/* <span className="text-white">in Less Time</span> */}
         </h1>
 
         {/* Sub-headline — Effort & Sacrifice */}
         <p className="text-sm sm:text-base md:text-xl text-[#94a3b8] max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
-          <strong className="text-white">Without</strong> spending thousands on courses, assets, or software.{' '}
-          <strong className="text-white">Without</strong> hours of searching for free resources.{' '}
-          Get <strong className="text-[#00f2ff]">70GB+ of pro-grade editing assets</strong> — instantly.
+          <strong className="text-white">Stop</strong> wasting hours searching for tools, assets, and tutorials.{' '}
+          Get <strong className="text-[#00f2ff]">70GB+ of pro-grade editing assets</strong> instantly
+          — and start creating stunning videos that earn you more, in less time.
         </p>
 
         {/* Social Proof - Trust elements */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
           <div className="flex items-center gap-2">
-            <span className="text-yellow-400 text-sm">★★★★★</span>
-            <span className="text-sm text-[#cbd5e1] font-medium">9.6/10 Rating</span>
+            {/* <span className="text-yellow-400 text-sm">★★★★★</span> */}
+            <span className="text-sm text-[#cbd5e1] font-medium">
+              🎬 Edit Videos for YouTube, Instagram, Wedding & Events</span>
           </div>
           <div className="hidden sm:block w-px h-5 bg-white/20" />
           <div className="flex items-center gap-0.5">
@@ -99,7 +100,7 @@ export default function HeroSection() {
 
           {/* Dashboard container */}
           <div className="bg-[#0a0f1a] border border-white/10 rounded-2xl sm:rounded-3xl p-2 sm:p-3 relative overflow-hidden">
-            <StarField speed={0.5} starsSmall={80} starsMedium={30} starsLarge={10} opacity={0.3} />
+            {/* <StarField speed={0.5} starsSmall={80} starsMedium={30} starsLarge={10} opacity={0.3} />*/}
             <div className="glow-line" />
             <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden relative bg-[#0a0f1a]">
               <video
@@ -114,6 +115,7 @@ export default function HeroSection() {
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/60 via-transparent to-transparent" />
+              {/*
               <div className="absolute bottom-2 sm:bottom-4 left-2 right-2 sm:left-4 sm:right-4 flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                 <div className="bg-[#0f1629]/80 backdrop-blur-sm border border-white/15 rounded-lg px-2 sm:px-3 py-1 sm:py-1.5">
                   <span className="text-[9px] sm:text-xs font-bold text-[#00f2ff]">28 Categories</span>
@@ -125,6 +127,7 @@ export default function HeroSection() {
                   <span className="text-[9px] sm:text-xs font-bold text-[#00f2ff]">Instant Access</span>
                 </div>
               </div>
+               */}
             </div>
           </div>
         </div>
