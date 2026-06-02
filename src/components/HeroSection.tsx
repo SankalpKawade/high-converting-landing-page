@@ -42,8 +42,8 @@ export default function HeroSection() {
 
         {/* Sub-headline — Effort & Sacrifice */}
         <p className="text-sm sm:text-base md:text-xl text-[#94a3b8] max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
-          <strong className="text-white">Stop</strong> wasting hours searching for tools, assets, and tutorials.{' '}
-          Get instant access to a <strong className="text-[#00f2ff]">complete editing system</strong> — presets, transitions, sound effects & step-by-step training — so you can create scroll-stopping videos in minutes.
+          {/*<strong className="text-white">Stop</strong> wasting hours searching for tools, assets, and tutorials.{' '}*/}
+          Create <strong className="text-[#00f2ff]">scroll-stopping videos</strong> in minutes using ready-to-use presets, effects & templates.
         </p>
 
         {/* Social Proof - Trust elements */}

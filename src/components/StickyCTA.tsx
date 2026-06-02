@@ -22,9 +22,10 @@ export default function StickyCTA() {
       style={{ pointerEvents: visible ? 'auto' : 'none' }}
     >
       <div className="max-w-lg mx-auto flex items-center gap-3">
-        <div className="flex-1 min-w-0">
+        {/*<div className="flex-1 min-w-0">
           <p className="text-xs sm:text-sm font-bold text-white truncate">Start Creating Pro Videos Today</p>
         </div>
+        */}
         <div className="text-center">
           <span
             className="text-xs line-through"
@@ -40,7 +41,7 @@ export default function StickyCTA() {
           href={CTA_URL}
           className="btn-cta text-sm sm:text-base font-bold px-5 sm:px-8 py-3 rounded-xl whitespace-nowrap text-center"
         >
-          Get It Now
+          Start Creating Pro Videos Today
         </a>
       </div>
     </div >
