@@ -18,20 +18,20 @@ const snippetPositions = [
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-36 sm:pt-40 pb-10 sm:pb-15 px-4 overflow-hidden grid-bg" id="hero">
+    <section className="relative pt-24 sm:pt-40 pb-8 sm:pb-15 px-4 overflow-hidden grid-bg" id="hero">
       {/* Background glow orbs */}
       <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 bg-[#00f2ff] rounded-full opacity-[0.06] blur-[100px]" />
       <div className="hidden sm:block absolute bottom-20 right-1/4 w-72 h-72 bg-[#7000ff] rounded-full opacity-[0.08] blur-[100px]" />
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
         {/* Top badge — SOLID background */}
-        <div className="inline-flex items-center gap-2 bg-[#0f1629] border border-[#00f2ff]/30 rounded-full px-4 py-1.5 mb-6">
+        <div className="inline-flex items-center gap-2 bg-[#0f1629] border border-[#00f2ff]/30 rounded-full px-4 py-1.5 mb-4 sm:mb-6">
           <span className="w-2 h-2 rounded-full bg-[#00f2ff] pulse-icon" />
           <span className="text-xs sm:text-sm font-medium text-[#cbd5e1]">Limited Time Offer</span>
         </div>
 
         {/* Dream Outcome Headline */}
-        <h1 className="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-4 sm:mb-6">
+        <h1 className="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-3 sm:mb-6">
           <span className="gradient-text">Create Viral Videos</span>
           <br />
           <span className="text-white">That Get Views, Followers & Clients</span>
@@ -41,13 +41,13 @@ export default function HeroSection() {
         </h1>
 
         {/* Sub-headline — Effort & Sacrifice */}
-        <p className="text-sm sm:text-base md:text-xl text-[#94a3b8] max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+        <p className="text-sm sm:text-base md:text-xl text-[#94a3b8] max-w-2xl mx-auto mb-4 sm:mb-8 leading-relaxed">
           {/*<strong className="text-white">Stop</strong> wasting hours searching for tools, assets, and tutorials.{' '}*/}
           Create <strong className="text-[#00f2ff]">scroll-stopping videos</strong> in minutes using ready-to-use presets, effects & templates.
         </p>
 
         {/* Social Proof - Trust elements */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-6 mb-4 sm:mb-8">
           <div className="flex items-center gap-2">
             {/* <span className="text-yellow-400 text-sm">★★★★★</span> */}
             <span className="text-sm text-[#cbd5e1] font-medium">
@@ -69,12 +69,12 @@ export default function HeroSection() {
           </div>
         </div>
         {/* CTA */}
-        <div className="text-center mt-8 sm:mt-12 mb-1">
+        <div className="text-center mt-4 sm:mt-12 mb-1">
           <a
             href={CTA_URL}
-            className="inline-block btn-cta text-sm sm:text-lg font-black px-6 sm:px-12 py-3 sm:py-3 rounded-xl sm:rounded-2xl tracking-wide uppercase"
+            className="block w-full max-w-[340px] mx-auto sm:inline-block sm:w-auto sm:max-w-none btn-cta text-[15px] sm:text-lg font-black px-4 sm:px-12 py-3.5 sm:py-3.5 rounded-2xl tracking-wide uppercase"
           >
-            Get Instant Access @ ₹199 Only
+            Get Instant Access @ ₹199 <br className="sm:hidden" /> Only
           </a>
         </div>
         {/* Hero Visual — Dashboard mockup with floating snippets 
