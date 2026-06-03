@@ -34,7 +34,7 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${scrolled ? '-translate-y-[40px]' : 'translate-y-0'}`}>
       {/* Countdown Timer */}
       <div
-        className="w-full h-[40px] flex items-center justify-center px-4 text-center"
+        className="w-full h-[50px] flex items-center justify-center px-4 text-center"
         style={{
           background: 'linear-gradient(90deg, #00effbb4, #379effff, #5689ffff)',
           backgroundSize: '200% 100%',
@@ -56,10 +56,10 @@ export default function Header() {
           <img
             src="/images/logo2-removebg.webp"
             alt="ProDigitalFiles Logo"
-            className="w-8 h-8 object-contain drop-shadow-[0_0_4px_rgba(255,255,255,0.25)]"
+            className="w-12 h-12 object-contain drop-shadow-[0_0_4px_rgba(255,255,255,0.25)]"
             decoding="async"
           />
-          <span className="text-base lg:text-xl font-bold tracking-tight">
+          <span className="text-lg lg:text-2xl font-bold tracking-tight">
             <span className="text-white">Pro</span>
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               DigitalFiles
