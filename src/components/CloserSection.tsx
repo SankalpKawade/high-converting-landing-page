@@ -14,7 +14,7 @@ export default function CloserSection() {
         </h2>
 
         <p className="text-base sm:text-lg text-[#94a3b8] mb-8 max-w-xl mx-auto leading-relaxed">
-          3,500+ creators already upgraded their workflow.
+          2,243+ creators already upgraded their workflow.
           <strong className="text-white"> Don't let another day pass</strong> making amateur videos when pro-quality is just ₹199 away.
         </p>
 

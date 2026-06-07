@@ -14,6 +14,7 @@ import FAQSection from './components/FAQSection';
 import CloserSection from './components/CloserSection';
 import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
+import SocialProofToast from './components/SocialProffPopUps';
 
 export default function App() {
   useEffect(() => {
@@ -69,6 +70,7 @@ export default function App() {
       </main>
       <Footer />
       <StickyCTA />
+      <SocialProofToast />
     </div>
   );
 }

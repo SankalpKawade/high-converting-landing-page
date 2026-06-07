@@ -25,11 +25,11 @@ export default function PricingSection() {
           {/* Value stack */}
           <div className="space-y-2.5 mb-6">
             {[
-              ['70GB+ Video Editing Assets (28 Categories)', '₹13,999'],
-              ['1500+ Motivational Reels', '₹1,999'],
-              ['Premium E-Books Pack', '₹1,499'],
-              ['ChatGPT Prompts Pack', '₹999'],
-              ['Instagram Growth Course', '₹1,999'],
+              ['70GB+ Video Editing Assets (28 Categories)', '₹3,999'],
+              ['1500+ Motivational Reels', '₹999'],
+              ['Premium E-Books Pack', '₹699'],
+              ['ChatGPT Prompts Pack', '₹499'],
+              ['Instagram Growth Course', '₹1,499'],
             ].map(([label, price], i) => (
               <div key={i} className="flex items-center justify-between card-dark rounded-xl px-4 py-3">
                 <span className="text-sm text-[#cbd5e1]">{label}</span>
@@ -42,12 +42,12 @@ export default function PricingSection() {
 
           <div className="mb-2">
             <p className="text-sm text-[#94a3b8]">Total Market Value</p>
-            <p className="text-2xl sm:text-3xl font-black text-white line-through opacity-50">₹19,788</p>
+            <p className="text-2xl sm:text-3xl font-black text-white line-through opacity-50">₹7,995</p>
           </div>
 
           <div className="mb-4">
             <p className="text-sm text-[#94a3b8]">Regular Price</p>
-            <p className="text-xl font-bold text-white line-through opacity-50">₹3,999</p>
+            <p className="text-xl font-bold text-white line-through opacity-50">₹2,499</p>
           </div>
 
           <div className="mb-6 sm:mb-8">

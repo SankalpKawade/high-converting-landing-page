@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: 'What if the files don\'t work or I\'m not satisfied?',
-    a: 'We have a 100% satisfaction guarantee. If you face any issues, our support team will help you immediately. We\'ve served 3,500+ happy creators with a 9.6/10 rating.',
+    a: 'We have a 100% satisfaction guarantee. If you face any issues, our support team will help you immediately. We\'ve served 1,000+ happy creators with a 9.4/10 rating.',
   },
   {
     q: 'How long will this ₹199 price last?',
