@@ -41,7 +41,7 @@ export default function Header() {
           // animation: 'shimmer 3s linear infinite',
         }}
       >
-        <p className="text-xs font-bold text-[#ebf7fc] tracking-wide">
+        <p className="text-sm font-bold text-[#ebf7fc] tracking-wide">
           ⚡ FLASH DEAL: FREE ₹6499 Bonus expires in →{' '}
           <span className="font-mono inline-block min-w-[65px]">
             {pad(time.hours)}:{pad(time.minutes)}:{pad(time.seconds)}

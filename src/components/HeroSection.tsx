@@ -1,8 +1,46 @@
+import { useState, useEffect } from 'react';
 // import StarField from './StarField';
 
 const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
+const BADGE_ITEMS = [
+  { text: "347 Bought in the Last 24 Hours", duration: 3000 },
+  { text: "Trending Among — Editors & Creators", duration: 4000 },
+  { text: "Trusted by 2,243+ Creators", duration: 5000 },
+  { text: "Stop Searching. Start Editing.", duration: 4000 },
+];
+
 export default function HeroSection() {
+  const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    let fadeOutTimeout: NodeJS.Timeout;
+    let switchTimeout: NodeJS.Timeout;
+
+    const runTimer = (currentIndex: number) => {
+      const item = BADGE_ITEMS[currentIndex];
+
+      fadeOutTimeout = setTimeout(() => {
+        setFade(false);
+      }, item.duration - 300);
+
+      switchTimeout = setTimeout(() => {
+        const nextIndex = (currentIndex + 1) % BADGE_ITEMS.length;
+        setIndex(nextIndex);
+        setFade(true);
+        runTimer(nextIndex);
+      }, item.duration);
+    };
+
+    runTimer(0);
+
+    return () => {
+      clearTimeout(fadeOutTimeout);
+      clearTimeout(switchTimeout);
+    };
+  }, []);
+
   return (
     <section className="relative min-h-[100dvh] flex flex-col pt-[140px] sm:pt-[100px] pb-6 sm:pb-10 px-4 overflow-hidden grid-bg" id="hero">
       {/* Background glow orbs */}
@@ -11,9 +49,11 @@ export default function HeroSection() {
 
       <div className="max-w-6xl mx-auto text-center relative z-10 flex-1 flex flex-col justify-center items-center gap-5 sm:gap-7 w-full pb-[4vh] mt-6 sm:mt-24">
         {/* Top badge — SOLID background */}
-        <div className="inline-flex items-center gap-2 bg-[#0f1629] border border-[#00f2ff]/30 rounded-full px-6 py-2 shrink-0">
-          <span className="w-2 h-2 rounded-full bg-[#00f2ff] pulse-icon" />
-          <span className="text-[11px] sm:text-sm font-medium text-[#cbd5e1]">Limited Time Offer</span>
+        <div className="inline-flex items-center gap-2 bg-[#0f1629] border border-[#00f2ff]/30 rounded-full px-6 py-2 shrink-0 min-w-[280px] sm:min-w-[320px] justify-center">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#00f2ff] pulse-icon inline-block" />
+          <span className={`text-[11px] sm:text-sm font-semibold text-[#cbd5e1] transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+            {BADGE_ITEMS[index].text}
+          </span>
         </div>
 
         {/* Dream Outcome Headline */}
@@ -25,7 +65,7 @@ export default function HeroSection() {
 
         {/* Sub-headline — Effort & Sacrifice */}
         <p className="text-[15px] sm:text-lg md:text-xl text-[#94a3b8] max-w-2xl mx-auto leading-[1.6] shrink-0 px-2">
-          70GB of premium editing assets that pay you back for years. <strong className="text-[#00f2ff]">Transitions, LUTs, sound effects, fonts & more.</strong><br /> Make smarter choices. Get the vault. Edit like a pro.
+          70GB of premium editing assets that pay you back for years. <strong className="text-[#00f2ff]">Transitions, LUTs, sound effects, fonts & more.</strong><br /> ⏰ Lock in ₹199 today - price increases to ₹999 when timer ends.
         </p>
 
         {/* Social Proof - Trust elements */}
