@@ -4,7 +4,7 @@ const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-sim
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[100dvh] flex flex-col pt-[88px] sm:pt-[100px] pb-6 sm:pb-10 px-4 overflow-hidden grid-bg" id="hero">
+    <section className="relative min-h-[100dvh] flex flex-col pt-[140px] sm:pt-[100px] pb-6 sm:pb-10 px-4 overflow-hidden grid-bg" id="hero">
       {/* Background glow orbs */}
       <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 bg-[#00f2ff] rounded-full opacity-[0.06] blur-[100px]" />
       <div className="hidden sm:block absolute bottom-20 right-1/4 w-72 h-72 bg-[#7000ff] rounded-full opacity-[0.08] blur-[100px]" />
