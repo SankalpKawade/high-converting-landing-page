@@ -20,7 +20,7 @@ export default function HeroSection() {
         <h1 className="hero-heading text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] shrink-0">
           <span className="gradient-text">Stop Paying ₹1,500/Month to Envato</span>
           <br />
-          <span className="text-white text-[2.3rem]">Get Studio-Quality Assets for ₹199 — Lifetime</span>
+          <span className="text-white text-2xl sm:text-2xl md:text-3xl lg:text-4xl">Get Studio-Quality Assets for ₹199 - Lifetime</span>
         </h1>
 
         {/* Sub-headline — Effort & Sacrifice */}
