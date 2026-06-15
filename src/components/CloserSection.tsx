@@ -15,7 +15,7 @@ export default function CloserSection() {
 
         <p className="text-base sm:text-lg text-[#94a3b8] mb-8 max-w-xl mx-auto leading-relaxed">
           2,243+ creators already upgraded their workflow.
-          <strong className="text-white"> Don't let another day pass</strong> making amateur videos when pro-quality is just ₹199 away.
+          <strong className="text-white"> Don't let another day pass</strong> making amateur videos when pro-quality is just ₹299 away.
         </p>
 
         {/* Visual testimonial */}
@@ -50,7 +50,7 @@ export default function CloserSection() {
           href={CTA_URL}
           className="inline-block btn-cta text-base sm:text-lg font-black px-10 sm:px-14 py-2 sm:py-3 rounded-2xl tracking-wide uppercase"
         >
-          Get Everything for ₹199
+          Get Everything for ₹299
         </a>
         {/*
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 mt-4 text-xs text-[#94a3b8]">

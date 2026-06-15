@@ -47,12 +47,12 @@ export default function PricingSection() {
 
           <div className="mb-4">
             <p className="text-sm text-[#94a3b8]">Regular Price</p>
-            <p className="text-xl font-bold text-white line-through opacity-50">₹2,499</p>
+            <p className="text-xl font-bold text-white line-through opacity-50">₹2,999</p>
           </div>
 
           <div className="mb-6 sm:mb-8">
             <p className="text-sm text-[#00f2ff] font-bold">Today Only</p>
-            <p className="text-5xl sm:text-6xl font-black gradient-text">₹199</p>
+            <p className="text-5xl sm:text-6xl font-black gradient-text">₹299</p>
             <p className="text-xs text-[#94a3b8] mt-1">One-time payment • Lifetime access</p>
           </div>
 

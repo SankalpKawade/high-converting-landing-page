@@ -4,7 +4,7 @@ const steps = [
   {
     emoji: '🖱️',
     step: 'STEP 01',
-    title: 'Click "Get Everything for ₹199"',
+    title: 'Click "Get Everything for ₹299"',
     desc: 'Tap the button below and you\'ll be taken to our secure checkout page',
   },
   {

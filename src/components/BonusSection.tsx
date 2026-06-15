@@ -3,19 +3,19 @@ import StarField from './StarField';
 const bonuses = [
   {
     title: '1500+ Motivational Reels',
-    value: '₹1,999',
-  },
-  {
-    title: 'Premium E-Books Pack',
-    value: '₹1,499',
-  },
-  {
-    title: 'ChatGPT Prompts Pack',
     value: '₹999',
   },
   {
+    title: 'Premium E-Books Pack',
+    value: '₹699',
+  },
+  {
+    title: 'ChatGPT Prompts Pack',
+    value: '₹499',
+  },
+  {
     title: 'Instagram Growth Course',
-    value: '₹1,999',
+    value: '₹1,499',
   },
 ];
 
@@ -33,9 +33,9 @@ export default function BonusSection() {
 
         <div className="bg-[#0b101e] border border-white/5 rounded-3xl p-4 sm:p-10 shadow-[0_0_30px_-5px_rgba(34,211,238,0.6)] max-w-2xl mx-auto relative overflow-hidden">
           {/* subtle glow inside - optimized for mobile performance without css blur */}
-          <div 
-            className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-32 pointer-events-none" 
-            style={{ background: 'radial-gradient(ellipse at top, rgba(0,242,255,0.08) 0%, transparent 70%)' }} 
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-32 pointer-events-none"
+            style={{ background: 'radial-gradient(ellipse at top, rgba(0,242,255,0.08) 0%, transparent 70%)' }}
           />
           <StarField speed={0.2} starsSmall={40} starsMedium={15} starsLarge={5} opacity={0.35} />
 
@@ -70,7 +70,7 @@ export default function BonusSection() {
 
           <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
             <p className="text-[#94a3b8] text-base sm:text-lg font-medium">
-              Total Value: <span className="line-through decoration-white/30">₹6,496</span>
+              Total Value: <span className="line-through decoration-white/30">₹3,696</span>
             </p>
             <p className="text-[#00f2ff] text-2xl sm:text-3xl md:text-4xl font-black tracking-tight">
               FREE Today!

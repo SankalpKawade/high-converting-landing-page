@@ -9,12 +9,37 @@ export default function SocialProofToast() {
     const [isVisible, setIsVisible] = useState(false);
     const [timeAgo, setTimeAgo] = useState("just now");
     const [isDismissed, setIsDismissed] = useState(false);
+    const [hasScrolledPastHero, setHasScrolledPastHero] = useState(false);
     const timerRef = useRef<NodeJS.Timeout | null>(null);
 
+    // Track scrolling past hero section
     useEffect(() => {
-        // Check if dismissed in this session
+        const handleScroll = () => {
+            const hero = document.getElementById('hero');
+            if (hero) {
+                // Determine if window scroll has passed the hero height
+                setHasScrolledPastHero(window.scrollY > hero.offsetHeight - 100);
+            } else {
+                setHasScrolledPastHero(window.scrollY > 600);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // Initial check
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // Manage popup cycling timer logic based on scroll state
+    useEffect(() => {
         if (sessionStorage.getItem("social_proof_dismissed") === "true") {
             setIsDismissed(true);
+            return;
+        }
+
+        if (!hasScrolledPastHero) {
+            setIsVisible(false);
+            if (timerRef.current) clearTimeout(timerRef.current);
             return;
         }
 
@@ -46,12 +71,12 @@ export default function SocialProofToast() {
         };
 
         // Initial delay before first popup
-        timerRef.current = setTimeout(showNextPopup, 4000);
+        timerRef.current = setTimeout(showNextPopup, 3000);
 
         return () => {
             if (timerRef.current) clearTimeout(timerRef.current);
         };
-    }, []);
+    }, [hasScrolledPastHero, isDismissed]);
 
     const handleDismiss = () => {
         setIsVisible(false);
@@ -72,11 +97,11 @@ export default function SocialProofToast() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 20, scale: 0.95 }}
                     transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                    className="fixed bottom-[76px] left-4 right-4 sm:right-auto sm:bottom-6 sm:left-6 z-50 max-w-[340px] sm:max-w-[380px] w-[calc(100%-2rem)] sm:w-auto"
+                    className="fixed bottom-[74px] left-3 right-3 sm:right-auto sm:bottom-6 sm:left-6 z-50 max-w-[290px] sm:max-w-[380px] w-[calc(100%-1.5rem)] sm:w-auto"
                 >
-                    <div className="bg-white text-slate-800 p-3 sm:p-3 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.12)] border border-slate-200/80 flex items-center gap-2.5 relative overflow-hidden">
+                    <div className="bg-white text-slate-800 p-2 sm:p-3 rounded-xl sm:rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.12)] border border-slate-200/80 flex items-center gap-2 sm:gap-2.5 relative overflow-hidden">
                         {/* Product Thumbnail */}
-                        <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0 bg-slate-50 rounded-xl flex items-center justify-center border border-slate-100 overflow-hidden">
+                        <div className="w-11 h-11 sm:w-16 sm:h-16 shrink-0 bg-slate-50 rounded-lg sm:rounded-xl flex items-center justify-center border border-slate-100 overflow-hidden">
                             <img
                                 src="/images/logo-removebg.webp"
                                 alt="Logo"
@@ -85,17 +110,17 @@ export default function SocialProofToast() {
                         </div>
 
                         {/* Content */}
-                        <div className="flex-1 min-w-0 pr-5">
-                            <p className="text-[12px] sm:text-[13px] leading-snug text-slate-700">
+                        <div className="flex-1 min-w-0 pr-4 sm:pr-5">
+                            <p className="text-[11px] sm:text-[13px] leading-snug text-slate-700">
                                 <span className="font-bold text-slate-900">{current.name}</span> from{" "}
                                 <span className="font-semibold text-slate-900">{current.city}</span> has just purchased{" "}
-                                <span className="font-bold text-blue-600 block sm:inline">ProDigitalFiles Video Editing Assets!</span>
+                                <span className="font-bold text-blue-600">ProDigitalFiles Video Editing Assets!</span>
                             </p>
 
                             {/* Verification Tag */}
-                            <div className="flex items-center gap-1.5 mt-1.5 text-[10px] text-slate-400 font-medium">
-                                <span className="flex items-center gap-0.5 text-emerald-600 font-semibold bg-emerald-50 px-1.5 py-0.5 rounded">
-                                    <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 20 20">
+                            <div className="flex items-center gap-1.5 mt-1 sm:mt-1.5 text-[9px] sm:text-[10px] text-slate-400 font-medium">
+                                <span className="flex items-center gap-0.5 text-emerald-600 font-semibold bg-emerald-50 px-1 py-[1px] sm:px-1.5 sm:py-0.5 rounded">
+                                    <svg className="w-2 h-2 sm:w-2.5 sm:h-2.5 fill-current" viewBox="0 0 20 20">
                                         <path d="M7.629 14.571L3.25 10.193l1.414-1.414 2.965 2.965 6.965-6.965 1.414 1.414z" />
                                     </svg>
                                     Verified
@@ -108,10 +133,10 @@ export default function SocialProofToast() {
                         {/* Close Button */}
                         <button
                             onClick={handleDismiss}
-                            className="absolute top-2.5 right-2.5 text-slate-400 hover:text-slate-600 transition-colors p-0.5 rounded-full hover:bg-slate-100"
+                            className="absolute top-1.5 right-1.5 sm:top-2.5 sm:right-2.5 text-slate-400 hover:text-slate-600 transition-colors p-0.5 rounded-full hover:bg-slate-100"
                             aria-label="Close notification"
                         >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>

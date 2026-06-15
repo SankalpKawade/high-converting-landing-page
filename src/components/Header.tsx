@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 export default function Header() {
-  const [time, setTime] = useState({ hours: 5, minutes: 23, seconds: 11 });
+  const [time, setTime] = useState({ hours: 8, minutes: 59, seconds: 11 });
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function Header() {
         }}
       >
         <p className="text-sm font-bold text-[#ebf7fc] tracking-wide">
-          ⚡ FLASH DEAL: FREE ₹6499 Bonus expires in →{' '}
+          ⚡ FLASH DEAL: FREE ₹3,696 Bonus expires in →{' '}
           <span className="font-mono inline-block min-w-[65px]">
             {pad(time.hours)}:{pad(time.minutes)}:{pad(time.seconds)}
           </span>{' '}
@@ -78,7 +78,7 @@ export default function Header() {
           href={CTA_URL}
           className="text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-2 rounded-full transition-all transform hover:-translate-y-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 shadow-[0_0_30px_-5px_rgba(34,211,238,0.6)]"
         >
-          Get Bundle — ₹199
+          Get Bundle — ₹299
         </a>
         */}
       </div>

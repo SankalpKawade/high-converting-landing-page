@@ -14,8 +14,8 @@ const faqs = [
     a: 'Immediately after payment, you\'ll receive an Access PDF with a direct Google Drive link. Simply download the files to your computer and start using them right away. It\'s instant — no waiting!',
   },
   {
-    q: 'Is this really just ₹199? No hidden charges?',
-    a: 'Yes! ₹199 is the complete price. One-time payment. No subscriptions, no hidden fees, no upsells. You get lifetime access to everything in the bundle plus all 4 bonuses.',
+    q: 'Is this really just ₹299? No hidden charges?',
+    a: 'Yes! ₹299 is the complete price. One-time payment. No subscriptions, no hidden fees, no upsells. You get lifetime access to everything in the bundle plus all 4 bonuses.',
   },
   {
     q: 'Can I use these assets for client work and commercial projects?',
@@ -30,7 +30,7 @@ const faqs = [
     a: 'We have a 100% satisfaction guarantee. If you face any issues, our support team will help you immediately. We\'ve served 1,000+ happy creators with a 9.4/10 rating.',
   },
   {
-    q: 'How long will this ₹199 price last?',
+    q: 'How long will this ₹299 price last?',
     a: 'This is a limited-time flash deal. The regular price is ₹3,999 and we will be increasing the price back soon. We strongly recommend you grab it now before the price goes up.',
   },
   {

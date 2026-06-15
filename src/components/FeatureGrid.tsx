@@ -343,8 +343,8 @@ export default function FeatureGrid() {
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
             {compatible.map((app, i) => (
               <div key={i} className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center font-black text-xl sm:text-2xl" 
-                  style={{ 
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center font-black text-xl sm:text-2xl"
+                  style={{
                     background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
                     border: '1px solid rgba(255,255,255,0.1)',
                     color: app.color,
@@ -364,7 +364,7 @@ export default function FeatureGrid() {
             href={CTA_URL}
             className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-3 sm:py-4 rounded-2xl uppercase tracking-wide"
           >
-            All 28 Packs — Just ₹199
+            All 28 Packs — Just ₹299
           </a>
         </div>
       </div>
