@@ -83,16 +83,41 @@ export default function HeroSection() {
         </p>
 
         {/* Social Proof - Trust elements */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 shrink-0 mt-1">
-          <div className="flex items-center gap-2">
-            <span className="text-[13px] sm:text-sm text-[#cbd5e1] font-medium">
-              🎬 Perfect for Reels, YouTube Shorts & Freelancing
-            </span>
+        <div className="df-wrap">
+          <div className="df-rating">
+            <div className="df-rating__stars"><span>★</span></div>
+            <span className="df-rating__text"><strong>4.9/5</strong> · Trusted worldwide</span>
           </div>
-          <div className="hidden sm:block w-px h-4 bg-white/20" />
-          <div className="flex items-center gap-1.5">
-            <span className="text-[13px] sm:text-sm text-[#cbd5e1] font-medium">🤝 Trusted by 2,243+ Creators</span>
+
+          <div className="df-title-row">
+            <span className="df-headline">Crafted for&nbsp;</span>
+            <div className="df-reel-outer">
+              <div className="df-reel-wrapper">
+                <div className="df-reel-track">
+                  <span>filmmakers</span>
+                  <span>photographers</span>
+                  <span>content creators</span>
+                  <span>editors</span>
+                  <span>brands</span>
+                  <span>storytellers</span>
+                  <span>filmmakers</span>
+                </div>
+              </div>
+              <div className="df-rocket-layer">
+                <div className="df-rocket-track">
+                  <div>filmmakers<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
+                  <div>photographers<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
+                  <div>content creators<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
+                  <div>editors<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
+                  <div>brands<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
+                  <div>storytellers<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
+                  <div>filmmakers<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <p className="df-subtitle">The #1 editing bundles everyone asks about.</p>
         </div>
 
         {/* CTA */}

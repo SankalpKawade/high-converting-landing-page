@@ -1,260 +1,34 @@
-import StarField from './StarField';
+import React, { useRef, useState, useEffect } from 'react';
 
 const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
-const features = [
+const mainSections = [
   {
-    icon: "🎬",
-    name: "800+ Transitions Pack",
-    desc: "Cinematic cuts, glitch, smooth, whip-pan & more",
-    tag: "MOST POPULAR",
-    tagColor: "#00D4FF",
-    count: "800+",
-    color: "#00D4FF",
+    title: "TRANSITIONS & FX",
+    image: "/images/transitions_fx_pack.png",
+    features: ["800+ Transitions Pack", "2000+ FX Presets", "VHS & Glitch Pack", "100+ AE Plugins"]
   },
   {
-    icon: "⚡",
-    name: "2000+ FX Presets",
-    desc: "One-click effects for Premiere Pro & After Effects",
-    tag: "FX",
-    tagColor: "#A855F7",
-    count: "2000+",
-    color: "#A855F7",
+    title: "CINEMATIC LUTS",
+    image: "/images/cinematic_luts_pack.png",
+    features: ["200+ Cinematic LUTs", "4K Cinematic Film Grain", "Light Leaks & Flares", "Smoke & Fog Overlays"]
   },
   {
-    icon: "🎨",
-    name: "200+ Cinematic LUTs",
-    desc: "Hollywood-grade color grading presets",
-    tag: "COLOR",
-    tagColor: "#FF6B00",
-    count: "200+",
-    color: "#FF6B00",
+    title: "GRAPHICS & FONTS",
+    image: "/images/graphics_assets_pack.png",
+    features: ["10,000+ Fonts Collection", "1500+ Lower Thirds", "Kinetic Title Pack", "100+ Callout Graphics"]
   },
   {
-    icon: "🔤",
-    name: "10,000+ Fonts Collection",
-    desc: "Premium typography for titles & lower thirds",
-    tag: "MEGA PACK",
-    tagColor: "#00D4FF",
-    count: "10K+",
-    color: "#00D4FF",
+    title: "SOUND FX & MUSIC",
+    image: "/images/sound_music_pack.png",
+    features: ["1000+ Premium Music Tracks", "3000+ Cinematic SFX", "Whooshes, Hits & Risers", "Commercial License"]
   },
   {
-    icon: "🎵",
-    name: "1000+ Free Music",
-    desc: "No copyright strikes. Use freely on YouTube & Reels",
-    tag: "NO COPYRIGHT",
-    tagColor: "#22C55E",
-    count: "1000+",
-    color: "#22C55E",
-  },
-  {
-    icon: "🔊",
-    name: "3000+ Sound Effects",
-    desc: "Whoosh, impacts, UI sounds & cinematic SFX",
-    tag: "SFX",
-    tagColor: "#FF6B00",
-    count: "3000+",
-    color: "#FF6B00",
-  },
-  {
-    icon: "🎥",
-    name: "500+ Stock Videos",
-    desc: "4K footage for any project",
-    tag: "4K",
-    tagColor: "#A855F7",
-    count: "500+",
-    color: "#A855F7",
-  },
-  {
-    icon: "✨",
-    name: "Motion Graphics Pack",
-    desc: "Professional MOGRT templates for Premiere Pro",
-    tag: "MOGRT",
-    tagColor: "#00D4FF",
-    count: "100+",
-    color: "#00D4FF",
-  },
-  {
-    icon: "🌟",
-    name: "Fire & Spark Overlays",
-    desc: "Dramatic fire, ember & spark video overlays",
-    tag: "OVERLAY",
-    tagColor: "#FF6B00",
-    count: "50+",
-    color: "#FF6B00",
-  },
-  {
-    icon: "💥",
-    name: "Glitch Effects Pack",
-    desc: "Digital glitch, VHS & cyberpunk effects",
-    tag: "TRENDING",
-    tagColor: "#A855F7",
-    count: "80+",
-    color: "#A855F7",
-  },
-  {
-    icon: "🌫️",
-    name: "Smoke & Haze Overlays",
-    desc: "Cinematic fog, smoke & atmospheric overlays",
-    tag: "OVERLAY",
-    tagColor: "#00D4FF",
-    count: "60+",
-    color: "#00D4FF",
-  },
-  {
-    icon: "💡",
-    name: "Light Leak & Lens Flare",
-    desc: "Vintage film light effects & bokeh overlays",
-    tag: "VISUAL",
-    tagColor: "#FFAA00",
-    count: "100+",
-    color: "#FFAA00",
-  },
-  {
-    icon: "📊",
-    name: "1500+ Lower Thirds Pack",
-    desc: "Animated name cards, titles & captions",
-    tag: "ANIMATION",
-    tagColor: "#00D4FF",
-    count: "1500+",
-    color: "#00D4FF",
-  },
-  {
-    icon: "🎞️",
-    name: "4K Cinematic Film Grain",
-    desc: "Authentic film grain & texture overlays",
-    tag: "4K",
-    tagColor: "#A855F7",
-    count: "4K",
-    color: "#A855F7",
-  },
-  {
-    icon: "🎭",
-    name: "Animated Title Pack",
-    desc: "Kinetic typography & title animations",
-    tag: "TITLES",
-    tagColor: "#FF6B00",
-    count: "200+",
-    color: "#FF6B00",
-  },
-  {
-    icon: "📱",
-    name: "YouTube Essentials Pack",
-    desc: "Thumbnails, end screens, subscribe buttons",
-    tag: "YOUTUBE",
-    tagColor: "#FF0000",
-    count: "50+",
-    color: "#FF4444",
-  },
-  {
-    icon: "💒",
-    name: "Wedding Invitation Pack",
-    desc: "Elegant templates for wedding cinematographers",
-    tag: "WEDDING",
-    tagColor: "#FFD700",
-    count: "30+",
-    color: "#FFD700",
-  },
-  {
-    icon: "🎬",
-    name: "100+ AE Plugins",
-    desc: "Powerful After Effects plugins & scripts",
-    tag: "PLUGINS",
-    tagColor: "#A855F7",
-    count: "100+",
-    color: "#A855F7",
-  },
-  {
-    icon: "🤖",
-    name: "200+ Animated Emojis",
-    desc: "Expressive animated emoji for reels & stories",
-    tag: "SOCIAL",
-    tagColor: "#FF6B00",
-    count: "200+",
-    color: "#FF6B00",
-  },
-  {
-    icon: "📷",
-    name: "Camera Rig Overlays",
-    desc: "Professional camera frame & rig overlays",
-    tag: "OVERLAY",
-    tagColor: "#00D4FF",
-    count: "40+",
-    color: "#00D4FF",
-  },
-  {
-    icon: "☁️",
-    name: "Rain & Snow Overlays",
-    desc: "Weather & seasonal atmospheric effects",
-    tag: "WEATHER",
-    tagColor: "#00D4FF",
-    count: "30+",
-    color: "#00D4FF",
-  },
-  {
-    icon: "🎯",
-    name: "100+ Callout Graphics",
-    desc: "Arrow pointers, speech bubbles & callouts",
-    tag: "GRAPHICS",
-    tagColor: "#22C55E",
-    count: "100+",
-    color: "#22C55E",
-  },
-  {
-    icon: "🖼️",
-    name: "100+ Video Backgrounds",
-    desc: "Abstract, cinematic & looping backgrounds",
-    tag: "BG",
-    tagColor: "#A855F7",
-    count: "100+",
-    color: "#A855F7",
-  },
-  {
-    icon: "🏆",
-    name: "Logo Animation Pack",
-    desc: "Reveal animations for your brand logo",
-    tag: "BRANDING",
-    tagColor: "#FFAA00",
-    count: "20+",
-    color: "#FFAA00",
-  },
-  {
-    icon: "📹",
-    name: "Full Video Editing Course",
-    desc: "Structured A-Z course from beginner to pro",
-    tag: "🎓 BONUS",
-    tagColor: "#22C55E",
-    count: "A-Z",
-    color: "#22C55E",
-  },
-  {
-    icon: "💬",
-    name: "Wedding Title Pack",
-    desc: "Romantic cinematic text & title animations",
-    tag: "WEDDING",
-    tagColor: "#FFD700",
-    count: "40+",
-    color: "#FFD700",
-  },
-  {
-    icon: "🌈",
-    name: "Dust Particle Overlays",
-    desc: "Floating dust, bokeh & particle effects",
-    tag: "PARTICLES",
-    tagColor: "#FF6B00",
-    count: "25+",
-    color: "#FF6B00",
-  },
-  {
-    icon: "🎪",
-    name: "Viral Meme Videos",
-    desc: "Meme Videos for Video Editing",
-    tag: "REELS",
-    tagColor: "#A855F7",
-    count: "50+",
-    color: "#A855F7",
-  },
+    title: "EBOOK BUNDLE",
+    textOnImage: "EDITING ACADEMY",
+    image: "/images/editing_academy_pack.png",
+    features: ["Full A-Z Editing Course", "Viral Meme Videos Pack", "500+ 4K Stock Footage", "Wedding Title Pack"]
+  }
 ];
 
 const compatible = [
@@ -267,71 +41,166 @@ const compatible = [
 ];
 
 export default function FeatureGrid() {
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const checkScroll = () => {
+    if (carouselRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+      setShowLeftArrow(scrollLeft > 5);
+      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 5);
+    }
+  };
+
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (el) {
+      el.addEventListener('scroll', checkScroll);
+      checkScroll();
+      window.addEventListener('resize', checkScroll);
+    }
+    return () => {
+      if (el) el.removeEventListener('scroll', checkScroll);
+      window.removeEventListener('resize', checkScroll);
+    };
+  }, []);
+
+  const handleScroll = (direction: 'left' | 'right') => {
+    if (carouselRef.current) {
+      const { scrollLeft, clientWidth } = carouselRef.current;
+      // Scroll by 85% of visible width to align nicely with peeking mobile cards
+      const scrollAmount = clientWidth * 0.85;
+      carouselRef.current.scrollTo({
+        left: direction === 'left' ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+  useEffect(() => {
+    if (isHovered) return;
+    const intervalId = setInterval(() => {
+      if (carouselRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+        // If we are close to the end, wrap back to start
+        const isAtEnd = scrollLeft >= scrollWidth - clientWidth - 10;
+
+        if (isAtEnd) {
+          carouselRef.current.scrollTo({
+            left: 0,
+            behavior: 'smooth'
+          });
+        } else {
+          const firstChild = carouselRef.current.firstElementChild as HTMLElement;
+          if (firstChild) {
+            const cardWidth = firstChild.getBoundingClientRect().width;
+            const gap = window.innerWidth >= 640 ? 24 : 16;
+            carouselRef.current.scrollTo({
+              left: scrollLeft + cardWidth + gap,
+              behavior: 'smooth'
+            });
+          }
+        }
+      }
+    }, 3000);
+    return () => clearInterval(intervalId);
+  }, [isHovered]);
+
   return (
     <section className="py-12 sm:py-20 px-4 relative z-10" id="features">
       <div className="section-divider mb-16" />
+
       <div className="max-w-6xl mx-auto">
-        {/* Heading */}
-        <div className="text-center mb-10 sm:mb-14">
-          <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">What's Included</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-4 max-w-3xl mx-auto leading-tight">
-            Your Complete Editing Arsenal — In One Download
-          </h2>
-          <p className="text-base sm:text-lg text-[#94a3b8] max-w-2xl mx-auto">
-            No more searching, no more subscriptions. Just import, apply, and export.
-          </p>
+        {/* Header Title & Nav arrows */}
+        <div className="flex items-end justify-between mb-8 sm:mb-12">
+          <div>
+            <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">What's Included</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-2 leading-tight">
+              All Assets
+            </h2>
+            <p className="text-sm sm:text-base text-[#94a3b8] max-w-xl">
+              No more searching, no more subscriptions. Just download, apply, and export.
+            </p>
+          </div>
+
+          {/* Slider controls */}
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              onClick={() => handleScroll('left')}
+              disabled={!showLeftArrow}
+              className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 ${showLeftArrow
+                ? 'border-white/20 text-white hover:border-[#00f2ff] hover:text-[#00f2ff] hover:shadow-[0_0_15px_rgba(0,242,255,0.2)] bg-[#0a1226]/80 cursor-pointer'
+                : 'border-white/5 text-white/20 bg-transparent cursor-not-allowed'
+                }`}
+              aria-label="Previous Section"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={() => handleScroll('right')}
+              disabled={!showRightArrow}
+              className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 ${showRightArrow
+                ? 'border-white/20 text-white hover:border-[#00f2ff] hover:text-[#00f2ff] hover:shadow-[0_0_15px_rgba(0,242,255,0.2)] bg-[#0a1226]/80 cursor-pointer'
+                : 'border-white/5 text-white/20 bg-transparent cursor-not-allowed'
+                }`}
+              aria-label="Next Section"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
 
-        {/* Grid — 2 columns on mobile, 3 on md, 4 on lg */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
-          {features.map((f, i) => (
+        {/* Carousel container */}
+        <div
+          ref={carouselRef}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={() => setIsHovered(true)}
+          onTouchEnd={() => setIsHovered(false)}
+          className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory flex-nowrap gap-4 sm:gap-6 pb-6 px-4 -mx-4 md:px-0 md:-mx-0 scroll-smooth"
+        >
+          {mainSections.map((item, i) => (
             <div
               key={i}
-              className="tilt-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 relative overflow-hidden cursor-default flex flex-col justify-start"
-              style={{
-                background: 'linear-gradient(135deg, #0f1830 0%, #0a1226 100%)',
-                border: `1px solid ${f.color}22`,
-                boxShadow: `0 4px 30px rgba(0, 0, 0, 0.4)`,
-              }}
+              className="snap-start shrink-0 w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[22vw] max-w-[300px] flex flex-col group"
             >
-              <StarField speed={0.3} starsSmall={15} starsMedium={5} starsLarge={2} opacity={0.2} />
-
-              {/* Top border glow corresponding to group color */}
+              {/* Image Box */}
               <div
-                className="absolute top-0 left-0 right-0 h-[2px] opacity-70"
-                style={{
-                  background: `linear-gradient(90deg, transparent, ${f.color}, transparent)`
-                }}
-              />
-              <div className="glow-line" />
+                className="relative aspect-square rounded-3xl overflow-hidden border border-white/10 bg-[#070c18] cursor-default shadow-lg transition-all duration-300 hover:border-[#00f2ff]/30"
+              >
+                {/* cover image */}
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 select-none pointer-events-none"
+                />
+                {/* subtle dark backing overlay that transitions on hover to ensure absolute image clarity */}
+                <div className="absolute inset-0 bg-black/15 group-hover:bg-transparent transition-colors duration-300 z-10 pointer-events-none select-none" />
+              </div>
 
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex items-start justify-between mb-3 sm:mb-4">
-                  <div
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center relative shrink-0"
-                    style={{
-                      background: `${f.color}1a`,
-                      border: `1px solid ${f.color}33`,
-                      boxShadow: `inset 0 0 12px ${f.color}1a, 0 0 15px ${f.color}22`
-                    }}
-                  >
-                    <span className="text-xl sm:text-2xl">{f.icon}</span>
-                  </div>
-                  {/* Tag pill */}
-                  {f.tag && (
-                    <span className="text-[9px] sm:text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider text-right" style={{ backgroundColor: `${f.tagColor}1a`, color: f.tagColor, border: `1px solid ${f.tagColor}33` }}>
-                      {f.tag}
-                    </span>
-                  )}
-                </div>
-                <div>
-                  <h3 className="text-sm sm:text-lg font-black text-white leading-tight mb-1.5 sm:mb-2">
-                    {f.name}
-                  </h3>
-                  <p className="text-[11px] sm:text-sm text-[#cbd5e1] leading-snug sm:leading-relaxed">
-                    {f.desc}
-                  </p>
-                </div>
+              {/* Text labels below the box */}
+              <div className="mt-4 pl-1.5">
+                <h3 className="text-base font-black text-white tracking-tight group-hover:text-[#00f2ff] transition-colors duration-200">
+                  {item.title}
+                </h3>
+
+                {/* Features List */}
+                <ul className="mt-3.5 space-y-2 text-xs text-[#94a3b8]">
+                  {item.features.map((feat, idx) => (
+                    <li key={idx} className="flex items-start gap-2 leading-tight">
+                      <svg className="w-3.5 h-3.5 text-[#00f2ff] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-white/80 font-medium">{feat}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
@@ -364,7 +233,7 @@ export default function FeatureGrid() {
             href={CTA_URL}
             className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-3 sm:py-4 rounded-2xl uppercase tracking-wide"
           >
-            All 28 Packs — Just ₹299
+            All 5 Packs — Just ₹299
           </a>
         </div>
       </div>

@@ -71,9 +71,7 @@ export default function ImageComparisonSection() {
         {/* Interactive Comparison Slider */}
         <div
           ref={containerRef}
-          onMouseDown={startDragging}
-          onTouchStart={startDragging}
-          className="relative w-full aspect-[1638/2048] md:aspect-[1638/684] rounded-3xl overflow-hidden border border-[#00f2ff]/20 shadow-[0_0_50px_rgba(0,242,255,0.08)] cursor-ew-resize select-none touch-none"
+          className="relative w-full aspect-[1638/2048] md:aspect-[1638/684] rounded-3xl overflow-hidden border border-[#00f2ff]/20 shadow-[0_0_50px_rgba(0,242,255,0.08)] select-none touch-none"
         >
           {/* Label Before (Left) */}
           <div className="absolute top-4 left-4 z-20 bg-black/60 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 text-xs font-bold uppercase tracking-wider text-white/70">
@@ -132,7 +130,11 @@ export default function ImageComparisonSection() {
             style={{ left: `${percent}%` }}
           >
             {/* Grab Capsule */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-black/90 rounded-full border-2 border-white flex items-center justify-center shadow-2xl cursor-ew-resize transition-transform duration-100 hover:scale-110 active:scale-95 pointer-events-auto">
+            <div 
+              onMouseDown={startDragging}
+              onTouchStart={startDragging}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-black/90 rounded-full border-2 border-white flex items-center justify-center shadow-2xl cursor-ew-resize transition-transform duration-100 hover:scale-110 active:scale-95 pointer-events-auto"
+            >
               <span className="flex items-center justify-center text-white select-none">
                 <svg className="w-4 h-4" viewBox="0 0 12 17" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeWidth="2" d="M1 1L1 16"></path>

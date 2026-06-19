@@ -564,3 +564,200 @@ section.py-16 {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
+/* ===========================================================
+   Scrollbar Hide Utility
+   =========================================================== */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* ===========================================================
+   Crafted for Animation (Hero Section)
+   =========================================================== */
+
+.df-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1.5rem auto;
+  width: 100%;
+}
+
+.df-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 242, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 242, 255, 0.05);
+  margin-bottom: 0.75rem;
+}
+
+.df-rating__stars {
+  color: #ffb800;
+  font-size: 1rem;
+  text-shadow: 0 0 8px rgba(255, 184, 0, 0.4);
+}
+
+.df-rating__text {
+  color: #cbd5e1;
+  font-size: 0.825rem;
+  font-weight: 500;
+}
+
+.df-rating__text strong {
+  color: #ffffff;
+}
+
+.df-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  height: 2.5rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .df-title-row {
+    font-size: 2.75rem;
+    height: 3.5rem;
+  }
+}
+
+.df-headline {
+  color: #ffffff;
+  font-weight: 900;
+  display: inline-block;
+}
+
+.df-reel-outer {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+}
+
+.df-reel-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.df-reel-track {
+  display: flex;
+  flex-direction: column;
+  animation: df-reel-slide 14s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+
+.df-reel-track span {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  color: #00f2ff;
+  font-weight: 900;
+  white-space: nowrap;
+  text-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+@media (min-width: 640px) {
+  .df-reel-track span {
+    height: 3.5rem;
+  }
+}
+
+/* Rocket track & layer overlay */
+.df-rocket-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.df-rocket-track {
+  display: flex;
+  flex-direction: column;
+  animation: df-reel-slide 14s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+
+.df-rocket-track div {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  color: transparent;
+  white-space: nowrap;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .df-rocket-track div {
+    height: 3.5rem;
+  }
+}
+
+.df-rocket-track img {
+  height: 2.2rem;
+  margin-left: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media (min-width: 640px) {
+  .df-rocket-track img {
+    height: 3rem;
+  }
+}
+
+.df-subtitle {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+@keyframes df-reel-slide {
+  0%, 12% {
+    transform: translateY(0%);
+  }
+  14%, 26% {
+    transform: translateY(-14.2857%);
+  }
+  28%, 40% {
+    transform: translateY(-28.5714%);
+  }
+  42%, 54% {
+    transform: translateY(-42.8571%);
+  }
+  56%, 68% {
+    transform: translateY(-57.1428%);
+  }
+  70%, 82% {
+    transform: translateY(-71.4285%);
+  }
+  84%, 96% {
+    transform: translateY(-85.7142%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

@@ -7,7 +7,7 @@ export default function Footer() {
           <img
             src="/images/logo2-removebg.webp"
             alt="ProDigitalFiles Logo"
-            className="w-8 h-8 object-contain drop-shadow-[0_0_4px_rgba(255,255,255,0.25)]"
+            className="w-10 h-10 object-contain brightness-110 drop-shadow-[0_0_8px_rgba(0,242,255,0.65)]"
             loading="lazy"
             decoding="async"
           />
