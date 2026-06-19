@@ -79,15 +79,12 @@ export default function HeroSection() {
 
         {/* Sub-headline — Effort & Sacrifice */}
         <p className="text-[15px] sm:text-lg md:text-xl text-[#94a3b8] max-w-2xl mx-auto leading-[1.6] shrink-0 px-2">
-          70GB of premium editing assets that pay you back for years. <strong className="text-[#00f2ff]">Transitions, LUTs, sound effects, fonts & more.</strong><br /> ⏰ Lock in ₹299 today - price increases to ₹999 when timer ends.
+          Premium editing assets that pay you back for years. <strong className="text-[#00f2ff]">Transitions, LUTs, sound effects, fonts & more.</strong><br /> ⏰ Lock in ₹299 today - price increases to ₹999 when timer ends.
         </p>
 
         {/* Social Proof - Trust elements */}
         <div className="df-wrap">
-          <div className="df-rating">
-            <div className="df-rating__stars"><span>★</span></div>
-            <span className="df-rating__text"><strong>4.9/5</strong> · Trusted worldwide</span>
-          </div>
+          <div className="df-rating__stars"><span>★</span>  <span className="df-rating__text"><strong>4.9/5</strong> · Trusted worldwide</span></div>
 
           <div className="df-title-row">
             <span className="df-headline">Crafted for&nbsp;</span>
@@ -105,19 +102,19 @@ export default function HeroSection() {
               </div>
               <div className="df-rocket-layer">
                 <div className="df-rocket-track">
-                  <div>filmmakers<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
-                  <div>photographers<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
-                  <div>content creators<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
-                  <div>editors<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
-                  <div>brands<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
-                  <div>storytellers<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
-                  <div>filmmakers<img src="https://cdn.shopify.com/s/files/1/0905/9303/4564/files/Rocket.gif?v=1767181256" alt="" /></div>
+                  <div>filmmakers</div>
+                  <div>photographers</div>
+                  <div>content creators</div>
+                  <div>editors</div>
+                  <div>brands</div>
+                  <div>storytellers</div>
+                  <div>filmmakers<img src="" alt="" /></div>
                 </div>
               </div>
             </div>
           </div>
 
-          <p className="df-subtitle">The #1 editing bundles everyone asks about.</p>
+          <p className="df-subtitle">The #1 editing bundle everyone asks about.</p>
         </div>
 
         {/* CTA */}

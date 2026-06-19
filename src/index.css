@@ -576,8 +576,10 @@ section.py-16 {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* ===========================================================
@@ -592,19 +594,6 @@ section.py-16 {
   text-align: center;
   margin: 1.5rem auto;
   width: 100%;
-}
-
-.df-rating {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(12px);
-  padding: 0.4rem 1rem;
-  border-radius: 9999px;
-  border: 1px solid rgba(0, 242, 255, 0.25);
-  box-shadow: 0 4px 20px rgba(0, 242, 255, 0.05);
-  margin-bottom: 0.75rem;
 }
 
 .df-rating__stars {
@@ -736,28 +725,43 @@ section.py-16 {
 }
 
 @keyframes df-reel-slide {
-  0%, 12% {
+
+  0%,
+  12% {
     transform: translateY(0%);
   }
-  14%, 26% {
+
+  14%,
+  26% {
     transform: translateY(-14.2857%);
   }
-  28%, 40% {
+
+  28%,
+  40% {
     transform: translateY(-28.5714%);
   }
-  42%, 54% {
+
+  42%,
+  54% {
     transform: translateY(-42.8571%);
   }
-  56%, 68% {
+
+  56%,
+  68% {
     transform: translateY(-57.1428%);
   }
-  70%, 82% {
+
+  70%,
+  82% {
     transform: translateY(-71.4285%);
   }
-  84%, 96% {
+
+  84%,
+  96% {
     transform: translateY(-85.7142%);
   }
+
   100% {
     transform: translateY(0%);
   }
-}
+}

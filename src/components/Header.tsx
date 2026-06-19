@@ -51,7 +51,7 @@ export default function Header() {
       </div>
 
       {/* Nav */}
-      <div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-[#091024]/90 backdrop-blur-md border-b border-white/10">
+      <div className="flex items-center justify-between px-4 sm:px-6 py-2 bg-[#091024]/90 backdrop-blur-md border-b border-white/10">
         <div className="flex items-center gap-2">
           <img
             src="/images/logo2-removebg.webp"

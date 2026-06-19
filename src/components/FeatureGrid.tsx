@@ -5,27 +5,42 @@ const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-sim
 const mainSections = [
   {
     title: "TRANSITIONS & FX",
+    badge: "POPULAR",
+    cardTitle: "TRANSITIONS & FX",
+    subtitle: "Most Bought Packs",
     image: "/images/transitions_fx_pack.png",
     features: ["800+ Transitions Pack", "2000+ FX Presets", "VHS & Glitch Pack", "100+ AE Plugins"]
   },
   {
     title: "CINEMATIC LUTS",
+    badge: "BEST-SELLING",
+    cardTitle: "CINEMATIC LUTS",
+    subtitle: "Enjoy all our Color Packs",
     image: "/images/cinematic_luts_pack.png",
     features: ["200+ Cinematic LUTs", "4K Cinematic Film Grain", "Light Leaks & Flares", "Smoke & Fog Overlays"]
   },
   {
     title: "GRAPHICS & FONTS",
+    badge: "HOT DEAL",
+    cardTitle: "Graphics",
+    subtitle: "10,000+ Premium Assets",
     image: "/images/graphics_assets_pack.png",
     features: ["10,000+ Fonts Collection", "1500+ Lower Thirds", "Kinetic Title Pack", "100+ Callout Graphics"]
   },
   {
     title: "SOUND FX & MUSIC",
+    badge: "RECOMMENDED",
+    cardTitle: "Audio",
+    subtitle: "Cinematic sound design",
     image: "/images/sound_music_pack.png",
     features: ["1000+ Premium Music Tracks", "3000+ Cinematic SFX", "Whooshes, Hits & Risers", "Commercial License"]
   },
   {
     title: "EBOOK BUNDLE",
     textOnImage: "EDITING ACADEMY",
+    badge: "BEST VALUE",
+    cardTitle: "Academy",
+    subtitle: "Master video editing",
     image: "/images/editing_academy_pack.png",
     features: ["Full A-Z Editing Course", "Viral Meme Videos Pack", "500+ 4K Stock Footage", "Wedding Title Pack"]
   }
@@ -78,12 +93,12 @@ export default function FeatureGrid() {
       });
     }
   };
+
   useEffect(() => {
     if (isHovered) return;
     const intervalId = setInterval(() => {
       if (carouselRef.current) {
         const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-        // If we are close to the end, wrap back to start
         const isAtEnd = scrollLeft >= scrollWidth - clientWidth - 10;
 
         if (isAtEnd) {
@@ -124,8 +139,8 @@ export default function FeatureGrid() {
             </p>
           </div>
 
-          {/* Slider controls */}
-          <div className="flex items-center gap-2 shrink-0">
+          {/* Slider controls (Omitted/Commented out per User edits) */}
+          {/*<div className="flex items-center gap-2 shrink-0">
             <button
               onClick={() => handleScroll('left')}
               disabled={!showLeftArrow}
@@ -152,7 +167,7 @@ export default function FeatureGrid() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
             </button>
-          </div>
+          </div>*/}
         </div>
 
         {/* Carousel container */}
@@ -162,45 +177,54 @@ export default function FeatureGrid() {
           onMouseLeave={() => setIsHovered(false)}
           onTouchStart={() => setIsHovered(true)}
           onTouchEnd={() => setIsHovered(false)}
-          className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory flex-nowrap gap-4 sm:gap-6 pb-6 px-4 -mx-4 md:px-0 md:-mx-0 scroll-smooth"
+          className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory flex-nowrap gap-4 sm:gap-6 pb-6 px-4 -mx-4 md:px-0 md:-mx-0 scroll-smooth items-stretch"
         >
           {mainSections.map((item, i) => (
             <div
               key={i}
               className="snap-start shrink-0 w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[22vw] max-w-[300px] flex flex-col group"
             >
-              {/* Image Box */}
+              {/* Feature Card Box */}
               <div
-                className="relative aspect-square rounded-3xl overflow-hidden border border-white/10 bg-[#070c18] cursor-default shadow-lg transition-all duration-300 hover:border-[#00f2ff]/30"
+                className="relative flex-1 flex flex-col justify-between p-5 sm:p-6 bg-[#0c0c0e] border border-white/10 rounded-[28px] sm:rounded-[32px] cursor-default shadow-lg transition-all duration-300 hover:border-[#00f2ff]/30"
               >
-                {/* cover image */}
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 select-none pointer-events-none"
-                />
-                {/* subtle dark backing overlay that transitions on hover to ensure absolute image clarity */}
-                <div className="absolute inset-0 bg-black/15 group-hover:bg-transparent transition-colors duration-300 z-10 pointer-events-none select-none" />
-              </div>
+                {/* Top Section */}
+                <div className="text-left flex-1 flex flex-col">
+                  {/* Badge */}
+                  <span className="text-[10px] font-black text-[#ffb800] tracking-widest uppercase block mb-1">
+                    {item.badge}
+                  </span>
+                  {/* Title */}
+                  <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight group-hover:text-[#00f2ff] transition-colors duration-200 mb-1.5">
+                    {item.cardTitle}
+                  </h3>
+                  {/* Subtitle */}
+                  <p className="text-[11px] sm:text-xs text-[#94a3b8] font-medium leading-normal mb-4">
+                    {item.subtitle}
+                  </p>
 
-              {/* Text labels below the box */}
-              <div className="mt-4 pl-1.5">
-                <h3 className="text-base font-black text-white tracking-tight group-hover:text-[#00f2ff] transition-colors duration-200">
-                  {item.title}
-                </h3>
+                  {/* Features List */}
+                  <ul className="space-y-2 text-[11px] sm:text-xs text-[#cbd5e1] mb-6">
+                    {item.features.map((feat, idx) => (
+                      <li key={idx} className="flex items-start gap-1.5 leading-snug">
+                        <svg className="w-3.5 h-3.5 text-[#00f2ff] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-white/90 font-medium">{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                {/* Features List */}
-                <ul className="mt-3.5 space-y-2 text-xs text-[#94a3b8]">
-                  {item.features.map((feat, idx) => (
-                    <li key={idx} className="flex items-start gap-2 leading-tight">
-                      <svg className="w-3.5 h-3.5 text-[#00f2ff] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-white/80 font-medium">{feat}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Mockup image at the bottom */}
+                <div className="w-full flex items-center justify-center pt-2 mt-auto">
+                  <img
+                    src={item.image}
+                    alt={item.cardTitle}
+                    loading="lazy"
+                    className="w-full max-h-[180px] sm:max-h-[250px] object-contain group-hover:scale-105 transition-transform duration-500 select-none pointer-events-none"
+                  />
+                </div>
               </div>
             </div>
           ))}
