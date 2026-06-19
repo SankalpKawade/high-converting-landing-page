@@ -3,6 +3,7 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import PASSection from './components/PASSection';
 import FeatureGrid from './components/FeatureGrid';
+import ImageComparisonSection from './components/ImageComparisonSection';
 import ValuePropStack from './components/ValuePropStack';
 import TransformationSection from './components/TransformationSection';
 import AudienceSection from './components/AudienceSection';
@@ -49,6 +50,8 @@ export default function App() {
         {/* <PASSection /> */}
         {/* Feature Bento Grid — All 28 Categories */}
         <FeatureGrid />
+        {/* Section: Image Comparison Slider */}
+        <ImageComparisonSection />
         {/* Section 4: Value Proposition Stack — Feature+Benefit combos */}
         {/* <ValuePropStack /> */}
         {/* Before & After Transformation */}
