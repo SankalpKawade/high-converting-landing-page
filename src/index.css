@@ -587,13 +587,40 @@ section.py-16 {
    =========================================================== */
 
 .df-wrap {
+  --reel-height: 1.8rem;
+  --reel-font-size: 1.1rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 1.5rem auto;
+  margin: 0.75rem auto;
+  gap: 0.25rem;
   width: 100%;
+}
+
+@media (min-width: 360px) {
+  .df-wrap {
+    --reel-height: 2.1rem;
+    --reel-font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .df-wrap {
+    --reel-height: 2.4rem;
+    --reel-font-size: 1.45rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .df-wrap {
+    --reel-height: 3.5rem;
+    --reel-font-size: 2.75rem;
+    margin: 1.5rem auto;
+    gap: 0.35rem;
+  }
 }
 
 .df-rating__stars {
@@ -614,28 +641,24 @@ section.py-16 {
 
 .df-title-row {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: var(--reel-font-size);
   font-weight: 900;
   color: #ffffff;
-  height: 2.5rem;
+  height: var(--reel-height);
   overflow: hidden;
   position: relative;
   width: 100%;
-}
-
-@media (min-width: 640px) {
-  .df-title-row {
-    font-size: 2.75rem;
-    height: 3.5rem;
-  }
 }
 
 .df-headline {
   color: #ffffff;
   font-weight: 900;
   display: inline-block;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .df-reel-outer {
@@ -644,6 +667,7 @@ section.py-16 {
   overflow: hidden;
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .df-reel-wrapper {
@@ -660,17 +684,11 @@ section.py-16 {
 .df-reel-track span {
   display: flex;
   align-items: center;
-  height: 2.5rem;
+  height: var(--reel-height);
   color: #00f2ff;
   font-weight: 900;
   white-space: nowrap;
   text-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
-}
-
-@media (min-width: 640px) {
-  .df-reel-track span {
-    height: 3.5rem;
-  }
 }
 
 /* Rocket track & layer overlay */
@@ -692,16 +710,10 @@ section.py-16 {
 .df-rocket-track div {
   display: flex;
   align-items: center;
-  height: 2.5rem;
+  height: var(--reel-height);
   color: transparent;
   white-space: nowrap;
   position: relative;
-}
-
-@media (min-width: 640px) {
-  .df-rocket-track div {
-    height: 3.5rem;
-  }
 }
 
 .df-rocket-track img {

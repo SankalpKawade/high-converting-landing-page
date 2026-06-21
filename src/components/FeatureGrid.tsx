@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import StarField from './StarField';
 
 const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
@@ -188,6 +189,8 @@ export default function FeatureGrid() {
               <div
                 className="relative flex-1 flex flex-col justify-between p-5 sm:p-6 bg-[#0c0c0e] border border-white/10 rounded-[28px] sm:rounded-[32px] cursor-default shadow-lg transition-all duration-300 hover:border-[#00f2ff]/30"
               >
+                <StarField speed={0.5} starsSmall={100} starsMedium={35} starsLarge={12} opacity={0.3} />
+
                 {/* Top Section */}
                 <div className="text-left flex-1 flex flex-col">
                   {/* Badge */}

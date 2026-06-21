@@ -108,7 +108,7 @@ export default function HeroSection() {
                   <div>editors</div>
                   <div>brands</div>
                   <div>storytellers</div>
-                  <div>filmmakers<img src="" alt="" /></div>
+                  <div>filmmakers</div>
                 </div>
               </div>
             </div>
