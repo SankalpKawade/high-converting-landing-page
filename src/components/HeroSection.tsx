@@ -5,7 +5,7 @@ const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-sim
 
 const BADGE_ITEMS = [
   { text: "347 Bought in the Last 24 Hours", duration: 3000 },
-  { text: "Trending Among — Editors & Creators", duration: 4000 },
+  { text: "Trending — Editors & Creators", duration: 4000 },
   { text: "Trusted by 2,243+ Creators", duration: 5000 },
   { text: "Stop Searching. Start Editing.", duration: 4000 },
 ];
@@ -78,26 +78,26 @@ export default function HeroSection() {
         </h1>
 
         {/* Sub-headline — Effort & Sacrifice */}
-        <p className="text-[15px] sm:text-lg md:text-xl text-[#94a3b8] max-w-2xl mx-auto leading-[1.6] shrink-0 px-2">
+        {/*<p className="text-[15px] sm:text-lg md:text-xl text-[#94a3b8] max-w-2xl mx-auto leading-[1.6] shrink-0 px-2">
           Premium editing assets that pay you back for years. <strong className="text-[#00f2ff]">Transitions, LUTs, sound effects, fonts & more.</strong><br /> ⏰ Lock in ₹299 today - price increases to ₹999 when timer ends.
-        </p>
+        </p>*/}
 
         {/* Social Proof - Trust elements */}
         <div className="df-wrap">
-          <div className="df-rating__stars"><span>★</span>  <span className="df-rating__text"><strong>4.9/5</strong> · Trusted worldwide</span></div>
+          <div className="df-rating__stars"><span>★</span>  <span className="df-rating__text"><strong>4.9/5</strong> · Creators' Choice</span></div>
 
           <div className="df-title-row">
             <span className="df-headline">Crafted for&nbsp;</span>
             <div className="df-reel-outer">
               <div className="df-reel-wrapper">
                 <div className="df-reel-track">
-                  <span>filmmakers</span>
-                  <span>photographers</span>
-                  <span>content creators</span>
-                  <span>editors</span>
-                  <span>brands</span>
-                  <span>storytellers</span>
-                  <span>filmmakers</span>
+                  <span>content creators 🎬</span>
+                  <span>editors ✂️</span>
+                  <span>photographers 📸</span>
+                  <span>beginners 👨🏼‍💻</span>
+                  <span>brands 🏢</span>
+                  <span>storytellers 📖</span>
+                  <span>filmmakers 🎥</span>
                 </div>
               </div>
               <div className="df-rocket-layer">
