@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import PASSection from './components/PASSection';
 import FeatureGrid from './components/FeatureGrid';
@@ -41,8 +40,7 @@ export default function App() {
     };
   }, []);
   return (
-    <div className="min-h-screen bg-[#030712] text-white grid-bg">
-      <Header />
+    <div className="min-h-screen bg-black text-white">
       <main>
         {/* ATF: Hero — Dream Outcome + Social Proof + CTA */}
         <HeroSection />

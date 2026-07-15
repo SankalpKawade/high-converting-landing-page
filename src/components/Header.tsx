@@ -22,7 +22,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
+      setScrolled(window.scrollY > window.innerHeight * 0.8);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -31,7 +31,7 @@ export default function Header() {
   const pad = (n: number) => n.toString().padStart(2, '0');
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-[#091024] transition-transform duration-300 ease-in-out ${scrolled ? '-translate-y-[50px]' : 'translate-y-0'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-[#091024] transition-all duration-500 ease-in-out ${scrolled ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
       {/* Countdown Timer */}
       <div
         className="w-full h-[50px] flex  items-center justify-center px-4 text-center"
@@ -51,7 +51,7 @@ export default function Header() {
       </div>
 
       {/* Nav */}
-      updates      <div className="flex items-center justify-between px-4 sm:px-6 py-1 bg-[#091024]/90 backdrop-blur-md border-b border-white/10">
+      <div className="flex items-center justify-between px-4 sm:px-6 py-1 bg-[#091024]/90 backdrop-blur-md border-b border-white/10">
         <div className="flex items-center gap-2">
           <img
             src="/images/logo2-removebg.webp"
