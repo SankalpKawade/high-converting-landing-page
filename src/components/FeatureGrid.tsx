@@ -188,10 +188,6 @@ export default function FeatureGrid() {
 
                 {/* Top Section */}
                 <div className="text-left flex-1 flex flex-col">
-                  {/* Badge */}
-                  <span className="text-[10px] font-black text-[#ffb800] tracking-widest uppercase block mb-1">
-                    {item.badge}
-                  </span>
                   {/* Title */}
                   <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight group-hover:text-[#00f2ff] transition-colors duration-200 mb-1.5">
                     {item.cardTitle}
