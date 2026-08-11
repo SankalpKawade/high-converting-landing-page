@@ -2,7 +2,7 @@ import StarField from './StarField';
 
 const bonuses = [
   {
-    title: '1500+ Motivational Reels',
+    title: '1500+ 4K Reels',
     value: '₹999',
   },
   {
@@ -14,7 +14,7 @@ const bonuses = [
     value: '₹499',
   },
   {
-    title: 'Instagram Growth Course',
+    title: 'Instagram Growth Mastery',
     value: '₹1,499',
   },
 ];

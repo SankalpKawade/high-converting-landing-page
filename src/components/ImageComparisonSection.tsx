@@ -59,7 +59,7 @@ export default function ImageComparisonSection() {
       <div className="max-w-4xl mx-auto">
         {/* Title & Description */}
         <div className="text-center mb-10 sm:mb-14">
-          <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Cinematic LUTs</p>
+          {/*<p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Cinematic LUTs</p>*/}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-4 leading-tight">
             See The Color Transformation
           </h2>
@@ -130,7 +130,7 @@ export default function ImageComparisonSection() {
             style={{ left: `${percent}%` }}
           >
             {/* Grab Capsule */}
-            <div 
+            <div
               onMouseDown={startDragging}
               onTouchStart={startDragging}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-black/90 rounded-full border-2 border-white flex items-center justify-center shadow-2xl cursor-ew-resize transition-transform duration-100 hover:scale-110 active:scale-95 pointer-events-auto touch-none"

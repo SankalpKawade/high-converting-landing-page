@@ -55,7 +55,7 @@ export default function ReviewsSection() {
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-10 sm:mb-12">
-          <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Social Proof</p>
+          {/* <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Social Proof</p>*/}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
             Trusted by Creators
           </h2>

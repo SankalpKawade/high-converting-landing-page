@@ -6,42 +6,37 @@ const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-sim
 const mainSections = [
   {
     title: "TRANSITIONS & FX",
-    badge: "POPULAR",
-    cardTitle: "TRANSITIONS & FX",
-    subtitle: "Most Bought Packs",
+    cardTitle: "Transitions, Glitches & Presets",
+    subtitle: "Hook Viewers in the First 3 Seconds",
     image: "/images/transitions_fx_pack.png",
     features: ["800+ Transitions Pack", "2000+ FX Presets", "VHS & Glitch Pack", "100+ AE Plugins"]
   },
   {
     title: "CINEMATIC LUTS",
-    badge: "BEST-SELLING",
-    cardTitle: "CINEMATIC LUTS",
-    subtitle: "Enjoy all our Color Packs",
+    cardTitle: "Cinematics Assets",
+    subtitle: "Turn Flat Raw Footage into Film Magic",
     image: "/images/cinematic_luts_pack.png",
     features: ["200+ Cinematic LUTs", "4K Cinematic Film Grain", "Light Leaks & Flares", "Smoke & Fog Overlays"]
   },
   {
     title: "GRAPHICS & FONTS",
-    badge: "HOT DEAL",
-    cardTitle: "Graphics",
-    subtitle: "10,000+ Premium Assets",
+    cardTitle: "Motion Graphics & Fonts",
+    subtitle: "Ready-to-Use Callouts and Custom Animations",
     image: "/images/graphics_assets_pack.png",
     features: ["10,000+ Fonts Collection", "1500+ Lower Thirds", "Kinetic Title Pack", "100+ Callout Graphics"]
   },
   {
-    title: "SOUND FX & MUSIC",
-    badge: "RECOMMENDED",
-    cardTitle: "Audio",
-    subtitle: "Cinematic sound design",
+    title: "Audio & SFX",
+    cardTitle: "Audio & SFX",
+    subtitle: "Make Your Edits Feel 10x More Immersive",
     image: "/images/sound_music_pack.png",
     features: ["1000+ Premium Music Tracks", "3000+ Cinematic SFX", "Whooshes, Hits & Risers", "Commercial License"]
   },
   {
     title: "EBOOK BUNDLE",
     textOnImage: "EDITING ACADEMY",
-    badge: "BEST VALUE",
-    cardTitle: "Academy",
-    subtitle: "Master video editing",
+    cardTitle: "Academy Access",
+    subtitle: "Learn Fast Pacing, Storytelling & Client Workflow",
     image: "/images/editing_academy_pack.png",
     features: ["Full A-Z Editing Course", "Viral Meme Videos Pack", "500+ 4K Stock Footage", "Wedding Title Pack"]
   }
@@ -131,7 +126,7 @@ export default function FeatureGrid() {
         {/* Header Title & Nav arrows */}
         <div className="flex items-end justify-between mb-8 sm:mb-12">
           <div>
-            <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">What's Included</p>
+            <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">What's In Master Bundle</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-2 leading-tight">
               All Assets
             </h2>
@@ -260,7 +255,7 @@ export default function FeatureGrid() {
             href={CTA_URL}
             className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-3 sm:py-4 rounded-2xl uppercase tracking-wide"
           >
-            All 5 Packs — Just ₹299
+            All 28+ Packs — Just ₹399
           </a>
         </div>
       </div>

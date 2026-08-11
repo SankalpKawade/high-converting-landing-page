@@ -25,11 +25,8 @@ export default function PricingSection() {
           {/* Value stack */}
           <div className="space-y-2.5 mb-6">
             {[
-              ['70GB+ Video Editing Assets (28 Categories)', '₹3,999'],
-              ['1500+ Motivational Reels', '₹999'],
-              ['Premium E-Books Pack', '₹699'],
-              ['ChatGPT Prompts Pack', '₹499'],
-              ['Instagram Growth Course', '₹1,499'],
+              ['ProDigitalFiles Video Editing Assets (28 Categories)', '₹3,999'],
+              ['Exclusive Bonuses', '₹3,696'],
             ].map(([label, price], i) => (
               <div key={i} className="flex items-center justify-between card-dark rounded-xl px-4 py-3">
                 <span className="text-sm text-[#cbd5e1]">{label}</span>
@@ -47,12 +44,12 @@ export default function PricingSection() {
 
           <div className="mb-4">
             <p className="text-sm text-[#94a3b8]">Regular Price</p>
-            <p className="text-xl font-bold text-white line-through opacity-50">₹2,999</p>
+            <p className="text-xl font-bold text-white line-through opacity-50">₹3,999</p>
           </div>
 
           <div className="mb-6 sm:mb-8">
             <p className="text-sm text-[#00f2ff] font-bold">Today Only</p>
-            <p className="text-5xl sm:text-6xl font-black gradient-text">₹299</p>
+            <p className="text-5xl sm:text-6xl font-black gradient-text">₹399</p>
             <p className="text-xs text-[#94a3b8] mt-1">One-time payment • Lifetime access</p>
           </div>
 

@@ -6,7 +6,7 @@ const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-sim
 const BADGE_ITEMS = [
   { text: "347 Bought in the Last 24 Hours", duration: 3000 },
   { text: "Trending — Editors & Creators", duration: 4000 },
-  { text: "Trusted by 2,243+ Creators", duration: 5000 },
+  { text: "Trusted by 5,243+ Creators", duration: 5000 },
   { text: "Stop Searching. Start Editing.", duration: 4000 },
 ];
 
@@ -71,16 +71,14 @@ export default function HeroSection() {
         </div>
 
         {/* Dream Outcome Headline */}
-        <h1 className="hero-heading text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] shrink-0">
-          <span className="gradient-text">Stop Paying ₹1,500/Month to Envato</span>
-          <br />
-          <span className="text-white text-2xl sm:text-2xl md:text-3xl lg:text-4xl">Get Studio-Quality Assets for ₹299 - Lifetime</span>
+        <h1 className="hero-heading text-[1.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] shrink-0">
+          <span className="gradient-text">Level Up Your Edits with ProDigitalFiles</span>
         </h1>
 
-        {/* Sub-headline — Effort & Sacrifice */}
-        {/*<p className="text-[15px] sm:text-lg md:text-xl text-[#94a3b8] max-w-2xl mx-auto leading-[1.6] shrink-0 px-2">
-          Premium editing assets that pay you back for years. <strong className="text-[#00f2ff]">Transitions, LUTs, sound effects, fonts & more.</strong><br /> ⏰ Lock in ₹299 today - price increases to ₹999 when timer ends.
-        </p>*/}
+        {/* Sub-headline */}
+        <p className="mt-4 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 px-2">
+          Access 500,000+ LUTs, transitions, sound effects, overlays and much more. One simple download, yours forever.
+        </p>
 
         {/* Social Proof - Trust elements */}
         <div className="df-wrap">
@@ -117,19 +115,30 @@ export default function HeroSection() {
           <p className="df-subtitle">The #1 editing bundle everyone asks about.</p>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-3 sm:mt-5 shrink-0 w-full">
+        {/* Price & CTA Section */}
+        <div className="flex flex-col items-center justify-center gap-5 my-3 sm:mt-5 shrink-0 w-full">
+          <div className="flex items-end gap-3 bg-white/5 px-6 py-3 rounded-2xl border border-white/10">
+            <span className="text-2xl sm:text-3xl text-gray-500 line-through font-medium">₹3,990</span>
+            <span className="text-5xl sm:text-6xl font-black text-white">₹399</span>
+          </div>
+
           <a
             href={CTA_URL}
-            className="block w-full max-w-[340px] mx-auto sm:inline-block sm:w-auto sm:max-w-none btn-cta text-[16px] sm:text-lg font-black px-6 sm:px-12 py-2 sm:py-3.5 rounded-2xl tracking-wide uppercase"
+            className="btn-cta inline-block w-auto px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-bold text-white rounded-2xl hover:scale-105 active:scale-95 transition-all duration-300"
           >
-            YES! I WANT 70GB FOR ₹299
+            Access All Assets Instantly
           </a>
+
+          <p className="text-sm text-gray-400 mt-1 flex items-center gap-2 justify-center">
+            <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Secure 1-Click Checkout
+          </p>
         </div>
 
-        {/* Hero Visual — Dashboard mockup with floating snippets */}
+        {/* Hero Visual — Dashboard mockup with floating snippets
         <div className="relative max-w-3xl mx-auto mt-8 sm:mt-12 w-full px-4">
-          {/* Floating 3D Snippets — Responsive (absolute positioned, floating) */}
           {floatingSnippets.map((s, i) => (
             <div
               key={`float-${i}`}
@@ -141,7 +150,6 @@ export default function HeroSection() {
             </div>
           ))}
 
-          {/* Dashboard container */}
           <div className="bg-[#0a0f1a] border border-white/10 rounded-2xl sm:rounded-3xl p-2 sm:p-3 relative overflow-hidden">
             <div className="glow-line" />
             <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden relative bg-[#0a0f1a]">
@@ -160,6 +168,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
+        */}
       </div>
     </section>
   );

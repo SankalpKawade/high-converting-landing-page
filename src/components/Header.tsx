@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 export default function Header() {
-  const [time, setTime] = useState({ hours: 8, minutes: 59, seconds: 11 });
+  const [time, setTime] = useState({ hours: 1, minutes: 30, seconds: 11 });
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export default function Header() {
           <img
             src="/images/logo2-removebg.webp"
             alt="ProDigitalFiles Logo"
-            className="w-14 h-14 object-contain brightness-110 drop-shadow-[0_0_8px_rgba(0,242,255,0.65)]"
+            className="w-12 h-12 object-contain brightness-110 drop-shadow-[0_0_8px_rgba(0,242,255,0.65)]"
             decoding="async"
           />
           <span className="text-lg lg:text-2xl font-bold tracking-tight">
