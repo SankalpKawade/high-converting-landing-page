@@ -39,7 +39,7 @@ export default function PricingSection() {
 
           <div className="mb-2">
             <p className="text-sm text-[#94a3b8]">Total Market Value</p>
-            <p className="text-2xl sm:text-3xl font-black text-white line-through opacity-50">₹7,995</p>
+            <p className="text-2xl sm:text-3xl font-black text-white line-through opacity-50">₹7,695</p>
           </div>
 
           <div className="mb-4">
