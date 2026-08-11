@@ -56,14 +56,14 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[100dvh] flex flex-col justify-start sm:justify-center pt-[136px] sm:pt-[120px] pb-6 sm:pb-10 px-4 overflow-hidden grid-bg" id="hero">
+    <section className="relative min-h-[100dvh] flex flex-col justify-start sm:justify-center pt-[130px] sm:pt-[145px] pb-6 sm:pb-10 px-4 sm:px-6 lg:px-8 text-center overflow-hidden grid-bg" id="hero">
       {/* Background glow orbs */}
       <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 bg-[#00f2ff] rounded-full opacity-[0.06] blur-[100px]" />
       <div className="hidden sm:block absolute bottom-20 right-1/4 w-72 h-72 bg-[#7000ff] rounded-full opacity-[0.08] blur-[100px]" />
 
-      <div className="max-w-6xl mx-auto text-center relative z-10 flex-1 flex flex-col justify-start sm:justify-center items-center gap-5 sm:gap-7 w-full pb-[4vh] mt-2 sm:mt-24">
+      <div className="max-w-5xl mx-auto text-center relative z-10 flex-1 flex flex-col justify-start sm:justify-center items-center w-full mt-1 sm:mt-3">
         {/* Top badge — SOLID background */}
-        <div className="inline-flex items-center gap-2 bg-[#0f1629] border border-[#00f2ff]/30 rounded-full px-6 py-2 shrink-0 min-w-[280px] sm:min-w-[320px] justify-center">
+        <div className="inline-flex items-center gap-2 bg-[#0f1629] border border-[#00f2ff]/30 rounded-full px-4 py-1.5 mb-6 sm:mb-8 shrink-0 min-w-[280px] sm:min-w-[320px] justify-center">
           <span className="w-2.5 h-2.5 rounded-full bg-[#00f2ff] pulse-icon inline-block" />
           <span className={`text-[11px] sm:text-sm font-semibold text-[#cbd5e1] transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}>
             {BADGE_ITEMS[index].text}
@@ -71,7 +71,7 @@ export default function HeroSection() {
         </div>
 
         {/* Dream Outcome Headline */}
-        <h1 className="hero-heading text-[1.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] shrink-0">
+        <h1 className="hero-heading text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-tight mb-6 shrink-0">
           <span className="gradient-text">Level Up Your Edits with ProDigitalFiles</span>
         </h1>
 
@@ -81,7 +81,7 @@ export default function HeroSection() {
         </p>
 
         {/* Social Proof - Trust elements */}
-        <div className="df-wrap">
+        <div className="df-wrap mb-8">
           <div className="df-rating__stars"><span>★</span>  <span className="df-rating__text"><strong>4.9/5</strong> · Creators' Choice</span></div>
 
           <div className="df-title-row">
@@ -116,7 +116,7 @@ export default function HeroSection() {
         </div>
 
         {/* Price & CTA Section */}
-        <div className="flex flex-col items-center justify-center gap-5 my-3 sm:mt-5 shrink-0 w-full">
+        <div className="flex flex-col items-center justify-center gap-5 shrink-0 w-full">
           <div className="flex items-end gap-3 bg-white/5 px-6 py-3 rounded-2xl border border-white/10">
             <span className="text-2xl sm:text-3xl text-gray-500 line-through font-medium">₹3,990</span>
             <span className="text-5xl sm:text-6xl font-black text-white">₹399</span>
@@ -124,12 +124,12 @@ export default function HeroSection() {
 
           <a
             href={CTA_URL}
-            className="btn-cta inline-block w-auto px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-bold text-white rounded-2xl hover:scale-105 active:scale-95 transition-all duration-300"
+            className="btn-cta inline-block w-auto sm:w-auto px-10 py-5 text-lg sm:text-xl font-bold text-white rounded-2xl hover:scale-105 active:scale-95 transition-all duration-300"
           >
             Access All Assets Instantly
           </a>
 
-          <p className="text-sm text-gray-400 mt-1 flex items-center gap-2 justify-center">
+          <p className="text-sm text-gray-400 mt-2 flex items-center gap-2 justify-center">
             <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
