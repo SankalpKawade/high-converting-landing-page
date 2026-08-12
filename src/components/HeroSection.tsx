@@ -56,7 +56,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[100dvh] flex flex-col justify-start sm:justify-center pt-[130px] sm:pt-[145px] pb-6 sm:pb-10 px-4 sm:px-6 lg:px-8 text-center overflow-hidden grid-bg" id="hero">
+    <section className="relative min-h-[100dvh] flex flex-col justify-start sm:justify-center pt-[180px] sm:pt-[180px] pb-6 sm:pb-10 px-4 sm:px-6 lg:px-8 text-center overflow-hidden grid-bg" id="hero">
       {/* Background glow orbs */}
       <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 bg-[#00f2ff] rounded-full opacity-[0.06] blur-[100px]" />
       <div className="hidden sm:block absolute bottom-20 right-1/4 w-72 h-72 bg-[#7000ff] rounded-full opacity-[0.08] blur-[100px]" />
@@ -71,17 +71,17 @@ export default function HeroSection() {
         </div>
 
         {/* Dream Outcome Headline */}
-        <h1 className="hero-heading text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-tight mb-6 shrink-0">
-          <span className="gradient-text">Level Up Your Edits with ProDigitalFiles</span>
+        <h1 className="hero-heading text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 text-white leading-snug sm:leading-tight shrink-0">
+          Level Up Your Edits with <br /> <span className="text-gradient">ProDigitalFiles</span>
         </h1>
 
         {/* Sub-headline */}
         <p className="mt-4 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 px-2">
-          Access 500,000+ LUTs, transitions, sound effects, overlays and much more. One simple download, yours forever.
+          Professionally created assets to edit faster, look cinematic, and create viral videos - no experience required. Download once, keep forever.
         </p>
 
         {/* Social Proof - Trust elements */}
-        <div className="df-wrap mb-8">
+        <div className="df-wrap mt-8 mb-16 sm:mt-10 sm:mb-20">
           <div className="df-rating__stars"><span>★</span>  <span className="df-rating__text"><strong>4.9/5</strong> · Creators' Choice</span></div>
 
           <div className="df-title-row">
@@ -98,17 +98,6 @@ export default function HeroSection() {
                   <span>filmmakers 🎥</span>
                 </div>
               </div>
-              <div className="df-rocket-layer">
-                <div className="df-rocket-track">
-                  <div>filmmakers</div>
-                  <div>photographers</div>
-                  <div>content creators</div>
-                  <div>editors</div>
-                  <div>brands</div>
-                  <div>storytellers</div>
-                  <div>filmmakers</div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -117,8 +106,8 @@ export default function HeroSection() {
 
         {/* Price & CTA Section */}
         <div className="flex flex-col items-center justify-center gap-5 shrink-0 w-full">
-          <div className="flex items-end gap-3 bg-white/5 px-6 py-3 rounded-2xl border border-white/10">
-            <span className="text-2xl sm:text-3xl text-gray-500 line-through font-medium">₹3,990</span>
+          <div className="flex items-end gap-3 bg-[#0f1629] border border-[#00f2ff]/30 px-6 py-3 rounded-2xl">
+            <span className="text-2xl sm:text-3xl text-gray-500 line-through font-medium">₹3,999</span>
             <span className="text-5xl sm:text-6xl font-black text-white">₹399</span>
           </div>
 

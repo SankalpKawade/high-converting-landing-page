@@ -35,8 +35,8 @@ const mainSections = [
   {
     title: "EBOOK BUNDLE",
     textOnImage: "EDITING ACADEMY",
-    cardTitle: "Academy Access",
-    subtitle: "Learn Fast Pacing, Storytelling & Client Workflow",
+    cardTitle: "Fast-Track Editing Course",
+    subtitle: "Learn Fast Pacing, Storytelling & Client Workflow with quality Add-Ons",
     image: "/images/editing_academy_pack.png",
     features: ["Full A-Z Editing Course", "Viral Meme Videos Pack", "500+ 4K Stock Footage", "Wedding Title Pack"]
   }
@@ -128,7 +128,7 @@ export default function FeatureGrid() {
           <div>
             <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">What's In Master Bundle</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-2 leading-tight">
-              All Assets
+              500,000+ Assets
             </h2>
             <p className="text-sm sm:text-base text-[#94a3b8] max-w-xl">
               No more searching, no more subscriptions. Just download, apply, and export.
@@ -211,12 +211,12 @@ export default function FeatureGrid() {
                 </div>
 
                 {/* Mockup image at the bottom */}
-                <div className="w-full flex items-center justify-center pt-2 mt-auto">
+                <div className="w-full flex items-center justify-center pt-2 mt-auto min-h-[200px] sm:min-h-[220px]">
                   <img
                     src={item.image}
                     alt={item.cardTitle}
                     loading="lazy"
-                    className="w-full max-h-[180px] sm:max-h-[250px] object-contain group-hover:scale-105 transition-transform duration-500 select-none pointer-events-none"
+                    className="w-full h-[200px] sm:h-[220px] object-contain group-hover:scale-105 transition-transform duration-500 select-none pointer-events-none"
                   />
                 </div>
               </div>
@@ -249,7 +249,7 @@ export default function FeatureGrid() {
         <div className="text-center mt-12 sm:mt-16">
           <a
             href={CTA_URL}
-            className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-3 sm:py-4 rounded-2xl uppercase tracking-wide"
+            className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-4 sm:py-4 rounded-2xl uppercase tracking-wide"
           >
             All 28+ Packs — Just ₹399
           </a>

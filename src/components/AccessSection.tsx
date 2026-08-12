@@ -17,7 +17,7 @@ const steps = [
     emoji: '📥',
     step: 'STEP 03',
     title: 'Instant Access PDF',
-    desc: 'Download your Access PDF from the order page with direct Google Drive link',
+    desc: 'Get confirmation email and access the complete pack instantly',
   },
 ];
 
@@ -27,7 +27,6 @@ export default function AccessSection() {
       <div className="section-divider mb-16" />
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10 sm:mb-14">
-          <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">How It Works</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
             Access Everything In<br className="hidden sm:block" /> 3 Simple Steps
           </h2>

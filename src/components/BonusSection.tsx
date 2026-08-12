@@ -2,19 +2,19 @@ import StarField from './StarField';
 
 const bonuses = [
   {
-    title: '1500+ 4K Reels',
+    title: '1500+ Ready-to-Post 4K Reels',
     value: '₹999',
   },
   {
-    title: 'Premium E-Books Pack',
+    title: 'The "3-Second Rule" Viral Content Blueprint',
     value: '₹699',
   },
   {
-    title: 'ChatGPT Prompts Pack',
+    title: '1,000+ Copy-Paste AI Prompts for Viral Videos',
     value: '₹499',
   },
   {
-    title: 'Instagram Growth Mastery',
+    title: '0 to 100K Instagram Growth System',
     value: '₹1,499',
   },
 ];
@@ -25,7 +25,7 @@ export default function BonusSection() {
       <div className="section-divider mb-16" />
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10 sm:mb-14">
-          <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Free Bonuses</p>
+          {/*<p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Free Bonuses</p>*/}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
             4 Exclusive Bonuses — Absolutely FREE
           </h2>

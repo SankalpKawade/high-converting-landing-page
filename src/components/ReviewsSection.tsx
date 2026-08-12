@@ -55,17 +55,11 @@ export default function ReviewsSection() {
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-10 sm:mb-12">
-          {/* <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Social Proof</p>*/}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
             Trusted by Creators
           </h2>
-          <div className="flex flex-col items-center gap-2 mb-4">
-            <span className="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
-            <p className="text-xl sm:text-2xl font-black text-white">9.4 / 10</p>
-            <p className="text-sm text-[#00f2ff] font-bold">100% Satisfaction</p>
-          </div>
-          <p className="text-sm sm:text-base text-[#94a3b8] max-w-xl mx-auto">
-            See how creators are saving time and improving their workflow
+          <p className="text-md sm:text-lg text-[#94a3b8] max-w-xl mx-auto">
+            See how creators are saving time and upgrading their editing game
           </p>
         </div>
 

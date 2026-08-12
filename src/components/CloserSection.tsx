@@ -50,7 +50,7 @@ export default function CloserSection() {
           href={CTA_URL}
           className="inline-block btn-cta text-base sm:text-lg font-black px-10 sm:px-14 py-2 sm:py-3 rounded-2xl tracking-wide uppercase"
         >
-          Get Everything for ₹399
+          All Yours for ₹399
         </a>
         {/*
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 mt-4 text-xs text-[#94a3b8]">

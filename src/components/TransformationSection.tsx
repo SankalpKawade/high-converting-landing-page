@@ -22,12 +22,12 @@ export default function TransformationSection() {
       <div className="section-divider mb-16" />
 
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-10 sm:mb-14">
-          {/*<p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Transformation</p>*/}
+        {/*<div className="text-center mb-10 sm:mb-14">
+          <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Transformation</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
             The Before & After Transformation
           </h2>
-        </div>
+        </div>*/}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {/* BEFORE Box — Red */}

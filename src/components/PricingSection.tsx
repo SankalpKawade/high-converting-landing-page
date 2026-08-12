@@ -1,3 +1,4 @@
+import React from 'react';
 import StarField from './StarField';
 
 const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
@@ -8,7 +9,7 @@ export default function PricingSection() {
       <div className="section-divider mb-16" />
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-8">
-          <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Special Offer</p>
+          {/* <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Special Offer</p>*/}
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white">
             🔥 TODAY'S SPECIAL PRICE
           </h2>
@@ -36,15 +37,15 @@ export default function PricingSection() {
           </div>
 
           <div className="section-divider mb-6" />
-
+          {/*
           <div className="mb-2">
             <p className="text-sm text-[#94a3b8]">Total Market Value</p>
             <p className="text-2xl sm:text-3xl font-black text-white line-through opacity-50">₹7,695</p>
-          </div>
+          </div>*/}
 
           <div className="mb-4">
-            <p className="text-sm text-[#94a3b8]">Regular Price</p>
-            <p className="text-xl font-bold text-white line-through opacity-50">₹3,999</p>
+            <p className="text-md text-[#94a3b8]">Regular Price</p>
+            <p className="text-2xl sm:text-3xl font-extrabold text-white/50 line-through">₹3,999</p>
           </div>
 
           <div className="mb-6 sm:mb-8">

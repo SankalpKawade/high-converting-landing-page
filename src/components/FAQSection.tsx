@@ -3,7 +3,7 @@ import { useState } from 'react';
 const faqs = [
   {
     q: 'What exactly do I get in this bundle?',
-    a: 'You get 70GB+ of professional video editing assets across 28 categories — including LUTs, transitions, overlays, sound effects, music, motion graphics, templates, fonts, stock footage, and much more. Plus 4 exclusive bonuses worth ₹6,499!',
+    a: 'You get 70GB+ of professional video editing assets across 28 categories — including LUTs, transitions, overlays, sound effects, music, motion graphics, templates, fonts, stock footage, and much more. Plus 4 exclusive bonuses worth ₹3,696!',
   },
   {
     q: 'Which video editing software is this compatible with?',
@@ -51,7 +51,6 @@ export default function FAQSection() {
       <div className="section-divider mb-16" />
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10 sm:mb-14">
-          <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">FAQ</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
             Frequently Asked Questions
           </h2>

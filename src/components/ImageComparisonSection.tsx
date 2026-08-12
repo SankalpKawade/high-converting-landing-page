@@ -63,9 +63,11 @@ export default function ImageComparisonSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-4 leading-tight">
             See The Color Transformation
           </h2>
+          {/*
           <p className="text-base sm:text-lg text-[#94a3b8] max-w-2xl mx-auto">
             Drag the slider to see how our Hollywood-grade LUTs instantly transform flat footage into cinematic masterpieces.
           </p>
+          */}
         </div>
 
         {/* Interactive Comparison Slider */}

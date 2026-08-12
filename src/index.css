@@ -31,6 +31,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.hero-heading {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
 /* Denser Grid Background Overlay — applied to main wrapper */
 .grid-bg {
   position: relative;
@@ -44,13 +48,17 @@ body {
   right: 0;
   bottom: 0;
   background-image:
-    linear-gradient(rgba(0, 180, 220, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 180, 220, 0.06) 1px, transparent 1px);
-  background-size: 32px 32px;
+    /* Primary Cyan Grid (64px) */
+    linear-gradient(rgba(0, 242, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 242, 255, 0.08) 1px, transparent 1px),
+    /* Sub-grid Purple Lines (16px) */
+    linear-gradient(rgba(112, 0, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(112, 0, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
   pointer-events: none;
   z-index: 0;
-  mask-image: radial-gradient(ellipse 120% 80% at 50% 20%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 55%, rgba(0, 0, 0, 0.1) 80%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 120% 80% at 50% 20%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 55%, rgba(0, 0, 0, 0.1) 80%, transparent 100%);
+  mask-image: radial-gradient(ellipse 120% 80% at 50% 30%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0.25) 100%);
+  -webkit-mask-image: radial-gradient(ellipse 120% 80% at 50% 30%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0.25) 100%);
 }
 
 .grid-bg::after {
@@ -59,8 +67,8 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 50%;
-  background: radial-gradient(ellipse 70% 40% at 50% 0%, rgba(0, 200, 255, 0.025) 0%, transparent 70%);
+  height: 60%;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 242, 255, 0.04) 0%, transparent 80%);
   pointer-events: none;
   z-index: 0;
 }
@@ -141,6 +149,13 @@ body {
 
 .gradient-text-cyan-purple {
   background: linear-gradient(135deg, #00f2ff, #7000ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #33f4ff 0%, #66b8ff 40%, #a78bfa 70%, #9333ea 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -451,8 +466,8 @@ body {
 
 @media (max-width: 640px) {
   .hero-heading {
-    font-size: 2.5rem !important;
-    line-height: 1.05 !important;
+    font-size: 2.25rem !important;
+    line-height: 1.25 !important;
   }
 }
 
