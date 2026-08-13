@@ -71,17 +71,17 @@ export default function HeroSection() {
         </div>
 
         {/* Dream Outcome Headline */}
-        <h1 className="hero-heading text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 text-white leading-snug sm:leading-tight shrink-0">
+        <h1 className="hero-heading text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-5 text-white leading-snug sm:leading-tight shrink-0">
           Level Up Your Edits with <br /> <span className="text-gradient">ProDigitalFiles</span>
         </h1>
 
         {/* Sub-headline */}
-        <p className="mt-4 text-m sm:text-xl text-gray-400 max-w-2xl mx-auto mb-6 px-2">
+        <p className="mt-4 text-m sm:text-xl text-gray-400 max-w-2xl mx-auto mb-4 px-2">
           Professionally created assets to edit faster, look cinematic, and create viral videos - no experience required. Download once, keep forever.
         </p>
 
         {/* Social Proof - Trust elements */}
-        <div className="df-wrap mt-10 mb-20 sm:mt-14 sm:mb-12">
+        <div className="df-wrap mt-10 mb-15 sm:mt-14 sm:mb-10">
           <div className="df-rating__stars"><span>★</span>  <span className="df-rating__text"><strong>4.9/5</strong> · Creators' Choice</span></div>
 
           <div className="df-title-row">
