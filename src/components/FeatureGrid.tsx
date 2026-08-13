@@ -8,28 +8,28 @@ const mainSections = [
     title: "TRANSITIONS & FX",
     cardTitle: "Transitions, Glitches & Presets",
     subtitle: "Hook Viewers in the First 3 Seconds",
-    image: "/images/transitions_fx_pack.png",
+    image: "/images/transitions_fx_pack.webp",
     features: ["800+ Transitions Pack", "2000+ FX Presets", "VHS & Glitch Pack", "100+ AE Plugins"]
   },
   {
     title: "CINEMATIC LUTS",
     cardTitle: "Cinematics Assets",
     subtitle: "Turn Flat Raw Footage into Film Magic",
-    image: "/images/cinematic_luts_pack.png",
+    image: "/images/cinematic_luts_pack.webp",
     features: ["200+ Cinematic LUTs", "4K Cinematic Film Grain", "Light Leaks & Flares", "Smoke & Fog Overlays"]
   },
   {
     title: "GRAPHICS & FONTS",
     cardTitle: "Motion Graphics & Fonts",
     subtitle: "Ready-to-Use Callouts and Custom Animations",
-    image: "/images/graphics_assets_pack.png",
+    image: "/images/graphics_assets_pack.webp",
     features: ["10,000+ Fonts Collection", "1500+ Lower Thirds", "Kinetic Title Pack", "100+ Callout Graphics"]
   },
   {
     title: "Audio & SFX",
     cardTitle: "Audio & SFX",
     subtitle: "Make Your Edits Feel 10x More Immersive",
-    image: "/images/sound_music_pack.png",
+    image: "/images/sound_music_pack.webp",
     features: ["1000+ Premium Music Tracks", "3000+ Cinematic SFX", "Whooshes, Hits & Risers", "Commercial License"]
   },
   {
@@ -37,7 +37,7 @@ const mainSections = [
     textOnImage: "EDITING ACADEMY",
     cardTitle: "Fast-Track Editing Course",
     subtitle: "Learn Fast Pacing, Storytelling & Client Workflow with quality Add-Ons",
-    image: "/images/editing_academy_pack.png",
+    image: "/images/editing_academy_pack.webp",
     features: ["Full A-Z Editing Course", "Viral Meme Videos Pack", "500+ 4K Stock Footage", "Wedding Title Pack"]
   }
 ];
