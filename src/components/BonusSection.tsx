@@ -6,11 +6,11 @@ const bonuses = [
     value: '₹999',
   },
   {
-    title: 'The "3-Second Rule" Viral Content Blueprint',
+    title: 'The "3-Second Rule" Content Blueprint',
     value: '₹699',
   },
   {
-    title: '1,000+ Copy-Paste AI Prompts for Viral Videos',
+    title: '1,000+ Copy-Paste Prompts for Viral AI Videos',
     value: '₹499',
   },
   {

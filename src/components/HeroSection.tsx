@@ -56,7 +56,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[100dvh] flex flex-col justify-start sm:justify-center pt-[180px] sm:pt-[180px] pb-6 sm:pb-10 px-4 sm:px-6 lg:px-8 text-center overflow-hidden grid-bg" id="hero">
+    <section className="relative min-h-[100dvh] flex flex-col justify-start sm:justify-center pt-[130px] sm:pt-[180px] pb-6 sm:pb-10 px-4 sm:px-6 lg:px-8 text-center overflow-hidden grid-bg" id="hero">
       {/* Background glow orbs */}
       <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 bg-[#00f2ff] rounded-full opacity-[0.06] blur-[100px]" />
       <div className="hidden sm:block absolute bottom-20 right-1/4 w-72 h-72 bg-[#7000ff] rounded-full opacity-[0.08] blur-[100px]" />
@@ -76,12 +76,12 @@ export default function HeroSection() {
         </h1>
 
         {/* Sub-headline */}
-        <p className="mt-4 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 px-2">
+        <p className="mt-4 text-m sm:text-xl text-gray-400 max-w-2xl mx-auto mb-8 px-2">
           Professionally created assets to edit faster, look cinematic, and create viral videos - no experience required. Download once, keep forever.
         </p>
 
         {/* Social Proof - Trust elements */}
-        <div className="df-wrap mt-8 mb-16 sm:mt-10 sm:mb-20">
+        <div className="df-wrap mt-10 mb-20 sm:mt-14 sm:mb-15">
           <div className="df-rating__stars"><span>★</span>  <span className="df-rating__text"><strong>4.9/5</strong> · Creators' Choice</span></div>
 
           <div className="df-title-row">

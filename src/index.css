@@ -48,13 +48,13 @@ body {
   right: 0;
   bottom: 0;
   background-image:
-    /* Primary Cyan Grid (64px) */
+    /* Primary Cyan Grid (48px) */
     linear-gradient(rgba(0, 242, 255, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 242, 255, 0.08) 1px, transparent 1px),
-    /* Sub-grid Purple Lines (16px) */
+    /* Sub-grid Purple Lines (12px) */
     linear-gradient(rgba(112, 0, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(112, 0, 255, 0.03) 1px, transparent 1px);
-  background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
+  background-size: 48px 48px, 48px 48px, 12px 12px, 12px 12px;
   pointer-events: none;
   z-index: 0;
   mask-image: radial-gradient(ellipse 120% 80% at 50% 30%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0.25) 100%);
@@ -610,7 +610,8 @@ section.py-16 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 0.75rem auto;
+  margin-left: auto;
+  margin-right: auto;
   gap: 0.25rem;
   width: 100%;
 }
@@ -633,7 +634,8 @@ section.py-16 {
   .df-wrap {
     --reel-height: 3.5rem;
     --reel-font-size: 2.75rem;
-    margin: 1.5rem auto;
+    margin-left: auto;
+    margin-right: auto;
     gap: 0.35rem;
   }
 }
