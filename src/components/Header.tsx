@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
 
 export default function Header() {
-  const [time, setTime] = useState({ hours: 1, minutes: 30, seconds: 11 });
+  const [time, setTime] = useState({ hours: 3, minutes: 30, seconds: 11 });
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

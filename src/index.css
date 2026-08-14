@@ -20,11 +20,11 @@ html {
 body {
   background-color: #040810;
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% 0%, #0c1d3d 0%, transparent 60%),
-    radial-gradient(ellipse 70% 40% at 50% 100%, #0a0e2e 0%, transparent 55%),
-    radial-gradient(ellipse 60% 60% at 20% 50%, #060d1e 0%, transparent 50%),
-    radial-gradient(ellipse 60% 60% at 80% 50%, #060d1e 0%, transparent 50%),
-    linear-gradient(180deg, #040810 0%, #060e20 50%, #040810 100%);
+    radial-gradient(ellipse 85% 55% at 50% 0%, #0e2247 0%, transparent 65%),
+    radial-gradient(ellipse 75% 45% at 50% 100%, #0c1236 0%, transparent 60%),
+    radial-gradient(ellipse 65% 65% at 20% 50%, #081024 0%, transparent 55%),
+    radial-gradient(ellipse 65% 65% at 80% 50%, #081024 0%, transparent 55%),
+    linear-gradient(180deg, #040810 0%, #08132b 50%, #040810 100%);
   background-attachment: fixed;
   color: #fff;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;

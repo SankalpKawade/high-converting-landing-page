@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import StarField from './StarField';
 
 const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
@@ -52,70 +52,41 @@ const compatible = [
 ];
 
 export default function FeatureGrid() {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const [showLeftArrow, setShowLeftArrow] = useState(false);
-  const [showRightArrow, setShowRightArrow] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number>(undefined);
 
-  const checkScroll = () => {
-    if (carouselRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-      setShowLeftArrow(scrollLeft > 5);
-      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 5);
-    }
-  };
+  // Duplicate items to allow for seamless infinite scrolling
+  const extendedSections = [...mainSections, ...mainSections, ...mainSections, ...mainSections];
 
   useEffect(() => {
     const el = carouselRef.current;
-    if (el) {
-      el.addEventListener('scroll', checkScroll);
-      checkScroll();
-      window.addEventListener('resize', checkScroll);
-    }
-    return () => {
-      if (el) el.removeEventListener('scroll', checkScroll);
-      window.removeEventListener('resize', checkScroll);
-    };
-  }, []);
+    if (!el) return;
 
-  const handleScroll = (direction: 'left' | 'right') => {
-    if (carouselRef.current) {
-      const { scrollLeft, clientWidth } = carouselRef.current;
-      // Scroll by 85% of visible width to align nicely with peeking mobile cards
-      const scrollAmount = clientWidth * 0.85;
-      carouselRef.current.scrollTo({
-        left: direction === 'left' ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-  };
+    // Slower pace
+    const scrollSpeed = 0.2;
 
-  useEffect(() => {
-    if (isHovered) return;
-    const intervalId = setInterval(() => {
-      if (carouselRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-        const isAtEnd = scrollLeft >= scrollWidth - clientWidth - 10;
+    const scrollLoop = () => {
+      if (!isHovered && el) {
+        el.scrollLeft += scrollSpeed;
 
-        if (isAtEnd) {
-          carouselRef.current.scrollTo({
-            left: 0,
-            behavior: 'smooth'
-          });
-        } else {
-          const firstChild = carouselRef.current.firstElementChild as HTMLElement;
-          if (firstChild) {
-            const cardWidth = firstChild.getBoundingClientRect().width;
-            const gap = window.innerWidth >= 640 ? 24 : 16;
-            carouselRef.current.scrollTo({
-              left: scrollLeft + cardWidth + gap,
-              behavior: 'smooth'
-            });
-          }
+        // Seamless reset when reaching the midpoint (since we duplicated 4 times, midpoint is exact)
+        if (el.scrollLeft >= el.scrollWidth / 2) {
+          el.scrollLeft -= el.scrollWidth / 2;
+        } else if (el.scrollLeft <= 0) {
+          // If user scrolls backwards manually
+          el.scrollLeft += el.scrollWidth / 2;
         }
       }
-    }, 3000);
-    return () => clearInterval(intervalId);
+      animationRef.current = requestAnimationFrame(scrollLoop);
+    };
+
+    animationRef.current = requestAnimationFrame(scrollLoop);
+    return () => {
+      if (animationRef.current !== undefined) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
   }, [isHovered]);
 
   return (
@@ -166,62 +137,71 @@ export default function FeatureGrid() {
           </div>*/}
         </div>
 
-        {/* Carousel container */}
+        {/* Carousel container - Native Scroll + JS Auto-pan */}
         <div
-          ref={carouselRef}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onTouchStart={() => setIsHovered(true)}
           onTouchEnd={() => setIsHovered(false)}
-          className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory flex-nowrap gap-4 sm:gap-6 pb-6 px-4 -mx-4 md:px-0 md:-mx-0 scroll-smooth items-stretch"
+          className="relative group w-full pb-6"
         >
-          {mainSections.map((item, i) => (
-            <div
-              key={i}
-              className="snap-start shrink-0 w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[22vw] max-w-[300px] flex flex-col group"
-            >
-              {/* Feature Card Box */}
+          {/* Edge gradients for smooth fade-out */}
+          <div className="absolute top-0 bottom-0 left-0 w-12 sm:w-24 bg-gradient-to-r from-[#040810] to-transparent z-20 pointer-events-none"></div>
+          <div className="absolute top-0 bottom-0 right-0 w-12 sm:w-24 bg-gradient-to-l from-[#040810] to-transparent z-20 pointer-events-none"></div>
+
+          <div
+            ref={carouselRef}
+            className="flex overflow-x-auto no-scrollbar w-full cursor-grab active:cursor-grabbing"
+            style={{ scrollBehavior: 'auto' }}
+          >
+            {extendedSections.map((item, i) => (
               <div
-                className="relative flex-1 flex flex-col justify-between p-5 sm:p-6 bg-[#0c0c0e] border border-white/10 rounded-[28px] sm:rounded-[32px] cursor-default shadow-lg transition-all duration-300 hover:border-[#00f2ff]/30"
+                key={i}
+                className="shrink-0 w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[22vw] max-w-[300px] flex flex-col group px-2 sm:px-3"
               >
-                <StarField speed={0.5} starsSmall={100} starsMedium={35} starsLarge={12} opacity={0.3} />
+                {/* Feature Card Box */}
+                <div
+                  className="relative flex-1 flex flex-col justify-between p-5 sm:p-6 bg-[#0c0c0e] border border-white/10 rounded-[28px] sm:rounded-[32px] cursor-default shadow-lg transition-all duration-300 hover:border-[#00f2ff]/30"
+                >
+                  <StarField speed={0.5} starsSmall={100} starsMedium={35} starsLarge={12} opacity={0.3} />
 
-                {/* Top Section */}
-                <div className="text-left flex-1 flex flex-col">
-                  {/* Title */}
-                  <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight group-hover:text-[#00f2ff] transition-colors duration-200 mb-1.5">
-                    {item.cardTitle}
-                  </h3>
-                  {/* Subtitle */}
-                  <p className="text-[11px] sm:text-xs text-[#94a3b8] font-medium leading-normal mb-4">
-                    {item.subtitle}
-                  </p>
+                  {/* Top Section */}
+                  <div className="text-left flex-1 flex flex-col z-10">
+                    {/* Title */}
+                    <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight group-hover:text-[#00f2ff] transition-colors duration-200 mb-1.5">
+                      {item.cardTitle}
+                    </h3>
+                    {/* Subtitle */}
+                    <p className="text-[11px] sm:text-xs text-[#94a3b8] font-medium leading-normal mb-4">
+                      {item.subtitle}
+                    </p>
 
-                  {/* Features List */}
-                  <ul className="space-y-2 text-[11px] sm:text-xs text-[#cbd5e1] mb-6">
-                    {item.features.map((feat, idx) => (
-                      <li key={idx} className="flex items-start gap-1.5 leading-snug">
-                        <svg className="w-3.5 h-3.5 text-[#00f2ff] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-white/90 font-medium">{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                    {/* Features List */}
+                    <ul className="space-y-2 text-[11px] sm:text-xs text-[#cbd5e1] mb-6">
+                      {item.features.map((feat, idx) => (
+                        <li key={idx} className="flex items-start gap-1.5 leading-snug">
+                          <svg className="w-3.5 h-3.5 text-[#00f2ff] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span className="text-white/90 font-medium">{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                {/* Mockup image at the bottom */}
-                <div className="w-full flex items-center justify-center pt-2 mt-auto min-h-[200px] sm:min-h-[220px]">
-                  <img
-                    src={item.image}
-                    alt={item.cardTitle}
-                    loading="lazy"
-                    className="w-full h-[200px] sm:h-[220px] object-contain group-hover:scale-105 transition-transform duration-500 select-none pointer-events-none"
-                  />
+                  {/* Mockup image at the bottom */}
+                  <div className="w-full flex items-center justify-center pt-2 mt-auto min-h-[200px] sm:min-h-[220px] z-10">
+                    <img
+                      src={item.image}
+                      alt={item.cardTitle}
+                      loading="lazy"
+                      className="w-full h-[200px] sm:h-[220px] object-contain group-hover:scale-105 transition-transform duration-500 select-none pointer-events-none"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Compatible Apps */}

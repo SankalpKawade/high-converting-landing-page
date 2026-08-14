@@ -77,31 +77,22 @@ export default function ImageComparisonSection() {
         >
           {/* Label Before (Left) */}
           <div className="absolute top-4 left-4 z-20 bg-black/60 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 text-xs font-bold uppercase tracking-wider text-white/70">
-            Graded (After)
+            Raw
           </div>
 
           {/* Label After (Right) */}
           <div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 text-xs font-bold uppercase tracking-wider text-white/70">
-            Raw (Before)
+            Graded
           </div>
 
           {/* Before Image (Left Layer - Full Width underneath) */}
           <div className="w-full h-full pointer-events-none select-none">
-            <picture className="w-full h-full block relative">
-              <source
-                media="(max-width: 767px)"
-                srcSet="https://cinematicfxeffects.com/cdn/shop/files/1_ef735bc8-d047-4b7c-ac4f-cece6019f8c1.png?v=1752603734&width=400 400w, https://cinematicfxeffects.com/cdn/shop/files/1_ef735bc8-d047-4b7c-ac4f-cece6019f8c1.png?v=1752603734&width=600 600w, https://cinematicfxeffects.com/cdn/shop/files/1_ef735bc8-d047-4b7c-ac4f-cece6019f8c1.png?v=1752603734&width=800 800w, https://cinematicfxeffects.com/cdn/shop/files/1_ef735bc8-d047-4b7c-ac4f-cece6019f8c1.png?v=1752603734&width=1000 1000w"
-                sizes="(max-width: 767px) 100vw, 800px"
-              />
-              <img
-                src="https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=1638"
-                alt="Before grading"
-                srcSet="https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=300 300w, https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=400 400w, https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=500 500w, https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=600 600w, https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=700 700w, https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=800 800w, https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=900 900w, https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=1000 1000w, https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=1200 1200w, https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=1400 1400w, https://cinematicfxeffects.com/cdn/shop/files/1_e1181635-360f-4e68-adfc-4e2c53d82acd.png?v=1752603663&width=1600 1600w"
-                sizes="min(1900px, 100vw)"
-                loading="lazy"
-                className="w-full h-full object-cover select-none pointer-events-none"
-              />
-            </picture>
+            <img
+              src="/images/before.webp"
+              alt="Raw (Before)"
+              loading="lazy"
+              className="w-full h-full object-cover select-none pointer-events-none"
+            />
           </div>
 
           {/* After Image (Right Layer - Absolute on top, clipped from the left) */}
@@ -109,21 +100,12 @@ export default function ImageComparisonSection() {
             className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none select-none overflow-hidden"
             style={{ clipPath: `inset(0 0 0 ${percent}%)` }}
           >
-            <picture className="w-full h-full block relative">
-              <source
-                media="(max-width: 767px)"
-                srcSet="https://cinematicfxeffects.com/cdn/shop/files/2_4334cd7f-5625-49de-a680-79cad4570785.png?v=1752603734&width=400 400w, https://cinematicfxeffects.com/cdn/shop/files/2_4334cd7f-5625-49de-a680-79cad4570785.png?v=1752603734&width=600 600w, https://cinematicfxeffects.com/cdn/shop/files/2_4334cd7f-5625-49de-a680-79cad4570785.png?v=1752603734&width=800 800w, https://cinematicfxeffects.com/cdn/shop/files/2_4334cd7f-5625-49de-a680-79cad4570785.png?v=1752603734&width=1000 1000w"
-                sizes="(max-width: 767px) 100vw, 800px"
-              />
-              <img
-                src="https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=1638"
-                alt="After grading"
-                srcSet="https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=300 300w, https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=400 400w, https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=500 500w, https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=600 600w, https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=700 700w, https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=800 800w, https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=900 900w, https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=1000 1000w, https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=1200 1200w, https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=1400 1400w, https://cinematicfxeffects.com/cdn/shop/files/2_feab630f-c196-4e1e-857e-5429f05e3b88.png?v=1752603703&width=1600 1600w"
-                sizes="min(1900px, 100vw)"
-                loading="lazy"
-                className="w-full h-full object-cover select-none pointer-events-none"
-              />
-            </picture>
+            <img
+              src="/images/after.webp"
+              alt="Graded (After)"
+              loading="lazy"
+              className="w-full h-full object-cover select-none pointer-events-none"
+            />
           </div>
 
           {/* Vertical Slider Handle Line and Drag Button */}
