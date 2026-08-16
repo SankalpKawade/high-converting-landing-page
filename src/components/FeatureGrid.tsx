@@ -16,7 +16,7 @@ const mainSections = [
     cardTitle: "Cinematics Assets",
     subtitle: "Turn Flat Raw Footage into Film Magic",
     image: "/images/cinematic_luts_pack.webp",
-    features: ["200+ Cinematic LUTs", "4K Cinematic Film Grain", "Light Leaks & Flares", "Smoke & Fog Overlays"]
+    features: ["200+ Cinematic LUTs", "4K Cinematic Film Grain", "Light Leaks & Flares", "Smoke, Fog, Dust, Fire, Snow & Camera Rig Overlays"]
   },
   {
     title: "GRAPHICS & FONTS",
@@ -38,7 +38,14 @@ const mainSections = [
     cardTitle: "Fast-Track Editing Course",
     subtitle: "Learn Fast Pacing, Storytelling & Client Workflow with quality Add-Ons",
     image: "/images/editing_academy_pack.webp",
-    features: ["Full A-Z Editing Course", "Viral Meme Videos Pack", "500+ 4K Stock Footage", "Wedding Title Pack"]
+    features: ["Full A-Z Editing Course", "Viral Meme Videos Pack", "500+ 4K Stock Footage", "Wedding Title Pack", "Youtube Essential Pack"]
+  },
+  {
+    title: "ANIMATION PACKS",
+    cardTitle: "Animation Packs",
+    subtitle: "Bring Your Edits to Life with Dynamic Animations",
+    image: "/images/animation.webp",
+    features: ["Logo Animation", "100+ Backgrounds", "100+ Callout Graphics", "Animated Title Pack"]
   }
 ];
 
@@ -64,7 +71,7 @@ export default function FeatureGrid() {
     if (!el) return;
 
     // Slower pace
-    const scrollSpeed = 0.2;
+    const scrollSpeed = 0.3;
 
     const scrollLoop = () => {
       if (!isHovered && el) {
@@ -146,8 +153,8 @@ export default function FeatureGrid() {
           className="relative group w-full pb-6"
         >
           {/* Edge gradients for smooth fade-out */}
-          <div className="absolute top-0 bottom-0 left-0 w-12 sm:w-24 bg-gradient-to-r from-[#040810] to-transparent z-20 pointer-events-none"></div>
-          <div className="absolute top-0 bottom-0 right-0 w-12 sm:w-24 bg-gradient-to-l from-[#040810] to-transparent z-20 pointer-events-none"></div>
+          <div className="absolute top-0 bottom-0 left-0 w-4 sm:w-24 bg-gradient-to-r from-[#040810] to-transparent z-20 pointer-events-none"></div>
+          <div className="absolute top-0 bottom-0 right-0 w-4 sm:w-24 bg-gradient-to-l from-[#040810] to-transparent z-20 pointer-events-none"></div>
 
           <div
             ref={carouselRef}
@@ -231,7 +238,7 @@ export default function FeatureGrid() {
             href={CTA_URL}
             className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-4 sm:py-4 rounded-2xl uppercase tracking-wide"
           >
-            All 28+ Packs — Just ₹399
+            All 25+ Packs — Just ₹399
           </a>
         </div>
       </div>

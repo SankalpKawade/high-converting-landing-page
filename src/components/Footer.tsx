@@ -23,12 +23,12 @@ export default function Footer() {
         <div className="flex items-center justify-center gap-4 sm:gap-6 mb-6">
           <a href="https://prodigitalfiles.com/privacy-policy/" className="text-sm text-[#94a3b8] hover:text-[#00f2ff] transition-colors">Privacy Policy</a>
           <a href="https://prodigitalfiles.com/terms-conditions/" className="text-sm text-[#94a3b8] hover:text-[#00f2ff] transition-colors">Terms & Conditions</a>
-          <a href="mailto:contact.prodigitalfiles@gmail.com" className="text-sm text-[#94a3b8] hover:text-[#00f2ff] transition-colors">Contact Us</a>
+          <a href="https://wa.me/+919403387731" target="_blank" rel="noopener noreferrer" className="text-sm text-[#94a3b8] hover:text-[#00f2ff] transition-colors">Contact Us</a>
         </div>
 
         {/* Disclaimer */}
         <p className="text-xs text-[#64748b] max-w-xl mx-auto leading-relaxed mb-4">
-          This site is not affiliated with, endorsed by, or associated with Facebook™ or Facebook™ Inc. in any way. Results may vary. Earnings and income representations are aspirational statements only. All assets are for personal and commercial use as per our license terms.
+          This site is not affiliated with, endorsed by, or associated with Facebook™ or Facebook™ Inc. in any way. All assets are for personal and commercial use as per our license terms.
         </p>
 
         <p className="text-xs text-[#64748b]">

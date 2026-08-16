@@ -3,7 +3,7 @@ import { useState } from 'react';
 const faqs = [
   {
     q: 'What exactly do I get in this bundle?',
-    a: 'You get 70GB+ of professional video editing assets across 28 categories — including LUTs, transitions, overlays, sound effects, music, motion graphics, templates, fonts, stock footage, and much more. Plus 4 exclusive bonuses worth ₹3,696!',
+    a: 'You get 70GB+ of professional video editing assets across 25+ Packs — including LUTs, transitions, overlays, sound effects, music, motion graphics, templates, fonts, stock footage, and much more. Plus 4 exclusive bonuses worth ₹3,696!',
   },
   {
     q: 'Which video editing software is this compatible with?',

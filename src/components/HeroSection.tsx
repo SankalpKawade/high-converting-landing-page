@@ -77,7 +77,7 @@ export default function HeroSection() {
 
         {/* Sub-headline */}
         <p className="mt-3 sm:mt-4 text-base sm:text-xl text-gray-400 max-w-2xl mx-auto mb-4 sm:mb-4 px-2">
-          Professionally created assets to edit faster, look cinematic, and create viral videos - no experience required. Download once, keep forever.
+          Instantly unlock 25+ editing packs with drag-and-drop LUTs, transitions, SFX, and an complete editing course to slash edit times by 80% to Level Up your videos quality immediately.
         </p>
 
         {/* Social Proof - Trust elements */}
