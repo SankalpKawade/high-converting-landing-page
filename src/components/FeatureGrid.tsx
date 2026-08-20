@@ -46,7 +46,7 @@ const mainSections = [
     textOnImage: "EDITING ACADEMY",
     cardTitle: "Fast-Track Editing Course",
     subtitle: "Learn Fast Pacing, Storytelling & Client Workflow with quality Add-Ons",
-    image: "/images/editing_academy_pack.webp",
+    video: "/images/course.webm",
     features: ["Full A-Z Editing Course", "Viral Meme Videos Pack", "500+ 4K Stock Footage", "Wedding Title Pack", "Youtube Essential Pack"]
   }
 ];
@@ -65,7 +65,7 @@ const VideoPlayer = ({ src, className }: { src: string; className: string }) => 
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 1.5;
+      videoRef.current.playbackRate = 1.3;
     }
   }, []);
 
