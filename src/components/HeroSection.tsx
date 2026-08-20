@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import StarField from './StarField';
 
-const CTA_URL = 'https://superprofile.bio/vp/professional-video-editing-made-simple';
+const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits';
 
 const BADGE_ITEMS = [
   { text: "347 Bought in the Last 24 Hours", duration: 3000 },
