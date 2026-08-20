@@ -26,7 +26,7 @@ export default function PricingSection() {
           {/* Value stack */}
           <div className="space-y-2.5 mb-6">
             {[
-              ['ProDigitalFiles Video Editing Assets (25+ Packs)', '₹3,999'],
+              ['ProDigitalFiles Video Editing Assets (28+ Packs)', '₹3,999'],
               ['Exclusive Bonuses', '₹3,696'],
             ].map(([label, price], i) => (
               <div key={i} className="flex items-center justify-between card-dark rounded-xl px-4 py-3">

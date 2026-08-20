@@ -28,7 +28,12 @@ export default function App() {
       if (anchor && anchor.href && anchor.href.includes('superprofile.bio')) {
         // Trigger Facebook Pixel InitiateCheckout event
         if (typeof window !== 'undefined' && (window as any).fbq) {
-          (window as any).fbq('track', 'InitiateCheckout');
+          (window as any).fbq('track', 'InitiateCheckout', {
+            content_name: 'ProDigitalFiles Bundle',
+            content_category: 'Digital Product',
+            value: 399.00,
+            currency: 'INR'
+          });
         }
       }
     };

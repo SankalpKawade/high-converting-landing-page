@@ -37,7 +37,7 @@ function ReviewCard({ index }: { index: number }) {
       <div className="review-card-inner card-dark rounded-2xl overflow-hidden relative group hover:scale-[1.02] hover:shadow-[0_10px_40px_rgba(0,242,255,0.15)] transition-all duration-500">
         <div className="glow-line" />
         <img
-          src={`https://demo.scalenite.com/wp-content/uploads/2024/06/v${index}.webp`}
+          src={`/images/v${index}.webp`}
           alt={`Creator Review ${index}`}
           className="w-full h-auto block"
           loading="lazy"

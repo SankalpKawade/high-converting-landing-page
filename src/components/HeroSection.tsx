@@ -58,8 +58,8 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-[100dvh] flex flex-col justify-start sm:justify-center pt-[132px] sm:pt-[180px] pb-6 sm:pb-10 px-4 sm:px-6 lg:px-8 text-center overflow-hidden grid-bg" id="hero">
       {/* Background glow orbs */}
-      <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 bg-[#00f2ff] rounded-full opacity-[0.06] blur-[100px]" />
-      <div className="hidden sm:block absolute bottom-20 right-1/4 w-72 h-72 bg-[#7000ff] rounded-full opacity-[0.08] blur-[100px]" />
+      <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 bg-[#00f2ff] rounded-full opacity-[0.06] blur-[100px]" style={{ willChange: 'transform', transform: 'translateZ(0)' }} />
+      <div className="hidden sm:block absolute bottom-20 right-1/4 w-72 h-72 bg-[#7000ff] rounded-full opacity-[0.08] blur-[100px]" style={{ willChange: 'transform', transform: 'translateZ(0)' }} />
 
       <div className="max-w-5xl mx-auto text-center relative z-10 flex-1 flex flex-col justify-start sm:justify-center items-center w-full mt-2 sm:mt-3">
         {/* Top badge — SOLID background */}
@@ -77,7 +77,7 @@ export default function HeroSection() {
 
         {/* Sub-headline */}
         <p className="mt-3 sm:mt-4 text-base sm:text-xl text-gray-400 max-w-2xl mx-auto mb-4 sm:mb-4 px-2">
-          Instantly unlock 25+ editing packs with drag-and-drop LUTs, transitions, SFX, and an complete editing course to slash edit times by 80% to Level Up your videos quality immediately.
+          Instantly unlock 28+ editing packs with drag-and-drop LUTs, transitions, SFX, and an complete editing course to slash edit times by 80% to Level Up your videos quality immediately.
         </p>
 
         {/* Social Proof - Trust elements */}
@@ -88,7 +88,7 @@ export default function HeroSection() {
             <span className="df-headline">Crafted for&nbsp;</span>
             <div className="df-reel-outer">
               <div className="df-reel-wrapper">
-                <div className="df-reel-track">
+                <div className="df-reel-track" style={{ willChange: 'transform', transform: 'translateZ(0)' }}>
                   <span>content creators 🎬</span>
                   <span>editors ✂️</span>
                   <span>photographers 📸</span>

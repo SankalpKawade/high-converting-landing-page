@@ -9,28 +9,37 @@ const mainSections = [
     cardTitle: "Transitions, Glitches & Presets",
     subtitle: "Hook Viewers in the First 3 Seconds",
     image: "/images/transitions_fx_pack.webp",
+    video: "/images/transition-glitch.webm",
     features: ["800+ Transitions Pack", "2000+ FX Presets", "VHS & Glitch Pack", "100+ AE Plugins"]
   },
   {
     title: "CINEMATIC LUTS",
     cardTitle: "Cinematics Assets",
     subtitle: "Turn Flat Raw Footage into Film Magic",
-    image: "/images/cinematic_luts_pack.webp",
+    video: "/images/luts.webm",
+    videoScale: true,
     features: ["200+ Cinematic LUTs", "4K Cinematic Film Grain", "Light Leaks & Flares", "Smoke, Fog, Dust, Fire, Snow & Camera Rig Overlays"]
   },
   {
     title: "GRAPHICS & FONTS",
     cardTitle: "Motion Graphics & Fonts",
     subtitle: "Ready-to-Use Callouts and Custom Animations",
-    image: "/images/graphics_assets_pack.webp",
+    video: "/images/mogrt.webm",
     features: ["10,000+ Fonts Collection", "1500+ Lower Thirds", "Kinetic Title Pack", "100+ Callout Graphics"]
   },
   {
     title: "Audio & SFX",
     cardTitle: "Audio & SFX",
     subtitle: "Make Your Edits Feel 10x More Immersive",
-    image: "/images/sound_music_pack.webp",
+    video: "/images/sounddesign.webm",
     features: ["1000+ Premium Music Tracks", "3000+ Cinematic SFX", "Whooshes, Hits & Risers", "Commercial License"]
+  },
+  {
+    title: "ANIMATION PACKS",
+    cardTitle: "Animation Packs",
+    subtitle: "Bring Your Edits to Life with Dynamic Animations",
+    video: "/images/animation.webm",
+    features: ["Logo Animation", "100+ Backgrounds", "100+ Callout Graphics", "Animated Title Pack"]
   },
   {
     title: "EBOOK BUNDLE",
@@ -39,13 +48,6 @@ const mainSections = [
     subtitle: "Learn Fast Pacing, Storytelling & Client Workflow with quality Add-Ons",
     image: "/images/editing_academy_pack.webp",
     features: ["Full A-Z Editing Course", "Viral Meme Videos Pack", "500+ 4K Stock Footage", "Wedding Title Pack", "Youtube Essential Pack"]
-  },
-  {
-    title: "ANIMATION PACKS",
-    cardTitle: "Animation Packs",
-    subtitle: "Bring Your Edits to Life with Dynamic Animations",
-    image: "/images/animation.webp",
-    features: ["Logo Animation", "100+ Backgrounds", "100+ Callout Graphics", "Animated Title Pack"]
   }
 ];
 
@@ -57,6 +59,38 @@ const compatible = [
   { name: "Final Cut Pro", icon: "Fc", color: "#FF4081" },
   { name: "CapCut", icon: "Cc", color: "#FFFFFF" },
 ];
+
+const VideoPlayer = ({ src, className }: { src: string; className: string }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1.5;
+    }
+  }, []);
+
+  const handleTimeUpdate = () => {
+    if (videoRef.current && videoRef.current.currentTime >= 10) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play().catch(e => console.error("Video play failed:", e));
+    }
+  };
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      onTimeUpdate={handleTimeUpdate}
+      className={className}
+      style={{ WebkitUserSelect: 'none' }}
+    />
+  );
+};
 
 export default function FeatureGrid() {
   const [isHovered, setIsHovered] = useState(false);
@@ -71,7 +105,7 @@ export default function FeatureGrid() {
     if (!el) return;
 
     // Slower pace
-    const scrollSpeed = 0.3;
+    const scrollSpeed = 0.4;
 
     const scrollLoop = () => {
       if (!isHovered && el) {
@@ -164,16 +198,16 @@ export default function FeatureGrid() {
             {extendedSections.map((item, i) => (
               <div
                 key={i}
-                className="shrink-0 w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[22vw] max-w-[300px] flex flex-col group px-2 sm:px-3"
+                className="shrink-0 w-[85vw] sm:w-[45vw] md:w-[32vw] lg:w-[24vw] max-w-[340px] flex flex-col group px-2 sm:px-3"
               >
                 {/* Feature Card Box */}
                 <div
-                  className="relative flex-1 flex flex-col justify-between p-5 sm:p-6 bg-[#0c0c0e] border border-white/10 rounded-[28px] sm:rounded-[32px] cursor-default shadow-lg transition-all duration-300 hover:border-[#00f2ff]/30"
+                  className="relative flex-1 flex flex-col justify-between p-4 sm:p-5 bg-[#0c0c0e] border border-white/10 rounded-[28px] sm:rounded-[32px] cursor-default shadow-lg transition-all duration-300 hover:border-[#00f2ff]/30 overflow-hidden"
                 >
-                  <StarField speed={0.5} starsSmall={100} starsMedium={35} starsLarge={12} opacity={0.3} />
+                  <StarField speed={0.05} starsSmall={40} starsMedium={10} starsLarge={2} opacity={0.1} />
 
                   {/* Top Section */}
-                  <div className="text-left flex-1 flex flex-col z-10">
+                  <div className="text-left flex flex-col z-10">
                     {/* Title */}
                     <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight group-hover:text-[#00f2ff] transition-colors duration-200 mb-1.5">
                       {item.cardTitle}
@@ -197,13 +231,26 @@ export default function FeatureGrid() {
                   </div>
 
                   {/* Mockup image at the bottom */}
-                  <div className="w-full flex items-center justify-center pt-2 mt-auto min-h-[200px] sm:min-h-[220px] z-10">
-                    <img
-                      src={item.image}
-                      alt={item.cardTitle}
-                      loading="lazy"
-                      className="w-full h-[200px] sm:h-[220px] object-contain group-hover:scale-105 transition-transform duration-500 select-none pointer-events-none"
-                    />
+                  <div className={`w-full mt-auto z-10 ${item.video ? 'h-[200px] sm:h-[240px]' : 'h-[200px] sm:h-[220px]'} pt-4`}>
+                    {item.video ? (
+                      <div className="overflow-hidden rounded-xl w-full h-full relative bg-black">
+                        <VideoPlayer
+                          src={item.video}
+                          className={`absolute inset-0 w-full h-full object-cover rounded-xl transition-transform duration-700 pointer-events-none ${item.videoScale ? 'scale-[1.35] group-hover:scale-[1.45]' : 'group-hover:scale-110'
+                            }`}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none rounded-xl"></div>
+                      </div>
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <img
+                          src={item.image}
+                          alt={item.cardTitle}
+                          loading="lazy"
+                          className="w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500 select-none pointer-events-none"
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -238,7 +285,7 @@ export default function FeatureGrid() {
             href={CTA_URL}
             className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-4 sm:py-4 rounded-2xl uppercase tracking-wide"
           >
-            All 25+ Packs — Just ₹399
+            All 28+ Packs — Just ₹399
           </a>
         </div>
       </div>
