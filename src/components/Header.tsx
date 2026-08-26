@@ -36,13 +36,13 @@ export default function Header() {
       <div
         className="w-full h-[50px] flex  items-center justify-center px-4 text-center"
         style={{
-          background: 'linear-gradient(90deg, #00effbb4, #379effff, #5689ffff)',
+          background: 'linear-gradient(90deg, #28698eb4, #004b92ff, #292669ff)',
           backgroundSize: '200% 100%',
           // animation: 'shimmer 3s linear infinite',
         }}
       >
         <p className="text-xs sm:text-sm font-bold text-[#ebf7fc] tracking-wide">
-          ⚡ FLASH DEAL: FREE ₹3,696 Bonus expires in →{' '}
+          ⚡ Use 'MASTER70' Code to Get Extra ₹70 off expires in →{' '}
           <span className="font-mono inline-block min-w-[65px]">
             {pad(time.hours)}:{pad(time.minutes)}:{pad(time.seconds)}
           </span>{' '}

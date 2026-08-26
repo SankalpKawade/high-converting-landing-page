@@ -20,13 +20,13 @@ export default function PricingSection() {
           <div className="glow-line" />
 
           <h3 className="text-xl sm:text-2xl font-black text-white mb-6">
-            Complete Video Editing Bundle
+            Lock In the Master Bundle Deal
           </h3>
 
           {/* Value stack */}
           <div className="space-y-2.5 mb-6">
             {[
-              ['ProDigitalFiles Video Editing Assets (28+ Packs)', '₹3,999'],
+              ['ProDigitalFiles Master Bundle (28+ Packs)', '₹3,999'],
               ['Exclusive Bonuses', '₹3,696'],
             ].map(([label, price], i) => (
               <div key={i} className="flex items-center justify-between card-dark rounded-xl px-4 py-3">

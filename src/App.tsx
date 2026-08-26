@@ -23,7 +23,7 @@ export default function App() {
       const target = e.target as HTMLElement;
       // Find closest anchor tag
       const anchor = target.closest('a');
-      
+
       // Check if it's a link to the checkout page
       if (anchor && anchor.href && anchor.href.includes('superprofile.bio')) {
         // Trigger Facebook Pixel InitiateCheckout event
@@ -40,7 +40,7 @@ export default function App() {
 
     // Use capturing phase to ensure we catch the event before any stopPropagation
     document.addEventListener('click', handleCTAClick, true);
-    
+
     return () => {
       document.removeEventListener('click', handleCTAClick, true);
     };
@@ -65,8 +65,8 @@ export default function App() {
         <AudienceSection />
         {/* Section 3: Social Proof — Wall of Love */}
         <ReviewsSection />
-        {/* Section 5: How It Works — 3 Steps */}
-        <AccessSection />
+        {/* Section 5: How It Works — 3 Steps 
+        <AccessSection />*/}
         {/* Bonus Section */}
         <BonusSection />
         {/* Pricing CTA Box */}

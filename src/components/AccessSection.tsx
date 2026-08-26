@@ -16,7 +16,7 @@ const steps = [
   {
     emoji: '📥',
     step: 'STEP 03',
-    title: 'Instant Access PDF',
+    title: 'Instant Access',
     desc: 'Get confirmation email and access the complete pack instantly',
   },
 ];

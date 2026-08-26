@@ -6,15 +6,15 @@ const bonuses = [
     value: '₹999',
   },
   {
-    title: 'The "3-Second Rule" Content Blueprint',
+    title: 'Viral Meme Videos Pack',
     value: '₹699',
   },
   {
-    title: '1,000+ Copy-Paste Prompts for Viral AI Videos',
+    title: '1,000+ Prompts for Viral AI Videos',
     value: '₹499',
   },
   {
-    title: '0 to 100K Instagram Growth System',
+    title: '0 to 100K Instagram Growth Course',
     value: '₹1,499',
   },
 ];

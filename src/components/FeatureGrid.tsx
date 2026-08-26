@@ -47,7 +47,7 @@ const mainSections = [
     cardTitle: "Fast-Track Editing Course",
     subtitle: "Learn Fast Pacing, Storytelling & Client Workflow with quality Add-Ons",
     video: "/images/course.webm",
-    features: ["Full A-Z Editing Course", "Viral Meme Videos Pack", "500+ 4K Stock Footage", "Wedding Title Pack", "Youtube Essential Pack"]
+    features: ["Full A-Z Editing Course", "500+ 4K Stock Footage", "Wedding Title Pack", "Youtube Essential Pack"]
   }
 ];
 
