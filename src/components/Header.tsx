@@ -3,19 +3,21 @@ import { useState, useEffect } from 'react';
 const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits';
 
 export default function Header() {
-  const [time, setTime] = useState({ hours: 3, minutes: 30, seconds: 11 });
   const [scrolled, setScrolled] = useState(false);
+
+  // Compute seconds remaining until midnight in the visitor's local timezone
+  const getSecondsUntilMidnight = () => {
+    const now = new Date();
+    const midnight = new Date();
+    midnight.setHours(24, 0, 0, 0); // next midnight in local time
+    return Math.max(0, Math.floor((midnight.getTime() - now.getTime()) / 1000));
+  };
+
+  const [secondsLeft, setSecondsLeft] = useState(getSecondsUntilMidnight);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTime(prev => {
-        let { hours, minutes, seconds } = prev;
-        seconds--;
-        if (seconds < 0) { seconds = 59; minutes--; }
-        if (minutes < 0) { minutes = 59; hours--; }
-        if (hours < 0) { hours = 0; minutes = 0; seconds = 0; }
-        return { hours, minutes, seconds };
-      });
+      setSecondsLeft(getSecondsUntilMidnight());
     }, 1000);
     return () => clearInterval(timer);
   }, []);
@@ -42,9 +44,9 @@ export default function Header() {
         }}
       >
         <p className="text-xs sm:text-sm font-bold text-[#ebf7fc] tracking-wide">
-          ⚡ Use 'MASTER70' Code to Get Extra ₹70 off expires in →{' '}
+          ⚡Extra 20% Off and Bonuses. Expires in →{' '}
           <span className="font-mono inline-block min-w-[65px]">
-            {pad(time.hours)}:{pad(time.minutes)}:{pad(time.seconds)}
+            {pad(Math.floor(secondsLeft / 3600))}:{pad(Math.floor((secondsLeft % 3600) / 60))}:{pad(secondsLeft % 60)}
           </span>{' '}
           ⚡
         </p>

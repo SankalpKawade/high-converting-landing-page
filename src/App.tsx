@@ -15,6 +15,7 @@ import FAQSection from './components/FAQSection';
 import CloserSection from './components/CloserSection';
 import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
+import CouponPopup from './components/CouponPopup';
 import SocialProofToast from './components/SocialProffPopUps';
 
 export default function App() {
@@ -61,8 +62,8 @@ export default function App() {
         {/* <ValuePropStack /> */}
         {/* Before & After Transformation */}
         <TransformationSection />
-        {/* Audience Section */}
-        <AudienceSection />
+        {/* Audience Section 
+        <AudienceSection />*/}
         {/* Section 3: Social Proof — Wall of Love */}
         <ReviewsSection />
         {/* Section 5: How It Works — 3 Steps 
@@ -78,6 +79,7 @@ export default function App() {
       </main>
       <Footer />
       <StickyCTA />
+      <CouponPopup />
       <SocialProofToast />
     </div>
   );

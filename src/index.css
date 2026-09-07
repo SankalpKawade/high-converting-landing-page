@@ -809,3 +809,18 @@ section.py-16 {
     transform: translateY(0%);
   }
 }
+
+/* ===========================================================
+   Hello2026 Coupon Offer Popup Styles
+   =========================================================== */
+.hello2026-popup-wrapper {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hello2026-close-button {
+  user-select: none;
+}
+
+.coupon-box .code {
+  letter-spacing: 0.12em;
+}

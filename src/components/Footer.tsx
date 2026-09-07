@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="py-10 sm:py-14 px-4 border-t border-white/5 pb-28 sm:pb-32">
+    <footer className="relative z-10 py-10 sm:py-14 px-4 border-t border-white/10 pb-28 sm:pb-32" style={{ background: 'linear-gradient(180deg, #040810 0%, #060c1e 60%, #040810 100%)' }}>
       <div className="max-w-4xl mx-auto text-center">
         {/* Logo */}
         <div className="flex items-center justify-center gap-2 mb-4">
@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
 
         {/* Disclaimer */}
-        <p className="text-xs text-[#64748b] max-w-xl mx-auto leading-relaxed mb-4">
+        <p className="text-xs text-[#94a3b8] max-w-xl mx-auto leading-relaxed mb-3">
           This site is not affiliated with, endorsed by, or associated with Facebook™ or Facebook™ Inc. in any way. All assets are for personal and commercial use as per our license terms.
         </p>
 
