@@ -10,10 +10,6 @@ const bonuses = [
     value: '₹699',
   },
   {
-    title: '1,000+ Prompts for Viral AI Videos',
-    value: '₹499',
-  },
-  {
     title: '0 to 100K Instagram Growth Course',
     value: '₹1,499',
   },
@@ -27,7 +23,7 @@ export default function BonusSection() {
         <div className="text-center mb-10 sm:mb-14">
           {/*<p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">Free Bonuses</p>*/}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
-            4 Exclusive Bonuses — Absolutely FREE
+            Our Way Of Saying Thank You
           </h2>
         </div>
 
@@ -40,9 +36,9 @@ export default function BonusSection() {
           <StarField speed={0.2} starsSmall={40} starsMedium={15} starsLarge={5} opacity={0.35} />
 
           <div className="flex items-center gap-4 mb-8 sm:mb-10 relative z-10">
-            <span className="text-4xl sm:text-5xl">🎁</span>
+            <span className="text-3xl sm:text-4xl">🎁</span>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white">
-              Exclusive Bonuses
+              Ultimate Content Creator Kit
             </h3>
           </div>
 
@@ -70,7 +66,7 @@ export default function BonusSection() {
 
           <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
             <p className="text-[#94a3b8] text-base sm:text-lg font-medium">
-              Total Value: <span className="line-through decoration-white/30">₹3,696</span>
+              Total Value: <span className="line-through decoration-white/30">₹3,197</span>
             </p>
             <p className="text-[#00f2ff] text-2xl sm:text-3xl md:text-4xl font-black tracking-tight">
               FREE Today!

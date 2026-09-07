@@ -126,6 +126,9 @@ export default function HeroSection() {
           </p>
         </div>
 
+        {/* Sentinel: marks the bottom of the Price & CTA block */}
+        <div id="hero-cta-end" className="w-full h-px pointer-events-none" />
+
         {/* Hero Visual — Dashboard mockup with floating snippets
         <div className="relative max-w-3xl mx-auto mt-8 sm:mt-12 w-full px-4">
           {floatingSnippets.map((s, i) => (

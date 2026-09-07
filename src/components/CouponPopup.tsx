@@ -52,30 +52,41 @@ export default function CouponPopup() {
       return;
     }
 
-    // Check if user is currently inside the Hero section
-    const checkHeroSection = () => {
+    // Check if user has scrolled past the Price & CTA section
+    const checkScrolledPastCTA = () => {
       if (sessionStorage.getItem('coupon_popup_dismissed') === 'true') return;
 
-      const hero = document.getElementById('hero');
-      if (hero) {
-        const heroBottom = hero.offsetTop + hero.offsetHeight;
-        // Visible strictly when user is within the Hero section
-        const onHero = window.scrollY < (heroBottom - 100);
-        setIsVisible(onHero);
+      const sentinel = document.getElementById('hero-cta-end');
+      const fastTrack = document.getElementById('after-fast-track-course') || document.getElementById('fast-track-course');
+
+      if (sentinel) {
+        const rect = sentinel.getBoundingClientRect();
+        // Visible right after user has scrolled through/past the Price & CTA section
+        const pastCTA = rect.top <= window.innerHeight * 0.65;
+
+        // Hide when reaching the Fast-Track course where Social Proof popups take over
+        let beforeSocialProof = true;
+        if (fastTrack) {
+          const ftRect = fastTrack.getBoundingClientRect();
+          beforeSocialProof = ftRect.top > window.innerHeight * 0.45;
+        }
+
+        setIsVisible(pastCTA && beforeSocialProof);
       } else {
-        setIsVisible(window.scrollY < 650);
+        // Fallback
+        setIsVisible(window.scrollY > 400 && window.scrollY < 1600);
       }
     };
 
-    window.addEventListener('scroll', checkHeroSection, { passive: true });
-    window.addEventListener('resize', checkHeroSection, { passive: true });
+    window.addEventListener('scroll', checkScrolledPastCTA, { passive: true });
+    window.addEventListener('resize', checkScrolledPastCTA, { passive: true });
 
     // Initial check with brief smooth mount delay
-    const timer = setTimeout(checkHeroSection, 400);
+    const timer = setTimeout(checkScrolledPastCTA, 400);
 
     return () => {
-      window.removeEventListener('scroll', checkHeroSection);
-      window.removeEventListener('resize', checkHeroSection);
+      window.removeEventListener('scroll', checkScrolledPastCTA);
+      window.removeEventListener('resize', checkScrolledPastCTA);
       clearTimeout(timer);
     };
   }, []);
@@ -90,10 +101,10 @@ export default function CouponPopup() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.94 }}
           transition={{ type: 'spring', stiffness: 380, damping: 26 }}
-          className="fixed bottom-4 sm:bottom-6 left-3 sm:left-6 z-50 w-[275px] xs:w-[290px] sm:w-[330px] max-w-[calc(100vw-1.5rem)]"
+          className="fixed bottom-[80px] sm:bottom-[84px] left-3 sm:left-4 z-[60] w-[225px] xs:w-[245px] sm:w-[250px] max-w-[calc(100vw-1.5rem)]"
         >
           <div
-            className="hello2026-popup-wrapper relative cursor-pointer overflow-hidden rounded-2xl bg-gradient-to-br from-[#0e1834] via-[#091124] to-[#040814] p-3 sm:p-4 text-white shadow-[0_12px_40px_rgba(0,0,0,0.75),0_0_25px_rgba(0,242,255,0.18)] border border-[#00f2ff]/35 backdrop-blur-xl transition-all duration-300 hover:border-[#00f2ff]/70 hover:shadow-[0_16px_45px_rgba(0,0,0,0.85),0_0_35px_rgba(0,242,255,0.3)] select-none group"
+            className="hello2026-popup-wrapper relative cursor-pointer overflow-hidden rounded-2xl bg-gradient-to-br from-[#0e1834] via-[#091124] to-[#040814] p-2 sm:p-2.5 text-white shadow-[0_12px_40px_rgba(0,0,0,0.75),0_0_25px_rgba(0,242,255,0.18)] border border-[#00f2ff]/35 backdrop-blur-xl transition-all duration-300 hover:border-[#00f2ff]/70 hover:shadow-[0_16px_45px_rgba(0,0,0,0.85),0_0_35px_rgba(0,242,255,0.3)] select-none group"
             onClick={copyCoupon}
             role="button"
             tabIndex={0}
@@ -103,12 +114,12 @@ export default function CouponPopup() {
             <div className="glow-line" />
 
             {/* Ambient background glows */}
-            <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#00f2ff]/15 rounded-full blur-2xl pointer-events-none" />
-            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-[#7000ff]/15 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute -top-10 -right-10 w-20 h-20 bg-[#00f2ff]/15 rounded-full blur-xl pointer-events-none" />
+            <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-[#7000ff]/15 rounded-full blur-xl pointer-events-none" />
 
             {/* Close button */}
             <div
-              className="hello2026-close-button absolute top-2 right-2 sm:top-2.5 sm:right-2.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-colors duration-150 z-20 cursor-pointer"
+              className="hello2026-close-button absolute top-1.5 right-1.5 sm:top-2 sm:right-2 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-colors duration-150 z-20 cursor-pointer"
               onClick={closePopup}
               role="button"
               tabIndex={0}
@@ -132,9 +143,9 @@ export default function CouponPopup() {
             </div>
 
             {/* Top Row: Discount Badge & Copy Status */}
-            <div className="flex items-center justify-between pr-6 mb-1.5 sm:mb-2">
-              <div className="discount-badge inline-flex items-center gap-1 px-2 py-0.5 sm:px-2.5 sm:py-0.5 rounded-full bg-gradient-to-r from-[#00f2ff] via-[#3b82f6] to-[#7000ff] text-white shadow-[0_0_12px_rgba(0,242,255,0.35)]">
-                <span className="discount-text text-[10px] sm:text-xs font-black tracking-wider uppercase drop-shadow-sm">
+            <div className="flex items-center justify-between pr-7 sm:pr-8 mb-1.5">
+              <div className="discount-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-[#00f2ff] via-[#3b82f6] to-[#7000ff] text-white shadow-[0_0_10px_rgba(0,242,255,0.35)]">
+                <span className="discount-text text-[9px] sm:text-[10px] font-black tracking-wider uppercase drop-shadow-sm">
                   🔥 20% OFF
                 </span>
               </div>
@@ -143,9 +154,8 @@ export default function CouponPopup() {
               <div className="text-right">
                 <p
                   id="copy-text"
-                  className={`copy-text text-[9px] sm:text-[10px] font-semibold text-[#00f2ff] group-hover:text-cyan-300 items-center gap-1 transition-colors ${
-                    copied ? 'hidden' : 'flex'
-                  }`}
+                  className={`copy-text text-[9px] sm:text-[10px] font-semibold text-[#00f2ff] group-hover:text-cyan-300 items-center gap-1 transition-colors ${copied ? 'hidden' : 'flex'
+                    }`}
                 >
                   <span>Tap to copy</span>
                   <svg
@@ -165,9 +175,8 @@ export default function CouponPopup() {
 
                 <p
                   id="copied-text"
-                  className={`copied-text text-[9px] sm:text-[10px] font-bold text-emerald-400 items-center gap-1 bg-emerald-950/70 border border-emerald-500/40 px-1.5 sm:px-2 py-0.5 rounded-full shadow-[0_0_10px_rgba(16,185,129,0.3)] animate-pulse ${
-                    copied ? 'flex' : 'hidden'
-                  }`}
+                  className={`copied-text text-[9px] sm:text-[10px] font-bold text-emerald-400 items-center gap-1 bg-emerald-950/70 border border-emerald-500/40 px-1.5 py-0.5 rounded-full shadow-[0_0_10px_rgba(16,185,129,0.3)] animate-pulse ${copied ? 'flex' : 'hidden'
+                    }`}
                 >
                   ✓ Copied!
                 </p>
@@ -177,32 +186,30 @@ export default function CouponPopup() {
             {/* Coupon Code Box */}
             <div
               id="coupon-code-box"
-              className={`coupon-box rounded-xl px-2.5 sm:px-3 py-1.5 sm:py-2 flex items-center justify-between border-2 border-dashed transition-all duration-200 ${
-                copied
-                  ? 'border-emerald-400 bg-emerald-950/30 shadow-[0_0_18px_rgba(16,185,129,0.25)]'
-                  : 'border-[#00f2ff]/40 bg-[#040814]/90 group-hover:border-[#00f2ff]/75 group-hover:bg-[#060d22]'
-              }`}
+              className={`coupon-box rounded-xl px-1.5 sm:px-3 py-1 sm:py-1.5 flex items-center justify-between border-2 border-dashed transition-all duration-200 ${copied
+                ? 'border-emerald-400 bg-emerald-950/30 shadow-[0_0_18px_rgba(16,185,129,0.25)]'
+                : 'border-[#00f2ff]/40 bg-[#040814]/90 group-hover:border-[#00f2ff]/75 group-hover:bg-[#060d22]'
+                }`}
             >
               <div className="flex items-center gap-1.5">
                 <span className="label text-[9px] sm:text-[10px] font-bold tracking-wider text-slate-400 uppercase">
                   Use code:
                 </span>
-                <span className="code font-mono text-sm sm:text-base font-black tracking-wider sm:tracking-widest text-white drop-shadow-[0_2px_8px_rgba(0,242,255,0.4)]">
+                <span className="code font-mono text-xs sm:text-sm font-black tracking-wider sm:tracking-widest text-white drop-shadow-[0_2px_8px_rgba(0,242,255,0.4)]">
                   MASTER80
                 </span>
               </div>
 
               {/* Copy icon indicator */}
               <div
-                className={`w-6 h-6 rounded-lg flex items-center justify-center transition-all ${
-                  copied
-                    ? 'bg-emerald-500 text-black font-bold scale-105'
-                    : 'bg-[#00f2ff]/15 text-[#00f2ff] group-hover:bg-[#00f2ff] group-hover:text-black'
-                }`}
+                className={`w-5 h-5 sm:w-5.5 sm:h-5.5 rounded-md sm:rounded-lg flex items-center justify-center transition-all ${copied
+                  ? 'bg-emerald-500 text-black font-bold scale-105'
+                  : 'bg-[#00f2ff]/15 text-[#00f2ff] group-hover:bg-[#00f2ff] group-hover:text-black'
+                  }`}
               >
                 {copied ? (
                   <svg
-                    className="w-3 h-3 sm:w-3.5 sm:h-3.5"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -216,7 +223,7 @@ export default function CouponPopup() {
                   </svg>
                 ) : (
                   <svg
-                    className="w-3 h-3 sm:w-3.5 sm:h-3.5"
+                    className="w-2.5 h-2.5 sm:w-3 sm:h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -232,15 +239,15 @@ export default function CouponPopup() {
               </div>
             </div>
 
-            {/* Bottom Row: Message & Terms */}
-            <div className="flex items-center justify-between mt-1.5 sm:mt-2 pt-0.5 text-slate-300">
-              <p className="message text-[10px] sm:text-[11px] font-semibold text-slate-200">
+            {/* Bottom Row: Message & Terms 
+            <div className="flex items-center justify-between mt-1 sm:mt-1.5 pt-0.5 text-slate-300">
+              <p className="message text-[9px] sm:text-[10px] font-semibold text-slate-200">
                 Extra 20% off on offer price
               </p>
-              <p className="terms text-[8px] sm:text-[9px] text-slate-400 font-medium">
+              <p className="terms text-[8px] sm:text-[8.5px] text-slate-400 font-medium">
                 *T&amp;C Applied
               </p>
-            </div>
+            </div>*/}
           </div>
         </motion.div>
       )}

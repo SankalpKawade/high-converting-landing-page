@@ -3,7 +3,7 @@ import { useState } from 'react';
 const faqs = [
   {
     q: 'What exactly do I get in this bundle?',
-    a: 'You get professional video editing assets across 28+ Packs — including LUTs, transitions, overlays, sound effects, music, motion graphics, templates, fonts, stock footage, and much more. Plus 4 exclusive bonuses worth ₹3,696!',
+    a: 'You get professional video editing assets across 28+ Packs — including LUTs, transitions, overlays, sound effects, music, motion graphics, templates, fonts, stock footage, and much more. Plus exclusive bonuses worth ₹3,197!',
   },
   {
     q: 'Which video editing software is this compatible with?',
@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: 'Is this really just ₹399? No hidden charges?',
-    a: 'Yes! ₹399 is the complete price. One-time payment. No subscriptions, no hidden fees, no upsells. You get lifetime access to everything in the bundle plus all 4 bonuses.',
+    a: 'Yes! ₹399 is the complete price. One-time payment. No subscriptions, no hidden fees, no upsells. You get lifetime access to everything in the bundle plus bonuses.',
   },
   {
     q: 'Can I use these assets for client work and commercial projects?',

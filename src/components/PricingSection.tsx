@@ -27,7 +27,7 @@ export default function PricingSection() {
           <div className="space-y-2.5 mb-6">
             {[
               ['ProDigitalFiles Master Bundle (28+ Packs)', '₹3,999'],
-              ['Exclusive Bonuses', '₹3,696'],
+              ['Exclusive Bonuses', '₹3,197'],
             ].map(([label, price], i) => (
               <div key={i} className="flex items-center justify-between card-dark rounded-xl px-4 py-3">
                 <span className="text-sm text-[#cbd5e1]">{label}</span>

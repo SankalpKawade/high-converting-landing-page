@@ -1,7 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="relative z-10 py-10 sm:py-14 px-4 border-t border-white/10 pb-28 sm:pb-32" style={{ background: 'linear-gradient(180deg, #040810 0%, #060c1e 60%, #040810 100%)' }}>
-      <div className="max-w-4xl mx-auto text-center">
+    <footer className="relative z-10 py-10 sm:py-14 px-4 pb-28 sm:pb-32 overflow-hidden">
+      <div className="section-divider mb-10 sm:mb-12" />
+
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Logo */}
         <div className="flex items-center justify-center gap-2 mb-4">
           <img
@@ -31,7 +33,7 @@ export default function Footer() {
           This site is not affiliated with, endorsed by, or associated with Facebook™ or Facebook™ Inc. in any way. All assets are for personal and commercial use as per our license terms.
         </p>
 
-        <p className="text-xs text-[#64748b]">
+        <p className="text-xs text-[#94a3b8]">
           © 2026 ProDigitalFiles. All Rights Reserved.
         </p>
       </div>

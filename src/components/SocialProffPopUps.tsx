@@ -109,24 +109,24 @@ export default function SocialProofToast() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 20, scale: 0.95 }}
                     transition={{ type: "spring", stiffness: 340, damping: 26 }}
-                    className="fixed bottom-[74px] sm:bottom-6 left-3 sm:left-6 z-50 w-[265px] xs:w-[280px] sm:w-[330px] max-w-[calc(100vw-1.5rem)]"
+                    className="fixed bottom-[80px] sm:bottom-[84px] left-3 sm:left-4 z-[60] w-[225px] xs:w-[245px] sm:w-[250px] max-w-[calc(100vw-1.5rem)]"
                 >
-                    <div className="bg-white text-slate-800 p-2 sm:p-2.5 rounded-xl sm:rounded-2xl shadow-[0_12px_35px_rgba(0,0,0,0.18)] border border-slate-200/90 flex items-center gap-2 sm:gap-2.5 relative overflow-hidden">
+                    <div className="bg-white text-slate-800 p-2 sm:p-2.5 rounded-xl sm:rounded-2xl shadow-[0_12px_35px_rgba(0,0,0,0.18)] border border-slate-200/90 flex items-center gap-2.5 relative overflow-hidden">
                         {/* Product Thumbnail */}
-                        <div className="w-9 h-9 sm:w-12 sm:h-12 shrink-0 bg-slate-50 rounded-lg sm:rounded-xl flex items-center justify-center border border-slate-100 overflow-hidden">
+                        <div className="w-11 h-11 sm:w-14 sm:h-12 shrink-0 bg-slate-50 rounded-xl flex items-center justify-center border border-slate-100 overflow-hidden p-1">
                             <img
-                                src="/images/logo-removebg.webp"
-                                alt="Logo"
-                                className="w-full h-full object-contain p-0.5 sm:p-1"
+                                src="/images/logo2-removebg.webp"
+                                alt="Master Bundle Logo"
+                                className="w-full h-full object-contain"
                             />
                         </div>
 
                         {/* Content */}
-                        <div className="flex-1 min-w-0 pr-3 sm:pr-4">
-                            <p className="text-[10px] sm:text-[12px] leading-snug text-slate-700">
+                        <div className="flex-1 min-w-0 pr-3.5">
+                            <p className="text-[10px] sm:text-[11px] leading-snug text-slate-700">
                                 <span className="font-bold text-slate-900">{current.name}</span> from{" "}
                                 <span className="font-semibold text-slate-900">{current.city}</span> bought{" "}
-                                <span className="font-bold text-blue-600">ProDigitalFiles Bundle!</span>
+                                <span className="font-bold text-blue-600">Master Bundle!</span>
                             </p>
 
                             {/* Verification Tag */}
