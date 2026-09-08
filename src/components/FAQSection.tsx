@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: 'Is this really just ₹399? No hidden charges?',
-    a: 'Yes! ₹399 is the complete price. One-time payment. No subscriptions, no hidden fees, no upsells. You get lifetime access to everything in the bundle plus bonuses.',
+    a: 'Yes! ₹399 is the complete price. One-time payment. No subscriptions, no hidden fees. You get lifetime access to everything in the bundle plus bonuses.',
   },
   {
     q: 'Can I use these assets for client work and commercial projects?',
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: 'What if the files don\'t work or I\'m not satisfied?',
-    a: 'We have a 100% satisfaction guarantee. If you face any issues, our support team will help you immediately. We\'ve served 1,000+ happy creators with a 9.4/10 rating.',
+    a: 'We have a 100% satisfaction guarantee. If you face any issues, our support team will help you immediately. We\'ve served 1,000+ happy creators with a 4.9/5 rating.',
   },
   {
     q: 'How long will this ₹399 price last?',

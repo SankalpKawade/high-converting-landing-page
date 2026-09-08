@@ -146,7 +146,7 @@ export default function CouponPopup() {
             <div className="flex items-center justify-between pr-7 sm:pr-8 mb-1.5">
               <div className="discount-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-[#00f2ff] via-[#3b82f6] to-[#7000ff] text-white shadow-[0_0_10px_rgba(0,242,255,0.35)]">
                 <span className="discount-text text-[9px] sm:text-[10px] font-black tracking-wider uppercase drop-shadow-sm">
-                  🔥 20% OFF
+                  Save Extra 20%
                 </span>
               </div>
 
@@ -196,7 +196,7 @@ export default function CouponPopup() {
                   Use code:
                 </span>
                 <span className="code font-mono text-xs sm:text-sm font-black tracking-wider sm:tracking-widest text-white drop-shadow-[0_2px_8px_rgba(0,242,255,0.4)]">
-                  MASTER80
+                  MASTER20OFF
                 </span>
               </div>
 
