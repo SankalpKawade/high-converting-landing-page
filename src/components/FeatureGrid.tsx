@@ -51,13 +51,16 @@ const mainSections = [
   }
 ];
 
-const compatible = [
-  { name: "Premiere Pro", image: "/images/premier pro.webp" },
-  { name: "After Effects", image: "/images/after effects.webp" },
-  { name: "DaVinci Resolve", image: "/images/davinci.webp" },
-  { name: "Filmora", image: "/images/filmora.webp" },
-  { name: "Final Cut Pro", image: "/images/final cut pro.webp" },
-  { name: "CapCut", image: "/images/capcut.webp" },
+const compatibleLogos = [
+  { src: '/images/logo_1.webp', alt: 'Premiere Pro' },
+  { src: '/images/logo_2.webp', alt: 'After Effects' },
+  { src: '/images/logo_3.webp', alt: 'DaVinci Resolve' },
+  { src: '/images/logo_4.webp', alt: 'Final Cut Pro' },
+  { src: '/images/logo_5.webp', alt: 'Filmora' },
+  { src: '/images/logo_6.webp', alt: 'CapCut' },
+  { src: '/images/logo_7.webp', alt: 'Sony Vegas' },
+  { src: '/images/logo_8.webp', alt: 'Audition' },
+  { src: '/images/logo_9.webp', alt: 'Photoshop' }
 ];
 
 const VideoPlayer = ({ src, className }: { src: string; className: string }) => {
@@ -279,26 +282,60 @@ export default function FeatureGrid() {
         {/* Position marker: directly following Fast-Track Editing Course & the assets boxes */}
         <div id="after-fast-track-course" className="w-full h-px pointer-events-none" />
 
-        {/* Compatible Apps 
-        <div className="mt-16 sm:mt-24 text-center">
-          <p className="text-[#94a3b8] text-sm font-bold uppercase tracking-widest mb-6">Compatible With All Major Software</p>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
-            {compatible.map((app, i) => (
-              <div key={i} className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center p-2.5 overflow-hidden transition-transform duration-300 hover:scale-110"
-                  style={{
-                    background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    boxShadow: '0 4px 20px rgba(0,0,0,0.3)'
-                  }}>
-                  <img src={app.image} alt={app.name} className="w-full h-full object-contain" />
+        {/* Compatible Apps */}
+        <div className="page-width relative mt-16 sm:mt-24">
+          <div className="title-wrapper leading-none gap-4 lg:gap-8 flex flex-col text-center md:items-center md:justify-between relative z-1 mb-6 sm:mb-8">
+            <div className="grid gap-4">
+              <h2 className="heading title-sm">
+                <em
+                  is="highlighted-text"
+                  className="highlighted-text inline-block not-italic relative"
+                  data-style="text"
+                >
+                  Compatible with
+                </em>
+              </h2>
+            </div>
+          </div>
+
+          <div className="text-center md:items-center overflow-hidden logo-list-container-mask relative">
+            <div
+              className="logo-list logo-list--left flex items-center flickity-enabled is-draggable"
+              data-speed="9"
+              data-direction="left"
+              tabIndex={0}
+              role="region"
+              aria-label="Compatible apps"
+            >
+              <div className="flickity-viewport">
+                <div className="flickity-slider">
+                  {[0, 1, 2, 3].map((cellIndex) => (
+                    <div
+                      key={cellIndex}
+                      className={`logo-bar inline-flex flex-wrap items-center justify-center flex-nowrap animate flickity-cell ${cellIndex === 0 ? 'is-selected' : ''}`}
+                      aria-hidden={cellIndex > 0 ? 'true' : undefined}
+                    >
+                      {compatibleLogos.map((logo, i) => (
+                        <div
+                          key={i}
+                          className="logo__media relative shrink-0"
+                        >
+                          <img
+                            src={logo.src}
+                            alt={logo.alt}
+                            loading="lazy"
+                            className="loaded"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
                 </div>
-                <span className="text-xs sm:text-sm text-[#94a3b8] font-semibold">{app.name}</span>
               </div>
-            ))}
+            </div>
           </div>
         </div>
-*/}
+
         {/* CTA */}
         <div className="text-center mt-12 sm:mt-16">
           <a
