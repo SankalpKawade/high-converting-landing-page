@@ -36,7 +36,7 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 bg-[#091024] transition-transform duration-300 ease-in-out ${scrolled ? '-translate-y-[50px]' : 'translate-y-0'}`}>
       {/* Countdown Timer */}
       <div
-        className="w-full h-[50px] flex  items-center justify-center px-4 text-center"
+        className="w-full h-[40px] flex  items-center justify-center px-4 text-center"
         style={{
           background: 'linear-gradient(90deg, #28698eb4, #004b92ff, #292669ff)',
           backgroundSize: '200% 100%',

@@ -91,7 +91,7 @@ export default function PricingSection() {
                   </span>
                 </div>
                 <p className="text-[11px] sm:text-xs text-[#94a3b8] mt-1">
-                  Apply this code at checkout to get an extra ₹80 off
+                  Apply this code at checkout to get extra ₹80 off
                 </p>
               </div>
 
