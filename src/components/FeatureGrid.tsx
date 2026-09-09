@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import StarField from './StarField';
 
-const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits';
+const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits-v2';
 
 const mainSections = [
   {
@@ -235,7 +235,7 @@ export default function FeatureGrid() {
           <div>
             <p className="text-[#00f2ff] text-sm font-bold uppercase tracking-widest mb-3">What's In Master Bundle</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-2 leading-tight">
-              500,000+ Assets
+              Premium Assets
             </h2>
             <p className="text-sm sm:text-base text-[#94a3b8] max-w-xl">
               No more searching, no more subscriptions. Just download, apply, and export.
@@ -342,7 +342,7 @@ export default function FeatureGrid() {
             href={CTA_URL}
             className="inline-block btn-cta text-base sm:text-lg font-black px-8 sm:px-12 py-4 sm:py-4 rounded-2xl uppercase tracking-wide"
           >
-            All 28+ Packs — Just ₹399
+            All 28+ Packs — Just ₹299
           </a>
         </div>
       </div>

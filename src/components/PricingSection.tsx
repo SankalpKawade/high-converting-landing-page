@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import StarField from './StarField';
 
-const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits';
-const COUPON_CODE = 'MASTER80';
+const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits-v2';
+const COUPON_CODE = 'MASTER50';
 
 export default function PricingSection() {
   const [copied, setCopied] = useState(false);
@@ -52,7 +52,7 @@ export default function PricingSection() {
           {/* Value stack */}
           <div className="space-y-2.5 mb-6">
             {[
-              ['ProDigitalFiles Master Bundle (28+ Packs)', '₹3,999'],
+              ['ProDigitalFiles Master Bundle (28+ Packs)', '₹2,999'],
               ['Exclusive Bonuses', '₹3,197'],
             ].map(([label, price], i) => (
               <div key={i} className="flex items-center justify-between card-dark rounded-xl px-4 py-3">
@@ -71,12 +71,12 @@ export default function PricingSection() {
 
           <div className="mb-4">
             <p className="text-md text-[#94a3b8]">Regular Price</p>
-            <p className="text-2xl sm:text-3xl font-extrabold text-white/50 line-through">₹3,999</p>
+            <p className="text-2xl sm:text-3xl font-extrabold text-white/50 line-through">₹2,999</p>
           </div>
 
           <div className="mb-6 sm:mb-8">
             <p className="text-sm text-[#00f2ff] font-bold">Today Only</p>
-            <p className="text-5xl sm:text-6xl font-black gradient-text">₹399</p>
+            <p className="text-5xl sm:text-6xl font-black gradient-text">₹299</p>
             <p className="text-xs text-[#94a3b8] mt-1">One-time payment • Lifetime access</p>
           </div>
 

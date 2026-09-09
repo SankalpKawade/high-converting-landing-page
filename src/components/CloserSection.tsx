@@ -1,6 +1,6 @@
 import StarField from './StarField';
 
-const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits';
+const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits-v2';
 
 export default function CloserSection() {
   return (
@@ -15,7 +15,7 @@ export default function CloserSection() {
 
         <p className="text-base sm:text-lg text-[#94a3b8] mb-8 max-w-xl mx-auto leading-relaxed">
           5,243+ creators already upgraded their workflow.
-          <strong className="text-white"> Don't let another day pass</strong> making amateur videos when pro-quality is just ₹399 away.
+          <strong className="text-white"> Don't let another day pass</strong> making amateur videos when pro-quality is just ₹299 away.
         </p>
 
         {/* Visual testimonial */}
@@ -50,7 +50,7 @@ export default function CloserSection() {
           href={CTA_URL}
           className="inline-block btn-cta text-base sm:text-lg font-black px-10 sm:px-14 py-2 sm:py-3 rounded-2xl tracking-wide uppercase"
         >
-          All Yours for ₹399
+          All Yours for ₹299
         </a>
         {/*
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 mt-4 text-xs text-[#94a3b8]">

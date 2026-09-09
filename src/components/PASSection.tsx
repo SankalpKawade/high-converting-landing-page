@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import StarField from './StarField';
 
-const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits';
+const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits-v2';
 
 const struggles = [
   "I want to post faceless reels but don't know where to start",

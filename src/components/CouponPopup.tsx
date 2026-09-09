@@ -7,7 +7,7 @@ export default function CouponPopup() {
   const [isDismissed, setIsDismissed] = useState(false);
 
   const copyCoupon = async () => {
-    const code = 'MASTER80';
+    const code = 'MASTER50';
     try {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(code);
@@ -108,7 +108,7 @@ export default function CouponPopup() {
             onClick={copyCoupon}
             role="button"
             tabIndex={0}
-            aria-label="Click to copy coupon code MASTER80 for 20% discount"
+            aria-label="Click to copy coupon code MASTER50 for 20% discount"
           >
             {/* Top scanning neon line */}
             <div className="glow-line" />
@@ -146,7 +146,7 @@ export default function CouponPopup() {
             <div className="flex items-center justify-between pr-7 sm:pr-8 mb-1.5">
               <div className="discount-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-[#00f2ff] via-[#3b82f6] to-[#7000ff] text-white shadow-[0_0_10px_rgba(0,242,255,0.35)]">
                 <span className="discount-text text-[9px] sm:text-[10px] font-black tracking-wider uppercase drop-shadow-sm">
-                  Save Extra ₹80
+                  Save Extra ₹50
                 </span>
               </div>
 
@@ -196,7 +196,7 @@ export default function CouponPopup() {
                   Use code:
                 </span>
                 <span className="code font-mono text-xs sm:text-sm font-black tracking-wider sm:tracking-widest text-white drop-shadow-[0_2px_8px_rgba(0,242,255,0.4)]">
-                  MASTER80
+                  MASTER50
                 </span>
               </div>
 

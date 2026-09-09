@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits';
+const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits-v2';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -58,7 +58,7 @@ export default function Header() {
           <img
             src="/images/logo2-removebg.webp"
             alt="ProDigitalFiles Logo"
-            className="w-12 h-12 object-contain brightness-110 drop-shadow-[0_0_8px_rgba(0,242,255,0.65)]"
+            className="w-[50px] h-[50px] sm:w-12 sm:h-12 object-contain brightness-110 drop-shadow-[0_0_8px_rgba(0,242,255,0.65)]"
             decoding="async"
           />
           <span className="text-lg lg:text-2xl font-bold tracking-tight">

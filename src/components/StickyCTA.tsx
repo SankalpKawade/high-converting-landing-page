@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits';
+const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits-v2';
 
 export default function StickyCTA() {
   const [visible, setVisible] = useState(false);
@@ -31,7 +31,7 @@ export default function StickyCTA() {
             className="text-xs line-through"
             style={{ color: "rgba(255,255,255,0.4)" }}
           >
-            ₹3,999
+            ₹2,999
           </span>
           <p className="font-black text-xl" style={{ color: "#385ffbff" }}>
             ₹299
@@ -42,7 +42,7 @@ export default function StickyCTA() {
           href={CTA_URL}
           className="btn-cta text-sm sm:text-base font-bold px-5 sm:px-8 py-2 rounded-xl whitespace-nowrap text-center"
         >
-          Unlock All Editing Assets for ₹399
+          Unlock All Editing Assets for ₹299
         </a>
       </div>
     </div >

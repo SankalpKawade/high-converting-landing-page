@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import StarField from './StarField';
 
-const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits';
+const CTA_URL = 'https://superprofile.bio/vp/level-up-your-edits-v2';
 
 const BADGE_ITEMS = [
   { text: "347 Bought in the Last 24 Hours", duration: 3000 },
@@ -76,7 +76,7 @@ export default function HeroSection() {
         </h1>
 
         {/* Sub-headline */}
-        <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-400 max-w-2xl mx-auto mb-4 sm:mb-4 px-2">
+        <p className="mt-3 sm:mt-4 text-[13px] sm:text-lg text-gray-400 max-w-2xl mx-auto mb-4 sm:mb-4 px-2">
           Instantly unlock 28+ editing packs with drag-and-drop LUTs, transitions, SFX, and an complete editing course to slash edit times by 80% to Level Up your videos.
         </p>
 
@@ -107,8 +107,8 @@ export default function HeroSection() {
         {/* Price & CTA Section */}
         <div className="flex flex-col items-center justify-center gap-4 sm:gap-5 shrink-0 w-full">
           <div className="flex items-end gap-3 bg-[#0f1629] border border-[#00f2ff]/30 px-6 py-3 rounded-2xl">
-            <span className="text-2xl sm:text-3xl text-gray-500 line-through font-medium">₹3,999</span>
-            <span className="text-5xl sm:text-6xl font-black text-white">₹399</span>
+            <span className="text-2xl sm:text-3xl text-gray-500 line-through font-medium">₹2,999</span>
+            <span className="text-5xl sm:text-6xl font-black text-white">₹299</span>
           </div>
 
           <a

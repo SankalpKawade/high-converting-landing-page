@@ -32,7 +32,7 @@ export default function App() {
           (window as any).fbq('track', 'InitiateCheckout', {
             content_name: 'ProDigitalFiles Bundle',
             content_category: 'Digital Product',
-            value: 399.00,
+            value: 299.00,
             currency: 'INR'
           });
         }
